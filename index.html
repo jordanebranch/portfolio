@@ -329,7 +329,7 @@ button{
     </li>
     <ul class="accordion">
     <li class="link">
-      <a href="#" class="linkName" class="dropdown-menu">
+      <a href="#" class="linkName" id="dropdown-menu">
         Portfolio
       </a>
       <ul class="submenu">
@@ -388,10 +388,10 @@ $('.accordion').hover(function(){
         $(this).find('ul').slideUp()
     }).find('ul').hide();
   $(".sublink").on("mouseover", function() {
-  $(".dropdown-menu").addClass('permahover');
+  $("#dropdown-menu").addClass('permahover');
 });
   $(".sublink").on("mouseleave", function() {
-  $(".dropdown-menu").removeClass('permahover');
+  $("#dropdown-menu").removeClass('permahover');
 });
   });
 </script>
