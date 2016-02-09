@@ -10,7 +10,12 @@
 </head>
 <style>
 
-#menu {
+.container{
+	margin: 0 auto;
+	width: 1000 px;
+	position: absolute;
+}
+.menu {
   list-style:none;
   padding:0;
   text-align:center;
@@ -106,17 +111,9 @@ a:selected{
   opacity: 1;
 }
 
-/*footer {
-  width: 100%;
-  height: 200px;
-  background-color: #666;
-  position: fixed;
-  bottom: 0px;
-}*/
-
 h1 {
   font: small-caps 44px 'Lato', sans-serif;
-  line-height: 50px;
+  letter-spacing: 3px;
   position: relative;
   top: -230px;
   left: -30px;
@@ -141,13 +138,14 @@ h1 {
   width: 50%;
 }
 
-.aboutText{
+p{
   font: 20px 'Lato', sans-serif;
-  line-height: 3vw;
-  padding-left: 15%;
+  line-height: 40px;
+  margin-left: 10px;
   position: relative;
-  top: -130px;
-  left: 400px;
+  top: -230px;
+  left: -30px;
+  width: 100%
 }
 
 a{
@@ -167,14 +165,14 @@ section{
   position: relative;
   display: inline-block;
   float: right;
-  width: 9%;
+  width: 15%;
   margin: 0px;
   padding: 0px;
 }
 
 #contact-bar{
   position: relative;
-  bottom: 100px;
+  bottom: 130px;
   right: 100px;
 }
 
@@ -203,13 +201,11 @@ button:focus {
 button{
   border: 1px solid black;
   height: 50px;
-  width: 15%;
+  width: 50%;
   padding: 5px;
   border-radius: 10px;
   position: relative;
-  top: -90px;
-  left: 0;
-  font-size: 20px;
+  top: 350px;
   background-color: white;
   font: small-caps 20px 'Lato', sans-serif;
 }
@@ -226,6 +222,7 @@ button:hover{
 }
 
 @media(max-width: 810px){
+
 h1 {
   font: small-caps 33px 'Lato', sans-serif;
   text-align: center;
@@ -240,26 +237,26 @@ h1 {
   width: 100%;
 }
 
-.aboutText{
+p{
   font: 20px 'Lato', sans-serif;
   line-height: 25px;
   text-align: center;
   position: absolute;
   top: 460px;
-  left: -45px;
+  left: 0px;
   padding-right: 5px;
   margin: auto;
 }
  
 button{
   border: 1px solid black;
-  height: 5%;
-  width: 40%;
+  height: 40px;
+  width: 50%;
   padding: 5px;
   border-radius: 10px;
   position: relative;
-  top: 280px;
-  left: 0;
+  top: 500px;
+  left: -30px;
   font-size: 20px;
   color: #909090;
   background-color: white;
@@ -317,7 +314,7 @@ button{
 </style>
 <body>
   <nav>
-  <ul id="menu">
+  <ul class="menu">
     <li class="link">
       <a href="resume.html" class="linkName">
          Resume
@@ -325,7 +322,7 @@ button{
     </li>
     <ul class="accordion">
     <li class="link">
-      <a href="#" class="linkName" id="dropdown-menu">
+      <a href="#" class="linkName" class="dropdown-menu">
         Portfolio
       </a>
       <ul class="submenu">
@@ -350,17 +347,14 @@ button{
     </li>
   </ul>
 </nav>
-  <div id="container">
-    <section>
-      <div id="circle"></div>
+  <div class="container">
+      <div id="circle">
+        <a href="https://drive.google.com/file/d/0B4DCAte3cN2qQjNLNG5HRjRfWE0/view"><button>Resume PDF</button></a>
+       </div>
       <div class="about">
         <h1>Front-End Developer</h1>
-      </div>
-      <div class="about">
-        <p class="aboutText">I am a student at the University of Maryland with a passion for front-end development and digital strategy. With a desire to learn about emerging technologies, I stay on top of the digital age. I'm currently learning PHP and working toward my
-          certification in Google Ads and Google Analytics.
+        <p>I am a student at the University of Maryland with a passion for front-end development and digital strategy. With a desire to learn about emerging technologies, I stay on top of the digital age. I'm currently learning PHP and SASS.
            </p>
-      </div>
       <div id="contact-bar">
         <li>
           <a href="https://twitter.com/Jordan_EBranch">
@@ -376,8 +370,7 @@ button{
             <ul class="contactEmoji"><i class="fa fa-github"></i></ul></a>
         </li>
       </div>
-      <a href="https://drive.google.com/file/d/0B4DCAte3cN2qQjNLNG5HRjRfWE0/view"><button>Resume PDF</button></a>
-    </section>
+      </div>
   </div>
 </body>
 <script>
@@ -388,10 +381,10 @@ $('.accordion').hover(function(){
         $(this).find('ul').slideUp()
     }).find('ul').hide();
   $(".sublink").on("mouseover", function() {
-  $("#dropdown-menu").addClass('permahover');
+  $(".dropdown-menu").addClass('permahover');
 });
   $(".sublink").on("mouseleave", function() {
-  $("#dropdown-menu").removeClass('permahover');
+  $(".dropdown-menu").removeClass('permahover');
 });
   });
 </script>
