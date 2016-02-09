@@ -335,26 +335,9 @@ a:hover{
   <div class="banner">
     <nav>
       <ul id="menu">
-        <ul class="accordion">
+      <ul class="accordion">
           <li class="link">
-            <a href="#" class="linkName" id="dropdown-menu">
-         Portfolio
-      </a>
-            <ul class="submenu">
-              <li class="sublink">
-                <a href="data-visualization.html">Data Visualization</a>
-              </li>
-              <li class="sublink">
-                <a href="css3.html">CSS3</a>
-              </li>
-              <li class="sublink">
-                <a href="#">jQuery</a>
-              </li>
-            </ul>
-        </ul>
-        <ul class="accordion">
-          <li class="link">
-            <a href="#" class="linkName">
+            <a href="#" class="linkName dropdown-menu">
         Resume
       </a>
             <ul class="submenu">
@@ -372,6 +355,23 @@ a:hover{
               </li>
               <li class="sublink">
                 <a href="#education">Education</a>
+              </li>
+            </ul>
+        </ul>
+        <ul class="accordion">
+          <li class="link">
+            <a href="#" class="linkName dropdown-menu">
+         Portfolio
+      </a>
+            <ul class="submenu">
+              <li class="sublink">
+                <a href="data-visualization.html">Data Visualization</a>
+              </li>
+              <li class="sublink">
+                <a href="css3.html">CSS3</a>
+              </li>
+              <li class="sublink">
+                <a href="#">jQuery</a>
               </li>
             </ul>
         </ul>
@@ -529,10 +529,10 @@ a:hover{
         $(this).find('ul').slideUp()
     }).find('ul').hide();
   $(".sublink").on("mouseover", function() {
-  $("#dropdown-menu").addClass('permahover');
+  $(".dropdown-menu").addClass('permahover');
 });
   $(".sublink").on("mouseleave", function() {
-  $("#dropdown-menu").removeClass('permahover');
+  $(".dropdown-menu").removeClass('permahover');
 });
 });
   </script>
