@@ -5,41 +5,103 @@
   <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
 </head>
 <style>
-nav {
+#menu {
+  list-style:none;
+  padding:0;
+  text-align:center;
   position: fixed;
   width: 100%;
-  padding: 0;
-  text-align: center;
   z-index: 2;
+  background-color: white;
+  margin:0;
   border-width: 0px 0px 1px 0px;
   border-style: solid;
-  border-color: #383839;
-  background-color: white;
+  border-color: lightgray;
 }
 
-nav ul li {
-  position: relative;
-  display: inline-block;
+.link {
+  display:inline-block;
+  width:25%;
+  position:relative;
   float: right;
-  width: 15%;
 }
 
-nav ul li a {
-  display: block;
-  text-decoration: none;
-  color: #383839;
-  margin: 0px;
-  padding-bottom: 10px;
+.linkName {
+  padding:10px;
+  text-decoration:none;
+  color:black;
+  display:block;
+  cursor:pointer;
   font: small-caps 21px 'Lato', sans-serif;
   letter-spacing: 1px;
 }
 
-#name li{
+.linkName:hover {
+  background-color:lightgray;
+  -moz-transition: all .5s linear;
+  -ms-transition: all .5s linear;
+  -o-transition: all .5s linear;
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear;
+}
+
+.submenu {
+  width:99.5%;
+  padding:0;
+  list-style:none;
+  border-left:1px solid lightgray;
+  border-right:1px solid lightgray;
+  border-bottom:1px solid lightgray;
+  border-radius: 0px 0px 10px 10px;
+  text-align:left;
+  display:none;
+  position:absolute;
+  background-color:white;
+}
+
+.sublink {
+  cursor:pointer;
+  padding: 10px;
+  letter-spacing: 1px;
+  font: 17px 'Lato', sans-serif;
+  text-align: center;
+}
+
+.sublink:hover {
+  background-color:lightgray;
+  -moz-transition: all .5s linear;
+  -ms-transition: all .5s linear;
+  -o-transition: all .5s linear;
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear; 
+}
+
+a{
+  color: black;
+  text-decoration: none;
+}
+
+a:selected{
+  border: 0px;
+}
+
+.permahover{
+  background-color: lightgray;
+}
+
+.name li{
   float: left;
-  text-align: left;
+  text-align: center;
   color: #383839;
   width: 20%;
 }
+
+.name li a:hover{
+  color: black;
+  background-color: lightgray;
+  opacity: 1;
+}
+
 
 .banner {
   height: 400px;
@@ -137,13 +199,13 @@ h4 {
   width: 30%;
 }
 
-ul li{
+/*ul li{
   list-style-type: none;
   line-height: 22px;
   margin-left: -35px;
   font-size: 18px;
   padding-left: 10px;
-}
+}*/
 
 .border{
   border: solid;
@@ -195,7 +257,7 @@ table {
 a:hover{
   opacity: .7;
 }
-@media(max-width: 900px) {
+@media(max-width: 700px) {
   body{
     width: 100%;
     margin: 0 auto;
@@ -215,26 +277,116 @@ a:hover{
     width: 100%;
   }
 }
+/*@media (min-width: 0px) and (max-width: 560px) {
+  body {
+    width: 100%;
+  }
+  .banner h1 {
+    font-size: 25px;
+    top: 35px;
+    left: 100px;
+  }
+  nav {
+    display: none;
+  }
+  table {
+    display: none;
+  }
+}
+
+@media (min-width: 560px) and (max-width: 650px) {
+  body {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .banner {
+    width: 100%;
+  }
+  .banner h1 {
+    font-size: 40px;
+  }
+  nav {
+    display: none;
+  }
+}
+
+@media (min-width: 650px) and (max-width: 2000px) {
+  body {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .banner {
+    width: 100%;
+  }
+  .banner h1 {
+    font-size: 70px;
+    top: 10px;
+  }
+  nav ul li {
+    position: relative;
+    display: inline-block;
+    float: right;
+  }
+}*/
 </style>
 <body>
-  <div id="top"></div>
   <div class="banner">
     <nav>
-      <ul>
-        <div id="name">
-          <li><a href="index.html">Jordan Branch</a></li>
+      <ul id="menu">
+        <ul class="accordion">
+          <li class="link">
+            <a href="#" class="linkName" id="dropdown-menu">
+         Portfolio
+      </a>
+            <ul class="submenu">
+              <li class="sublink">
+                <a href="types.html">Data Visualization</a>
+              </li>
+              <li class="sublink">
+                <a href="#">CSS3</a>
+              </li>
+              <li class="sublink">
+                <a href="#">jQuery</a>
+              </li>
+            </ul>
+        </ul>
+        <ul class="accordion">
+          <li class="link">
+            <a href="#" class="linkName" id="dropdown-menu">
+        Resume
+      </a>
+            <ul class="submenu">
+              <li class="sublink">
+                <a href="types.html">Contact</a>
+              </li>
+              <li class="sublink">
+                <a href="#">Tech</a>
+              </li>
+              <li class="sublink">
+                <a href="#">Journalism</a>
+              </li>
+              <li class="sublink">
+                <a href="#">Consulting</a>
+              </li>
+              <li class="sublink">
+                <a href="#">Education</a>
+              </li>
+            </ul>
+        </ul>
+        <div class="name">
+          <li class="link">
+            <a href="#" class="linkName">
+         Jordan Branch
+      </a>
+          </li>
         </div>
-        <li><a href="#address">Contact</a></li>
-        <li><a href="#tech">Tech</a></li>
-        <li><a href="#journalism">Journalism</a></li>
-        <li><a href="#pr">Consulting</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="types.html">Portfolio</a></li>
+        </li>
       </ul>
     </nav>
     <div>
       <h1>Jordan Branch</h1>
     </div>
+  </div>
   </div>
   <h2 id="education">Education</h2>
   <h3>University of Maryland</h3>
@@ -256,7 +408,7 @@ a:hover{
   </div>
   <div class="transitionBanner3"></div>
   <div class="width">
-    <h2 id="pr">Public and Media Relations Experience</h2>
+    <h2 id="pr">Consulting Experience</h2>
     <h3>Hamilton Place Strategies, public affairs consulting firm</h3>
 
     <div class="date">
@@ -425,6 +577,21 @@ a:hover{
     <p id="address">4330 Hartwick Rd. Apt. 602 | College Park, MD, 20740
       <br> 407-227-0951 | <a href="jordan.ebranch@gmail.com">jordan.ebranch@gmail.com</a></p>
   </div>
+  <script>
+  $(document).ready(function() {
+   $('.accordion').hover(function(){
+        $(this).find('ul').slideDown()
+    }, function(){
+        $(this).find('ul').slideUp()
+    }).find('ul').hide();
+  $(".sublink").on("mouseover", function() {
+  $("#dropdown-menu").addClass('permahover');
+});
+  $(".sublink").on("mouseleave", function() {
+  $("#dropdown-menu").removeClass('permahover');
+});
+});
+  </script>
 </body>
 
 </html>
