@@ -1,0 +1,196 @@
+<!doctype html>
+<html>
+
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+</head>
+<style>
+nav {
+  position: fixed;
+  width: 100%;
+  padding: 0;
+  text-align: center;
+  z-index: 2;
+  border-width: 0px 0px 1px 0px;
+  border-style: solid;
+  border-color: #383839;
+  background-color: white;
+}
+
+nav ul li {
+  position: relative;
+  display: inline-block;
+  float: right;
+  width: 25%;
+}
+
+nav ul li a {
+  display: block;
+  text-decoration: none;
+  color: #383839;
+  margin: 0px;
+  padding-bottom: 10px;
+  font: small-caps 21px 'Lato', sans-serif;
+  letter-spacing: 1px;
+}
+
+nav ul li a:hover{
+  opacity: .7;
+}
+
+#name li {
+  float: left;
+  text-align: left;
+  color: #383839;
+  width: 40%;
+}
+
+#circle2 {
+  width: 30vw;
+  height: 30vw;
+  background: url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/new_year_background.png");
+  -moz-border-radius: 17.5vw;
+  -webkit-border-radius: 17.5vw;
+  border-radius: 17.5vw;
+  position: relative;
+  top: 80px;
+  box-shadow: 0px 0px 5px 0px #393939;
+}
+
+.container {
+  width: 100%;
+}
+
+.publishedText {
+  position: relative;
+  font: small-caps 5vw 'Lato', sans-serif;
+  top: 10vw;
+  text-align: center;
+}
+
+.unpublishedText {
+  position: relative;
+  font: small-caps 5vw 'Lato', sans-serif;
+  top: 10vw;
+  text-align: center;
+}
+
+#circle1:hover {
+    background: url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/dark_embroidery.png");
+  color: white;
+  -moz-transition: all .5s linear;
+  -ms-transition: all .5s linear;
+  -o-transition: all .5s linear;
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear;
+}
+
+#circle2:hover {
+  background: url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/dark_embroidery.png");
+  color: white;
+  -moz-transition: all .5s linear;
+  -ms-transition: all .5s linear;
+  -o-transition: all .5s linear;
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear;
+}
+
+a {
+  color: #666;
+  text-decoration: none;
+}
+
+.flex {
+  display: flex;
+  text-wrap: none;
+  padding: 0;
+  margin-right: 17vw;
+  margin-bottom: 50px;
+  float: left;
+  width: 15%;
+  -moz-transition: all .5s linear;
+  -ms-transition: all .5s linear;
+  -o-transition: all .5s linear;
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear;
+}
+
+@media(max-width: 496px) {
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  section {
+    margin-left: 0px;
+  }
+  #circle1 {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/new_year_background.png");
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+    /*top: 130px;
+  left: 80px;*/
+  }
+  #circle2 {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/new_year_background.png");
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+  }
+  .publishedText {
+    position: relative;
+    font: small-caps 29px 'Lato', sans-serif;
+  }
+  .unpublishedText {
+    position: relative;
+    font: small-caps 29px 'Lato', sans-serif;
+  }
+}
+</style>
+<body>
+  <div class="container">
+    <nav>
+      <ul>
+        <div id="name">
+          <li><a href="index.html">Jordan Branch</a></li>
+        </div>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="types.html">Portfolio</a></li>
+      </ul>
+    </nav>
+    <section>
+      <div class="flex">
+        <a href="css3.html">
+          <div id="circle2">
+            <p class="publishedText">CSS3</p>
+          </div>
+        </a>
+      </div>
+      <div class="flex">
+        <a href="#">
+          <div id="circle2">
+            <p class="unpublishedText">jQuery</p>
+          </div>
+        </a>
+      </div>
+      <div class="flex">
+        <a href="data-visualization.html">
+          <div id="circle2">
+            <p class="unpublishedText">Data Visualization</p>
+          </div>
+        </a>
+      </div>
+    </section>
+  </div>
+
+</body>
+
+</html>
