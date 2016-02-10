@@ -12,7 +12,7 @@
 
 .container{
 	margin: 0 auto;
-	width: 1200px;
+	width: 1000px;
 	position: absolute;
 }
 
@@ -164,14 +164,14 @@ section{
   position: relative;
   display: inline-block;
   float: right;
-  width: 5%;
+  width: 60px;
   margin: 0px;
   padding: 0px;
 }
 
 #contact-bar{
   position: absolute;
-  bottom: -60px;
+  bottom: 0px;
   background-color: lightgray;
   height: 60px;
   width: 100%;
@@ -185,11 +185,11 @@ section{
 
 a .contactEmoji:hover {
   color: white;
-  -moz-transition: all .5s linear;
-  -ms-transition: all .5s linear;
-  -o-transition: all .5s linear;
-  -webkit-transition: all .5s linear;
-  transition: all .5s linear;
+  -moz-transition: all .3s linear;
+  -ms-transition: all .3s linear;
+  -o-transition: all .3s linear;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
 }
 
 li{
@@ -203,13 +203,13 @@ button:focus {
 button{
   border: 1px solid black;
   height: 50px;
-  width: 120px;
+  width: 150px;
   padding: 5px;
   border-radius: 10px;
   position: relative;
+  right: 68vw;
   background-color: white;
   font: small-caps 20px 'Lato', sans-serif;
-  float: left;
 }
 
 button:hover{
@@ -223,7 +223,7 @@ button:hover{
   transition: all .5s linear;
 }
 
-@media(max-width: 1200px){
+@media(max-width: 1000px){
 
 .container{
 	width: 100%;
@@ -256,20 +256,23 @@ p{
  
 button{
   border: 1px solid black;
-  height: 40px; 
+  height: 50px;
+  width: 150px;
   padding: 5px;
   border-radius: 10px;
   position: relative;
-  margin: 0 auto;
-  font-size: 20px;
-  color: #909090;
+  float: left;
   background-color: white;
   font: small-caps 20px 'Lato', sans-serif;
 }
 
 #contact-bar{
-  position: relative;
-  margin: 0 auto;
+  position: absolute;
+  bottom: -140px;
+  background-color: lightgray;
+  height: 60px;
+  width: 100%;
+  padding-top: 15px;
 }
 
 #circle {
@@ -294,7 +297,7 @@ button{
   position: relative;
   display: inline-block;
   float: right;
-  width: 12%;
+  width: 40px;
   margin: 0px;
   padding: 0px;
 }
@@ -378,7 +381,7 @@ button{
           </a>
           <a href="https://github.com/jordanebranch">
             <ul class="contactEmoji"><i class="fa fa-github"></i></ul></a>
-            <ul><a href="https://drive.google.com/file/d/0B4DCAte3cN2qQjNLNG5HRjRfWE0/view"><button>Resume PDF</button></a></ul>
+            <ul class="contactEmoji"><a href="https://drive.google.com/file/d/0B4DCAte3cN2qQjNLNG5HRjRfWE0/view"><button>Resume PDF</button></a></ul>
         </li>
       </div>
 </body>
