@@ -138,6 +138,7 @@ h1 {
 .about {
   float: right;
   width: 50%;
+  margin: 0 auto;
 }
 
 p{
@@ -155,10 +156,6 @@ a{
   color: black;
 }
 
-a:hover{
-  opacity: .7;
-}
-
 section{
   margin: 0 auto;
 }
@@ -167,24 +164,27 @@ section{
   position: relative;
   display: inline-block;
   float: right;
-  width: 15%;
+  width: 5%;
   margin: 0px;
   padding: 0px;
 }
 
 #contact-bar{
-  position: relative;
-  bottom: 130px;
-  right: 100px;
+  position: absolute;
+  bottom: -60px;
+  background-color: lightgray;
+  height: 60px;
+  width: 100%;
+  padding-top: 15px;
 }
 
 .contactEmoji{
-  font-size: 50px;
+  font-size: 30px;
   color: #393939;
 }
 
 a .contactEmoji:hover {
-  color: lightgray;
+  color: white;
   -moz-transition: all .5s linear;
   -ms-transition: all .5s linear;
   -o-transition: all .5s linear;
@@ -203,13 +203,13 @@ button:focus {
 button{
   border: 1px solid black;
   height: 50px;
-  width: 50%;
+  width: 120px;
   padding: 5px;
   border-radius: 10px;
   position: relative;
-  top: 350px;
   background-color: white;
   font: small-caps 20px 'Lato', sans-serif;
+  float: left;
 }
 
 button:hover{
@@ -240,7 +240,6 @@ h1 {
 }
 
 .about {
-  float: left;
   width: 100%;
 }
 
@@ -257,13 +256,10 @@ p{
  
 button{
   border: 1px solid black;
-  height: 40px;
-  width: 50%;
+  height: 40px; 
   padding: 5px;
   border-radius: 10px;
   position: relative;
-  top: 480px;
-  left: 60px;
   margin: 0 auto;
   font-size: 20px;
   color: #909090;
@@ -273,7 +269,6 @@ button{
 
 #contact-bar{
   position: relative;
-  top: 175px;
   margin: 0 auto;
 }
 
@@ -363,12 +358,13 @@ button{
 </nav>
   <div class="container">
       <div id="circle">
-        <a href="https://drive.google.com/file/d/0B4DCAte3cN2qQjNLNG5HRjRfWE0/view"><button>Resume PDF</button></a>
        </div>
       <div class="about">
         <h1>Front-End Developer</h1>
         <p>I am a student at the University of Maryland with a passion for front-end development and digital strategy. With a desire to learn about emerging technologies, I stay on top of the digital age. I'm currently learning PHP and SASS.
            </p>
+</div>
+</div>
       <div id="contact-bar">
         <li>
           <a href="https://twitter.com/Jordan_EBranch">
@@ -382,10 +378,9 @@ button{
           </a>
           <a href="https://github.com/jordanebranch">
             <ul class="contactEmoji"><i class="fa fa-github"></i></ul></a>
+            <ul><a href="https://drive.google.com/file/d/0B4DCAte3cN2qQjNLNG5HRjRfWE0/view"><button>Resume PDF</button></a></ul>
         </li>
       </div>
-      </div>
-  </div>
 </body>
 <script>
 	$(document).ready(function() {
