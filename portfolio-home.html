@@ -2,40 +2,79 @@
 <html>
 
 <head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
 </head>
 <style>
-nav {
+.menu {
+  list-style:none;
+  padding:0;
+  text-align:center;
   position: fixed;
   width: 100%;
-  padding: 0;
-  text-align: center;
   z-index: 2;
+  background-color: white;
+  margin:0;
   border-width: 0px 0px 1px 0px;
   border-style: solid;
-  border-color: #383839;
-  background-color: white;
+  border-color: lightgray;
 }
 
-nav ul li {
-  position: relative;
-  display: inline-block;
+.link {
+  display:inline-block;
+  width:25%;
+  position:relative;
   float: right;
-  width: 25%;
 }
 
-nav ul li a {
-  display: block;
-  text-decoration: none;
-  color: #383839;
-  margin: 0px;
-  padding-bottom: 10px;
+.linkName {
+  padding:10px;
+  text-decoration:none;
+  color:black;
+  display:block;
+  cursor:pointer;
   font: small-caps 21px 'Lato', sans-serif;
   letter-spacing: 1px;
 }
 
-nav ul li a:hover{
-  opacity: .7;
+.linkName:hover {
+  background-color:lightgray;
+  -moz-transition: all .5s linear;
+  -ms-transition: all .5s linear;
+  -o-transition: all .5s linear;
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear;
+}
+
+.submenu {
+  width:99.5%;
+  padding:0;
+  list-style:none;
+  border-left:1px solid lightgray;
+  border-right:1px solid lightgray;
+  border-bottom:1px solid lightgray;
+  border-radius: 0px 0px 10px 10px;
+  text-align:left;
+  display:none;
+  position:absolute;
+  background-color:white;
+}
+
+.sublink {
+  cursor:pointer;
+  padding: 10px;
+  letter-spacing: 1px;
+  font: 17px 'Lato', sans-serif;
+}
+
+.sublink:hover {
+  background-color:lightgray;
+  -moz-transition: all .5s linear;
+  -ms-transition: all .5s linear;
+  -o-transition: all .5s linear;
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear; 
 }
 
 #name li {
@@ -137,14 +176,45 @@ a {
 <body>
   <div class="container">
     <nav>
-      <ul>
-        <div id="name">
-          <li><a href="index.html">Jordan Branch</a></li>
-        </div>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a href="types.html">Portfolio</a></li>
+  <ul class="menu">
+    <li class="link">
+      <a href="resume.html" class="linkName">
+         Resume
+      </a>
+    </li>
+    <ul class="accordion">
+    <li class="link">
+      <a href="portfolio-home.html" class="linkName" id="dropdown-menu">
+        Portfolio
+      </a>
+      <ul class="submenu">
+      <a href="data-visualization.html">
+        <li class="sublink">
+         	Data Visualization
+        </li>
+        </a>
+        <a href="css3.html">
+          <li class="sublink">
+            CSS3
+        </li> 
+        </a> 
+        <a href="#">
+          <li class="sublink">
+            jQuery
+        </li>  
+        </a>
       </ul>
-    </nav>
+       </ul>
+      <div class="name">
+      <li class="link">
+      <a href="#" class="linkName">
+         Jordan Branch
+      </a>
+    </li>
+      </div>
+    </li>
+  </ul>
+</nav>
     <section>
       <div class="flex">
         <a href="css3.html">
@@ -169,7 +239,21 @@ a {
       </div>
     </section>
   </div>
-
+<script>
+$(document).ready(function() {
+$('.accordion').hover(function(){
+        $(this).find('ul').slideDown()
+    }, function(){
+        $(this).find('ul').slideUp()
+    }).find('ul').hide();
+  $(".sublink").on("mouseover", function() {
+  $("#dropdown-menu").addClass('permahover');
+});
+  $(".sublink").on("mouseleave", function() {
+  $("#dropdown-menu").removeClass('permahover');
+});
+  });
+</script>
 </body>
 
 </html>
