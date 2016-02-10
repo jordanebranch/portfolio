@@ -45,6 +45,10 @@ nav ul li a:hover{
   width: 40%;
 }
 
+.container {
+  width: 100%;
+}
+
 #circle2 {
   width: 30vw;
   height: 30vw;
@@ -57,24 +61,6 @@ nav ul li a:hover{
   box-shadow: 0px 0px 5px 0px #393939;
 }
 
-.container {
-  width: 100%;
-}
-
-.publishedText {
-  position: relative;
-  font: small-caps 5vw 'Lato', sans-serif;
-  top: 10vw;
-  text-align: center;
-}
-
-.unpublishedText {
-  position: relative;
-  font: small-caps 5vw 'Lato', sans-serif;
-  top: 10vw;
-  text-align: center;
-}
-
 #circle2:hover {
   background: url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/dark_embroidery.png");
   color: white;
@@ -83,6 +69,20 @@ nav ul li a:hover{
   -o-transition: all .5s linear;
   -webkit-transition: all .5s linear;
   transition: all .5s linear;
+}
+
+.shortText {
+  position: relative;
+  font: small-caps 5vw 'Lato', sans-serif;
+  top: 11vw;
+  text-align: center;
+}
+
+.longText {
+  position: relative;
+  font: small-caps 5vw 'Lato', sans-serif;
+  top: 8vw;
+  text-align: center;
 }
 
 a {
@@ -124,11 +124,11 @@ a {
     border-radius: 100px;
 	margin: 0 auto;
   }
-  .publishedText {
+  .shortText {
     position: relative;
     font: small-caps 29px 'Lato', sans-serif;
   }
-  .unpublishedText {
+  .longText {
     position: relative;
     font: small-caps 29px 'Lato', sans-serif;
   }
@@ -149,21 +149,21 @@ a {
       <div class="flex">
         <a href="css3.html">
           <div id="circle2">
-            <p class="publishedText">CSS3</p>
+            <p class="shortText">CSS3</p>
           </div>
         </a>
       </div>
       <div class="flex">
         <a href="#">
           <div id="circle2">
-            <p class="unpublishedText">jQuery</p>
+            <p class="shortText">jQuery</p>
           </div>
         </a>
       </div>
       <div class="flex">
         <a href="data-visualization.html">
           <div id="circle2">
-            <p class="unpublishedText">Data Visualization</p>
+            <p class="longText">Data Visualization</p>
           </div>
         </a>
       </div>
