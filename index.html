@@ -183,7 +183,7 @@ section{
   color: #393939;
 }
 
-a .contactEmoji:hover {
+.contactEmoji:hover {
   color: white;
   -moz-transition: all .3s linear;
   -ms-transition: all .3s linear;
@@ -206,8 +206,7 @@ button{
   width: 150px;
   padding: 5px;
   border-radius: 10px;
-  position: relative;
-  right: 68vw;
+  float:right;
   background-color: white;
   font: small-caps 20px 'Lato', sans-serif;
 }
@@ -253,7 +252,7 @@ p{
   padding-right: 5px;
   margin: auto;
 }
- 
+
 button{
   border: 1px solid black;
   height: 50px;
@@ -314,8 +313,6 @@ button{
   text-align: left;
   color: #383839;
   width: 50%;
-}
-
 }
 </style>
 <body>
@@ -381,7 +378,9 @@ button{
           </a>
           <a href="https://github.com/jordanebranch">
             <ul class="contactEmoji"><i class="fa fa-github-square"></i></ul></a>
+            <div class="pdfFloat">
             <ul class="contactEmoji"><a href="https://drive.google.com/file/d/0B4DCAte3cN2qQjNLNG5HRjRfWE0/view"><button>Resume PDF</button></a></ul>
+            </div>
         </li>
       </div>
 </body>
