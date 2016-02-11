@@ -1,0 +1,604 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>
+  </title>
+</head>
+<style>
+   /*Hover container to move rabbit*/
+  
+  .shake {
+    width: 100%;
+    height: 450px;
+    border-radius: 30px;
+    margin: 0 auto;
+    background-color: lightblue;
+  }
+  /*Rabbit head*/
+  
+  .head {
+    width: 210px;
+    height: 210px;
+    background: lightgray;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+    position: absolute;
+    top: 180px;
+    left: 350px;
+    margin: 0 auto;
+    border: .1px solid;
+    background: -webkit-radial-gradient(lightgray 60%, gray);
+    background: -o-radial-gradient(lightgray 60%, gray);
+    background: -moz-radial-gradient(lightgray 60%, gray);
+    background: radial-gradient(lightgray 60%, gray);
+  }
+  
+  .headShape {
+    width: 200px;
+    height: 50px;
+    background-color: lightblue;
+    position: relative;
+    bottom: 290px;
+  }
+  
+  .nose {
+    width: 40px;
+    height: 40px;
+    background: pink;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    position: relative;
+    left: 85px;
+    bottom: 12px;
+    z-index: 3;
+    border: .1px solid;
+    background: -webkit-radial-gradient(pink 60%, gray);
+    background: -o-radial-gradient(lightgray 60%, gray);
+    background: -moz-radial-gradient(lightgray 60%, gray);
+    background: radial-gradient(pink 60%, red);
+  }
+  
+  .nose {
+    -webkit-animation: noseBounce 3s;
+    animation: noseBounce 3s;
+    animation-duration: infinite;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+  }
+  
+  .mouth {
+    width: 220px;
+    height: 100px;
+    background: white;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+    z-index: 2;
+    position: relative;
+    top: 109px;
+    right: 5px;
+    border: .1px solid;
+    background: -webkit-radial-gradient(white 60%, lightgray);
+    background: -o-radial-gradient(white 60%, lightgray);
+    background: -moz-radial-gradient(white 60%, lightgray);
+  background: radial-gradient(white 60%, lightgray);
+}
+
+.mouth {
+  -webkit-animation: mouthBounce 3s;
+  animation: mouthBounce 3s;
+  -webkit-animation-duration: infinite;
+  animation-duration: infinite;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.rightTooth {
+  width: 25px;
+  height: 25px;
+  border: 1px solid;
+  z-index: 4;
+  position: relative;
+  left: 110px;
+  top: -270px;
+}
+
+.rightTooth {
+  -webkit-animation: mouthBounce 3s;
+  animation: mouthBounce 3s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.smile {
+  width: 60px;
+  height: 15px;
+  border-width: 0px 0px 1px 0px;
+  border-style: solid;
+  z-index: 4;
+  position: relative;
+  left: 85px;
+  top: -312px;
+}
+
+.smile {
+  -webkit-animation: mouthBounce 3s;
+  animation: mouthBounce 3s;
+  -webkit-animation-duration: infinite;
+  animation-duration: infinite;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.leftEyeSocket {
+  width: 55px;
+  height: 95px;
+  background: white;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  z-index: 1.5;
+  position: relative;
+  border: .1px solid;
+  top: -110px;
+  left: 25px;
+}
+
+.rightEyeSocket {
+  width: 55px;
+  height: 95px;
+  background: white;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  z-index: 1.5;
+  position: relative;
+  border: .1px solid;
+  top: -205px;
+  left: 130px;
+}
+
+.leftEye {
+  width: 25px;
+  height: 45px;
+  background: blue;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  z-index: 1.5;
+  position: relative;
+  border: .1px solid;
+  top: -260px;
+  left: 25px;
+}
+
+.shake:hover .leftEye {
+  -webkit-animation-name: floatLeft;
+  animation-name: floatLeft;
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.rightEye {
+  width: 25px;
+  height: 45px;
+  background: blue;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  z-index: 1.5;
+  position: relative;
+  border: .1px solid;
+  top: -308px;
+  left: 130px;
+}
+
+.shake:hover .rightEye {
+  -webkit-animation-name: floatRight;
+  animation-name: floatRight;
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.leftEar {
+  width: 15em;
+  height: 6em;
+  border: none;
+  -webkit-border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
+  border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
+  color: rgba(0, 0, 0, 1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: lightgray;
+  -webkit-transform: rotateX(180deg) rotateZ(-40deg) scaleZ(-2) translateZ(-3px);
+  transform: rotateX(180deg) rotateZ(-40deg) scaleZ(-2) translateZ(-3px);
+  position: absolute;
+  top: 90px;
+  left: 220px;
+  border: solid 1px;
+  background: -webkit-radial-gradient(white 20%, gray);
+  background: -o-radial-gradient(white 20%, gray);
+  background: -moz-radial-gradient(white 20%, gray);
+  background: radial-gradient(white 20%, gray);
+}
+
+.leftEar {
+  -webkit-animation-name: rightEar;
+  -webkit-animation-duration: 4s;
+  animation-name: rightEar;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.rightEar {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 15em;
+  height: 6em;
+  -webkit-border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
+  border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
+  color: rgba(0, 0, 0, 1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: lightgray;
+  -webkit-transform: rotateX(180deg) rotateZ(-40deg) scaleZ(-2) translateZ(-3px);
+  transform: rotateX(180deg) rotateZ(-100deg) scaleZ(-2) translateZ(-3px);
+  position: absolute;
+  top: 90px;
+  left: 390px;
+  border: solid 1px;
+  background: -webkit-radial-gradient(white 20%, gray);
+  background: -o-radial-gradient(white 20%, gray);
+  background: -moz-radial-gradient(white 20%, gray);
+  background: radial-gradient(white 20%, gray);
+}
+
+.rightEar {
+  -webkit-animation-name: rightEar;
+  -webkit-animation-duration: 4s;
+  animation-name: rightEar;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-delay: .6s;
+}
+
+
+/*carrot*/
+
+.carrot {
+  width: 10em;
+  height: 10em;
+  margin: -2px;
+  z-index: 3;
+  border: none;
+  -webkit-border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
+  border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
+  font: normal 100%/normal Arial, Helvetica, sans-serif;
+  color: rgba(0, 0, 0, 1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: orange;
+  -webkit-transform: rotateY(-2deg) rotateZ(110deg) skewY(-20deg);
+  transform: rotateY(-2deg) rotateZ(110deg) skewY(-20deg);
+  position: relative;
+  top: -300px;
+  left: 580px;
+  margin: 30px;
+  margin-top: 0px;
+  -moz-box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 3px 4px 4px rgba(0, 0, 0, .5);
+  box-shadow: 3px 4px 4px rgba(0, 0, 0, .5);
+  background: -webkit-radial-gradient(darkorange 55%, gray);
+  background: -o-radial-gradient(darkorange 55%, gray);
+  background: -moz-radial-gradient(darkorange 55%, gray);
+  background: radial-gradient(darkorange 55%, gray);
+}
+
+.shake:hover .carrot {
+  -webkit-animation-name: carrot;
+  animation-name: carrot;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.carrotTop {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  text-align: center;
+  background: #1abc9c;
+  background: -webkit-radial-gradient(green 55%, gray);
+  background: -o-radial-gradient(green 55%, gray);
+  background: -moz-radial-gradient(green 55%, gray);
+  background: radial-gradient(green 55%, gray);
+  top: -350px;
+  right: -610px;
+  -moz-box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 3px 4px 4px rgba(0, 0, 0, .5);
+  box-shadow: 3px 4px 4px rgba(0, 0, 0, .5);
+}
+
+.carrotTop::before {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  content: "";
+  top: 0px;
+  right: 5px;
+  color: rgba(0, 0, 0, 1);
+  -webkit-transform: rotateZ(30deg);
+  transform: rotateZ(30deg);
+  background: -webkit-radial-gradient(green 55%, gray);
+  background: -o-radial-gradient(green 55%, gray);
+  background: -moz-radial-gradient(green 55%, gray);
+  background: radial-gradient(green 55%, gray);
+  -moz-box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 3px 4px 4px rgba(0, 0, 0, .5);
+  box-shadow: 3px 4px 4px rgba(0, 0, 0, .5);
+}
+
+.carrotTop::after {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  content: "";
+  top: 0px;
+  right: 5px;
+  -webkit-transform: rotateZ(60deg);
+  transform: rotateZ(60deg);
+  background: -webkit-radial-gradient(green 55%, gray);
+  background: -o-radial-gradient(green 55%, gray);
+  background: -moz-radial-gradient(green 55%, gray);
+  background: radial-gradient(green 55%, gray);
+}
+
+.shake:hover .carrotTop {
+  -webkit-animation-name: carrotTop;
+  animation-name: carrotTop;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+
+/*Animations referenced above*/
+
+@-webkit-keyframes rightEar {
+  from {
+    top: 80px;
+  }
+  to {
+    top: 88px;
+  }
+}
+
+@keyframes rightEar {
+  from {
+    top: 80px;
+  }
+  to {
+    top: 88px;
+  }
+}
+
+@-webkit-keyframes leftEar {
+  from {
+    top: 80px;
+  }
+  to {
+    top: 88px;
+  }
+}
+
+@keyframes leftEar {
+  from {
+    top: 80px;
+  }
+  to {
+    top: 88px;
+  }
+}
+
+@-webkit-keyframes floatLeft {
+  from {
+    left: 25px;
+    top: -260px;
+  }
+  to {
+    left: 56px;
+    top: -295px;
+  }
+}
+
+@keyframes floatLeft {
+  from {
+    left: 25px;
+    top: -260px;
+  }
+  to {
+    left: 56px;
+    top: -295px;
+  }
+}
+
+@-webkit-keyframes floatRight {
+  from {
+    top: -308px;
+    left: 130px;
+  }
+  to {
+    left: 160px;
+    top: -340px;
+  }
+}
+
+@keyframes floatRight {
+  from {
+    top: -308px;
+    left: 130px;
+  }
+  to {
+    left: 160px;
+    top: -340px;
+  }
+}
+
+@-webkit-keyframes mouthBounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -webkit-transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-10px);
+  }
+  60% {
+    -webkit-transform: translateY(-10px);
+  }
+}
+
+@keyframes mouthBounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+@-webkit-keyframes noseBounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -webkit-transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-20px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+  }
+  100% {
+    -webkit-transform: translateY(-15px);
+  }
+}
+
+@keyframes noseBounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+@-webkit-keyframes carrotTop {
+  from {
+   top: -500px;
+  }
+  to {
+   top: -150px;
+   left: 610px;
+  }
+}
+
+@keyframes carrotTop {
+  from {
+    top: -500px;
+  }
+  to {
+    top: -150px;
+    left: 610px;
+  }
+}
+
+@-webkit-keyframes carrot {
+  from {
+    top: -360px;
+  }
+  to {
+    top: 70px;
+    left: 580px;
+  }
+}
+
+@keyframes carrot {
+  from {
+    top: -360px;
+  }
+  to {
+    top: 70px;
+    left: 580px;
+  }
+}
+</style>
+<body>
+  <div class="shake">
+  	<div class="carrot"></div>
+  	<div class="carrotTop"></div>
+  	<div class="leftEar"></div>
+  	<div class="rightEar"></div>
+  	<div class="head">
+    	<div class="mouth"></div>
+    	<div class="nose"></div>
+    	<div class="leftEyeSocket"></div>
+    	<div class="rightEyeSocket"></div>
+    	<div class="leftEye"></div>
+    	<div class="rightEye"></div>
+    	<div class="rightTooth"></div>
+    	<div class="smile"></div>
+    	<div class="headShape"></div>
+  	</div>
+  </div>
+</body>
+</html>
