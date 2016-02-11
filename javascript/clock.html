@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Clock</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Mono:500' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:600' rel='stylesheet' type='text/css'>
+</head>
+<style>
+#clock {
+  margin: 0 auto;
+  height: 22.5vw;
+  width: 62vw;
+  background-color: #C0CDEF;
+  text-align: center;
+  border-radius: 20px;
+  padding: 20px;
+  z-index: 1;
+}
+
+#hour {
+  margin: 0;
+  width: 28%;
+  margin-right: 10px;
+  display: inline-block;
+  background-color: #DEF4EE;
+  color: gray;
+  padding-right: 10px;
+  font: 14.5vw 'Roboto Mono', sans-serif;
+  border-radius: 20px;
+}
+
+#minutes {
+  margin: 0;
+  width: 28%;
+  margin-right: 10px;
+  display: inline-block;
+  border-radius: 20px;
+  background-color: #DEF4EE;
+  color: gray;
+  padding-right: 10px;
+  font: 14.5vw 'Roboto Mono', sans-serif;
+}
+
+#seconds {
+  margin: 0 auto;
+  width: 28%;
+  border-radius: 20px;
+  background-color: #DEF4EE;
+  color: gray;
+  padding-right: 10px;
+  font: 14.5vw 'Roboto Mono', sans-serif;
+  display: inline-block;
+}
+
+.description {
+  z-index: 2;
+}
+
+p {
+  margin: 0;
+  width: 32%;
+  display: inline-block;
+  color: gray;
+  padding-top: 5px;
+  font: 3vw 'Lato', sans-serif;
+  border-radius: 20px;
+  text-align: center;
+}
+
+@media (max-width: 585px) {
+  #clock {
+    margin: 0 auto;
+    height: 135px;
+    width: 400px;
+    background-color: #C0CBEA;
+    text-align: center;
+    border-radius: 20px;
+    padding: 20px;
+    z-index: 1;
+  }
+  #hour {
+    margin: 0;
+    width: 28%;
+    margin-right: 10px;
+    display: inline-block;
+    background-color: #DEF4EE;
+    color: gray;
+    padding-right: 10px;
+    font: 90px 'Roboto Mono', sans-serif;
+    border-radius: 20px;
+  }
+  #minutes {
+    margin: 0;
+    width: 28%;
+    margin-right: 10px;
+    display: inline-block;
+    border-radius: 20px;
+    background-color: #DEF4EE;
+    color: gray;
+    padding-right: 10px;
+    font: 90px 'Roboto Mono', sans-serif;
+  }
+  #seconds {
+    margin: 0 auto;
+    width: 28%;
+    border-radius: 20px;
+    background-color: #DEF4EE;
+    color: gray;
+    padding-right: 10px;
+    font: 90px 'Roboto Mono', sans-serif;
+    display: inline-block;
+  }
+  .description {
+    z-index: 2;
+  }
+  p {
+    margin: 0;
+    width: 32%;
+    display: inline-block;
+    color: #DEF4EE;
+    font: 20px 'Roboto Mono', sans-serif;
+    border-radius: 20px;
+    text-align: center;
+  }
+}
+</style>
+
+<body onload="startTime()">
+  <div id="clock">
+    <div id="hour"></div>
+    <div id="minutes"></div>
+    <div id="seconds"></div>
+    <div class="description">
+    <p>Hour</p>
+    <p>Minutes</p>
+    <p>Seconds</p>
+  </div>
+  </div>
+<script>
+function startTime() {
+  var time = new Date();
+  var hours = new Array(12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11);
+  var hours = hours[time.getHours()];
+  var minutes = time.getMinutes();
+  var seconds = time.getSeconds();
+  minutes = checkTime(minutes);
+  seconds = checkTime(seconds);
+  document.getElementById('hour').innerHTML =
+    hours;
+  document.getElementById('minutes').innerHTML = minutes;
+  document.getElementById('seconds').innerHTML = seconds;
+  var t = setTimeout(startTime, 500);
+}
+
+function checkTime(i) {
+  if (i < 10) {
+    i = "0" + i
+  };
+  return i;
+}
+</script>
+</body>
+</html>
