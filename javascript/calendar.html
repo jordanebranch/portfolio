@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Calendar</title>
+</head>
+<style>
+.container{
+  margin: 0 auto;
+  height: 580px;
+  width: 500px;
+  background-color: teal;
+  text-align: center;
+}
+
+#year{
+  color: teal;
+  background-color: white;
+  font: small-caps 150px 'Lato', sans-serif;
+  border: solid;
+  border-width: 6px;
+}
+
+#month{
+  color: white;
+  font: small-caps 110px 'Lato', sans-serif;
+  margin-bottom: 10px;
+}
+
+#day{
+  color: white;
+  font: small-caps 140px 'Lato', sans-serif;
+  margin-bottom: 10px;
+}
+
+#weekend{
+  background-color: white;
+  font: small-caps 32px 'Lato', sans-serif;
+  color: teal;
+  padding: 10px;
+  border: solid;
+  border-width: 6px;
+  border-color: teal;
+}
+</style>
+<body>
+<div class="container">
+<div id="year"></div>
+<div id="month"></div>
+<div id="day"></div>
+<div id="weekend"></div>
+</div>
+<script>
+var date = new Date(); 
+var month = new Array("January", "February", "March", "April", "May", "June", "July", "August","September","October","Novemeber","December");
+
+document.getElementById('year').innerHTML=date.getFullYear();
+document.getElementById('month').innerHTML=month[date.getMonth()];
+document.getElementById('day').innerHTML=date.getDate();
+
+var is_weekend =  function(date1){
+    var dt = new Date(date1);
+     
+    if(dt.getDay() == 6 || dt.getDay() == 0)
+       {
+        return "weekend";
+        } else if(dt.getDay() == 4){
+          return "One more day until the weekend!";
+        } else if(dt.getDay() == 3){
+          return "Two more days until the weekend!";
+        }else if(dt.getDay() == 2){
+          return "Three more days until the weekend!";
+        }else if(dt.getDay() == 1){
+          return "Four more days until the weekend!";
+        }else{
+          return "Make some plans! No work tomorrow!"
+        }
+}
+
+console.log(is_weekend(date));
+
+document.getElementById('weekend').innerHTML=is_weekend(date);
+</script>
+</body>
+</html>
