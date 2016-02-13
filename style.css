@@ -783,6 +783,102 @@ button{
   width: 50%;
 }
 
+@media(max-width: 950px) {
+  .skillName{
+  width: 96%;
+  display: inline-block;
+  border: solid #666;
+  border-width: 1px 1px 0px 0px;
+  margin: 10px;
+}
+  .html{
+  height: 30px;
+  width: 89vw;
+  background-color: lightgray;
+  border: 1px solid #666;
+  margin-bottom: 5px;
+  padding-bottom: 10px;
+  padding-right: 5px;
+}
+
+.css{
+  height: 30px;
+  width: 89vw;
+  background-color: lightgray;
+  border: 1px solid #666;
+  margin-bottom: 5px;
+  padding-bottom: 10px;
+  padding-right: 5px;
+}
+
+.javascript{
+  height: 30px;
+  width: 60vw;
+  background-color: lightgray;
+  border: 1px solid #666;
+  padding-bottom: 10px;
+  padding-right: 5px;
+}
+
+.illustrator{
+  height: 30px;
+  width: 89vw;
+  background-color: lightgray;
+  border: 1px solid #666;
+  margin-bottom: 5px;
+  padding-bottom: 10px;
+  padding-right: 5px;
+}
+
+.indesign{
+  height: 30px;
+  width: 83vw;
+  background-color: lightgray;
+  border: 1px solid #666;
+  margin-bottom: 5px;
+  padding-bottom: 10px;
+  padding-right: 5px;
+}
+
+.photoshop{
+  height: 30px;
+  width: 35vw;
+  background-color: lightgray;
+  border: 1px solid #666;
+  padding-bottom: 10px;
+  padding-right: 5px;
+}
+
+.tableau{
+  height: 30px;
+  width: 89vw;
+  background-color: lightgray;
+  border: 1px solid #666;
+  margin-bottom: 5px;
+  padding-bottom: 10px;
+  padding-right: 5px;
+}
+
+.excel{
+  height: 30px;
+  width: 35vw;
+  background-color: lightgray;
+  border: 1px solid #666;
+  margin-bottom: 5px;
+  padding-bottom: 10px;
+  padding-right: 5px;
+}
+
+.d3{
+  height: 30px;
+  width: 15vw;
+  background-color: lightgray;
+  border: 1px solid #666;
+  padding-bottom: 10px;
+  padding-right: 5px;
+}
+}
+
   @media(max-width: 496px) {
   .flex {
     display: flex;
