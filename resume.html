@@ -6,411 +6,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <style>
- .menu {
- list-style:none;
-  padding:0;
-  text-align:center;
-  position: fixed;
-  width: 100%;
-  z-index: 2;
-  background-color: white;
-  margin:0;
-  border-width: 0px 0px 1px 0px;
-  border-style: solid;
-  border-color: lightgray;
- }
-
- .link {
-  display:inline-block;
-  width:25%;
-  position:relative;
-  float: right;
- }
-
- .linkName {
-  padding:10px;
-  text-decoration:none;
-  color:black;
-  display:block;
-  cursor:pointer;
-  font: small-caps 21px 'Lato', sans-serif;
-  letter-spacing: 1px;
- }
-
- .linkName:hover {
-  background-color:lightgray;
-  -moz-transition: all .5s linear;
-  -ms-transition: all .5s linear;
-  -o-transition: all .5s linear;
-  -webkit-transition: all .5s linear;
-  transition: all .5s linear;
- }
-
- .submenu {
-  width:99.5%;
-  padding:0;
-  list-style:none;
-  border-left:1px solid lightgray;
-  border-right:1px solid lightgray;
-  border-bottom:1px solid lightgray;
-  border-radius: 0px 0px 10px 10px;
-  text-align:left;
-  display:none;
-  position:absolute;
-  background-color:white;
- }
-
- .sublink {
-  cursor:pointer;
-  padding: 10px;
-  letter-spacing: 1px;
-  font: 17px 'Lato', sans-serif;
-  text-align: left;
- }
-
- .sublink:hover {
-  background-color:lightgray;
-  -moz-transition: all .5s linear;
-  -ms-transition: all .5s linear;
-  -o-transition: all .5s linear;
-  -webkit-transition: all .5s linear;
-  transition: all .5s linear; 
- }
-
- a{
-  color: black;
-  text-decoration: none;
- }
-
- a:selected{
-  border: 0px;
- }
-
- .permahover{
-  background-color: lightgray;
- }
-
- .name li{
-  float: left;
-  text-align: center;
-  color: #383839;
-  width: 20%;
-}
-
-.name li a:hover{
-  color: black;
-  background-color: lightgray;
-  opacity: 1;
- }
-
- .banner {
-  height: 400px;
-  width: 100%;
-  position: relative;
-  margin: 0;
-  display: block;
-  background: linear-gradient(#383839, transparent 30%), linear-gradient(0deg, #383839, transparent 30%), url("http://i666.photobucket.com/albums/vv28/jordanebranch/31d71682-f2d2-4fde-9772-4b7e9368f46f_zps0kscwakb.jpg") no-repeat;
-  background-size: cover;
-  background-position: center top;
-  background-attachment: fixed;
- }
-
- .transitionBanner {
-  width: 100%;
-  height: 350px;
-  margin-top: 50px;
-  background: linear-gradient(#383839, transparent 20%), linear-gradient(0deg, #383839, transparent 20%), url("http://i666.photobucket.com/albums/vv28/jordanebranch/eaf9d586-6ad1-41e2-a565-918d341e738e_zpshjjmesce.jpg");
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
- }
-
- .transitionBanner2 {
-  width: 100%;
-  height: 350px;
-  margin-top: 50px;
-  background: linear-gradient(#383839, transparent 20%), linear-gradient(0deg, #383839, transparent 20%), url("http://i666.photobucket.com/albums/vv28/jordanebranch/coding_zpscqflavxj.jpg");
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
- }
-
- .transitionBanner3 {
-  width: 100%;
-  height: 350px;
-  margin-top: 50px;
-  background: linear-gradient(#383839, transparent 30%), linear-gradient(0deg, #383839, transparent 30%), url("http://i666.photobucket.com/albums/vv28/jordanebranch/New%20York_zpsdzw2ug7e.jpg");
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
- }
-
- .transitionBanner4 {
-  width: 100%;
-  height: 350px;
-  margin-top: 50px;
-  background: linear-gradient(#383839, transparent 20%), linear-gradient(0deg, #383839, transparent 20%), url("http://i666.photobucket.com/albums/vv28/jordanebranch/bridge_zps14koymf3.jpeg");
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
- }
-
- body {
-  margin: 0px;
-  padding: 0px;
-  font: 100% 'Lato', sans-serif;
- }
-
-h1{
-	width: 100%;
-	margin: 0 auto;
-	margin-bottom: 0px;
-	color: lightgray;
-	background-color: #393939;
-	padding-top: 80px;
-	padding-bottom: 30px;
-	text-align: center;
-	font: small-caps 100px 'Lato', sans-serif;
-}
-
- h2 {
-  padding: 15px;
-  padding-top: 30px;
-  margin: 0;
-  font-size: 50px;
-  font: small-caps 55px 'Lato', sans-serif;
- }
-
- h3 {
-  margin-left: 0px;
-  margin-top: 10px;
-  font-size: 20px;
-  background-color: lightgray;
-  padding: 10px;
-  letter-spacing: 1px;
- }
-
- h4 {
-  margin-top: 30px;
-  margin-bottom: 0px;
-  font-size: 20px;
-  border: solid;
-  border-width: 0px 0px 1px 0px;
-  padding-bottom: 8px;
-  width: 30%;
- }
-
- .bullets li{
-  list-style-type: none;
-  line-height: 22px;
-  font-size: 18px;
- }
-
- .border{
-  border: solid;
-  border-width: 0px 0px 1px 0px;
-  padding-bottom: 5px;
-  width: 400px;
- }
-
-#contact-bar li ul{
-  display: inline-block;
-  float: right;
-  width: 60px;
-  margin: 0px;
-  padding: 0px;
-}
-
-#contact-bar{
-  bottom: 0px;
-  background-color: lightgray;
-  height: 60px;
-  width: 100%;
-  padding-top: 15px;
-  margin-top: 35px;
-}
-
-.contactEmoji{
-  font-size: 40px;
-  color: #393939;
-}
-
-.contactEmoji:hover {
-  color: white;
-  -moz-transition: all .3s linear;
-  -ms-transition: all .3s linear;
-  -o-transition: all .3s linear;
-  -webkit-transition: all .3s linear;
-  transition: all .3s linear;
-}
-
-li{
- list-style-type: none;
-}
-
-button:focus {
-  outline:0;
-}
-
-button{
-  height: 50px;
-  width: 150px;
-  padding: 5px;
-  border-radius: 10px;
-  float:right;
-  color: lightgray;
-  background-color: #393939;
-  font: small-caps 20px 'Lato', sans-serif;
-}
-
-button:hover{
-  -moz-transition: all .5s linear;
-  -ms-transition: all .5s linear;
-  -o-transition: all .5s linear;
-  -webkit-transition: all .5s linear;
-  transition: all .5s linear;
-  background-color: white;
-  color: #393939;
-  cursor: pointer;
-}
-
-#contact-bar .pdfFloat{
-  display: inline-block;
-  float: left;
-  width: 40px;
-  margin: 0px;
-  padding: 0px;
-  margin-left: 11vw;
-  
-}
-
- .paddingDate {
-  line-height: 30px;
-  font-size: 15px;
-  font-style: italic;
- }
-
- #address a {
-  color: white;
- }
-
- a:hover{
-  opacity: .7;
- }
- 
-.skillName h1{
-  text-align: center;
-  margin: 0;
-  margin-bottom: 5px;
-  font: small-caps 30px 'Lato', sans-serif;
-  background-color: white;
-  color: black;
-  padding: 0;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.skillName p{
-  text-align: right;
-  font: small-caps 18px 'Lato', sans-serif;
-}
-
-.skillName{
-  width: 31%;
-  display: inline-block;
-  border: solid #666;
-  border-width: 1px 1px 0px 0px;
-  margin: 10px;
-}
-
-.html{
-  height: 30px;
-  width: 25vw;
-  background-color: lightgray;
-  border: 1px solid #666;
-  margin-bottom: 5px;
-  padding-bottom: 10px;
-  padding-right: 5px;
-}
-
-.css{
-  height: 30px;
-  width: 25vw;
-  background-color: lightgray;
-  border: 1px solid #666;
-  margin-bottom: 5px;
-  padding-bottom: 10px;
-  padding-right: 5px;
-}
-
-.javascript{
-  height: 30px;
-  width: 18vw;
-  background-color: lightgray;
-  border: 1px solid #666;
-  padding-bottom: 10px;
-  padding-right: 5px;
-}
-
-.illustrator{
-  height: 30px;
-  width: 25vw;
-  background-color: lightgray;
-  border: 1px solid #666;
-  margin-bottom: 5px;
-  padding-bottom: 10px;
-  padding-right: 5px;
-}
-
-.indesign{
-  height: 30px;
-  width: 23vw;
-  background-color: lightgray;
-  border: 1px solid #666;
-  margin-bottom: 5px;
-  padding-bottom: 10px;
-  padding-right: 5px;
-}
-
-.photoshop{
-  height: 30px;
-  width: 14vw;
-  background-color: lightgray;
-  border: 1px solid #666;
-  padding-bottom: 10px;
-  padding-right: 5px;
-}
-
-.tableau{
-  height: 30px;
-  width: 25vw;
-  background-color: lightgray;
-  border: 1px solid #666;
-  margin-bottom: 5px;
-  padding-bottom: 10px;
-  padding-right: 5px;
-}
-
-.excel{
-  height: 30px;
-  width: 10vw;
-  background-color: lightgray;
-  border: 1px solid #666;
-  margin-bottom: 5px;
-  padding-bottom: 10px;
-  padding-right: 5px;
-}
-
-.d3{
-  height: 30px;
-  width: 6vw;
-  background-color: lightgray;
-  border: 1px solid #666;
-  padding-bottom: 10px;
-  padding-right: 5px;
-}
 
 @media(max-width: 687px) {
   .skillName{
@@ -570,8 +168,7 @@ button:hover{
         </li>
       </ul>
     </nav>
-  </div>
-  <h1>Jordan Branch</h1>
+  <h2 class="resumeheader">Jordan Branch</h2>
   <h2 id="education">Education</h2>
   <h3>University of Maryland</h3>
 <div class="bullets">
@@ -712,7 +309,7 @@ button:hover{
   <div class="transitionBanner2"></div>
   <h2 id="tech">Technical Tools</h2>
   <div class="skillName">
-<h1>Coding</h1>
+<h2 class="skillheader">Coding</h2>
 <div class="html">
   <p>HTML</p>
 </div>
@@ -725,7 +322,7 @@ button:hover{
   
 </div>
   <div class="skillName">
-<h1>Adobe</h1>
+<h2 class="skillheader">Adobe</h2>
 <div class="illustrator">
   <p>Illustrator</p>
 </div>
@@ -736,7 +333,7 @@ button:hover{
   <p>Photoshop</p>
   </div>
 </div><div class="skillName">
-<h1>Data</h1>
+<h2 class="skillheader">Data</h2>
 <div class="tableau">
   <p>Tableau</p>
 </div>
@@ -747,7 +344,7 @@ button:hover{
   <p>D3.js</p>
   </div>
 </div>
-  <div id="contact-bar">
+  <div id="contact-bar-resume">
         <li>
           <a href="https://twitter.com/Jordan_EBranch">
             <ul class="contactEmoji"><i class="fa fa-twitter-square"></i></ul>
@@ -765,6 +362,7 @@ button:hover{
             </div>
         </li>
       </div>
+
   <script>
   $(document).ready(function() {
    $('.accordion').hover(function(){
