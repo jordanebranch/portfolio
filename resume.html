@@ -5,6 +5,7 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 <style>
  .menu {
@@ -176,7 +177,7 @@ h1{
 
  h2 {
   padding: 15px;
-  padding-top: 60px;
+  padding-top: 30px;
   margin: 0;
   font-size: 50px;
   font: small-caps 55px 'Lato', sans-serif;
@@ -184,7 +185,7 @@ h1{
 
  h3 {
   margin-left: 0px;
-  margin-top: 30px;
+  margin-top: 10px;
   font-size: 20px;
   background-color: lightgray;
   padding: 10px;
@@ -214,12 +215,76 @@ h1{
   width: 400px;
  }
 
- .contactInfo {
-  background-color: #383839;
+#contact-bar li ul{
+  display: inline-block;
+  float: right;
+  width: 60px;
+  margin: 0px;
+  padding: 0px;
+}
+
+#contact-bar{
+  bottom: 0px;
+  background-color: lightgray;
+  height: 60px;
+  width: 100%;
+  padding-top: 15px;
+  margin-top: 35px;
+}
+
+.contactEmoji{
+  font-size: 40px;
+  color: #393939;
+}
+
+.contactEmoji:hover {
   color: white;
-  padding: 1px;
-  text-align: center;
- }
+  -moz-transition: all .3s linear;
+  -ms-transition: all .3s linear;
+  -o-transition: all .3s linear;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+li{
+ list-style-type: none;
+}
+
+button:focus {
+  outline:0;
+}
+
+button{
+  height: 50px;
+  width: 150px;
+  padding: 5px;
+  border-radius: 10px;
+  float:right;
+  color: lightgray;
+  background-color: #393939;
+  font: small-caps 20px 'Lato', sans-serif;
+}
+
+button:hover{
+  -moz-transition: all .5s linear;
+  -ms-transition: all .5s linear;
+  -o-transition: all .5s linear;
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear;
+  background-color: white;
+  color: #393939;
+  cursor: pointer;
+}
+
+#contact-bar .pdfFloat{
+  display: inline-block;
+  float: left;
+  width: 40px;
+  margin: 0px;
+  padding: 0px;
+  margin-left: 11vw;
+  
+}
 
  .paddingDate {
   line-height: 30px;
@@ -234,6 +299,214 @@ h1{
  a:hover{
   opacity: .7;
  }
+ 
+.skillName h1{
+  text-align: center;
+  margin: 0;
+  margin-bottom: 5px;
+  font: small-caps 30px 'Lato', sans-serif;
+  background-color: white;
+  color: black;
+  padding: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.skillName p{
+  text-align: right;
+  font: small-caps 18px 'Lato', sans-serif;
+}
+
+.skillName{
+  width: 31%;
+  display: inline-block;
+  border: solid #666;
+  border-width: 1px 1px 0px 0px;
+  margin: 10px;
+}
+
+.html{
+  height: 30px;
+  width: 25vw;
+  background-color: lightgray;
+  border: 1px solid #666;
+  margin-bottom: 5px;
+  padding-bottom: 10px;
+  padding-right: 5px;
+}
+
+.css{
+  height: 30px;
+  width: 25vw;
+  background-color: lightgray;
+  border: 1px solid #666;
+  margin-bottom: 5px;
+  padding-bottom: 10px;
+  padding-right: 5px;
+}
+
+.javascript{
+  height: 30px;
+  width: 18vw;
+  background-color: lightgray;
+  border: 1px solid #666;
+  padding-bottom: 10px;
+  padding-right: 5px;
+}
+
+.illustrator{
+  height: 30px;
+  width: 25vw;
+  background-color: lightgray;
+  border: 1px solid #666;
+  margin-bottom: 5px;
+  padding-bottom: 10px;
+  padding-right: 5px;
+}
+
+.indesign{
+  height: 30px;
+  width: 23vw;
+  background-color: lightgray;
+  border: 1px solid #666;
+  margin-bottom: 5px;
+  padding-bottom: 10px;
+  padding-right: 5px;
+}
+
+.photoshop{
+  height: 30px;
+  width: 14vw;
+  background-color: lightgray;
+  border: 1px solid #666;
+  padding-bottom: 10px;
+  padding-right: 5px;
+}
+
+.tableau{
+  height: 30px;
+  width: 25vw;
+  background-color: lightgray;
+  border: 1px solid #666;
+  margin-bottom: 5px;
+  padding-bottom: 10px;
+  padding-right: 5px;
+}
+
+.excel{
+  height: 30px;
+  width: 10vw;
+  background-color: lightgray;
+  border: 1px solid #666;
+  margin-bottom: 5px;
+  padding-bottom: 10px;
+  padding-right: 5px;
+}
+
+.d3{
+  height: 30px;
+  width: 6vw;
+  background-color: lightgray;
+  border: 1px solid #666;
+  padding-bottom: 10px;
+  padding-right: 5px;
+}
+
+@media(max-width: 687px) {
+  .skillName{
+  width: 96%;
+  display: inline-block;
+  border: solid #666;
+  border-width: 1px 1px 0px 0px;
+  margin: 10px;
+}
+  .html{
+  height: 30px;
+  width: 89vw;
+  background-color: lightgray;
+  border: 1px solid #666;
+  margin-bottom: 5px;
+  padding-bottom: 10px;
+  padding-right: 5px;
+}
+
+.css{
+  height: 30px;
+  width: 89vw;
+  background-color: lightgray;
+  border: 1px solid #666;
+  margin-bottom: 5px;
+  padding-bottom: 10px;
+  padding-right: 5px;
+}
+
+.javascript{
+  height: 30px;
+  width: 60vw;
+  background-color: lightgray;
+  border: 1px solid #666;
+  padding-bottom: 10px;
+  padding-right: 5px;
+}
+
+.illustrator{
+  height: 30px;
+  width: 89vw;
+  background-color: lightgray;
+  border: 1px solid #666;
+  margin-bottom: 5px;
+  padding-bottom: 10px;
+  padding-right: 5px;
+}
+
+.indesign{
+  height: 30px;
+  width: 83vw;
+  background-color: lightgray;
+  border: 1px solid #666;
+  margin-bottom: 5px;
+  padding-bottom: 10px;
+  padding-right: 5px;
+}
+
+.photoshop{
+  height: 30px;
+  width: 35vw;
+  background-color: lightgray;
+  border: 1px solid #666;
+  padding-bottom: 10px;
+  padding-right: 5px;
+}
+
+.tableau{
+  height: 30px;
+  width: 89vw;
+  background-color: lightgray;
+  border: 1px solid #666;
+  margin-bottom: 5px;
+  padding-bottom: 10px;
+  padding-right: 5px;
+}
+
+.excel{
+  height: 30px;
+  width: 35vw;
+  background-color: lightgray;
+  border: 1px solid #666;
+  margin-bottom: 5px;
+  padding-bottom: 10px;
+  padding-right: 5px;
+}
+
+.d3{
+  height: 30px;
+  width: 15vw;
+  background-color: lightgray;
+  border: 1px solid #666;
+  padding-bottom: 10px;
+  padding-right: 5px;
+}
+}
  
 @media(max-width: 700px) {
  body{
@@ -438,13 +711,60 @@ h1{
   </ul>
   <div class="transitionBanner2"></div>
   <h2 id="tech">Technical Tools</h2>
-  <div class="transitionBanner4">
+  <div class="skillName">
+<h1>Coding</h1>
+<div class="html">
+  <p>HTML</p>
+</div>
+<div class="css">
+<p>CSS3</p>
+</div>
+<div class="javascript">
+  <p>JavaScript</p>
   </div>
-  <div class="contactInfo">
-    <p id="address">4330 Hartwick Rd. Apt. 602 | College Park, MD, 20740
-      <br> 407-227-0951 | <a href="jordan.ebranch@gmail.com">jordan.ebranch@gmail.com</a></p>
+  
+</div>
+  <div class="skillName">
+<h1>Adobe</h1>
+<div class="illustrator">
+  <p>Illustrator</p>
+</div>
+<div class="indesign">
+<p>InDesign</p>
+</div>
+<div class="photoshop">
+  <p>Photoshop</p>
   </div>
+</div><div class="skillName">
+<h1>Data</h1>
+<div class="tableau">
+  <p>Tableau</p>
+</div>
+<div class="excel">
+<p>Excel</p>
+</div>
+<div class="d3">
+  <p>D3.js</p>
   </div>
+</div>
+  <div id="contact-bar">
+        <li>
+          <a href="https://twitter.com/Jordan_EBranch">
+            <ul class="contactEmoji"><i class="fa fa-twitter-square"></i></ul>
+          </a>
+          <a href="https://www.linkedin.com/in/jordanebranch">
+            <ul class="contactEmoji"><i class="fa fa-linkedin-square"></i></ul>
+          </a>
+          <a href="mailto:jordane.branch@gmail.com">
+            <ul class="contactEmoji"><i class="fa fa-envelope-square"></i></ul>
+          </a>
+          <a href="https://github.com/jordanebranch">
+            <ul class="contactEmoji"><i class="fa fa-github-square"></i></ul></a>
+            <div class="pdfFloat">
+            <ul class="contactEmoji"><a href="https://drive.google.com/file/d/0B4DCAte3cN2qQjNLNG5HRjRfWE0/view"><button>Resume PDF</button></a></ul>
+            </div>
+        </li>
+      </div>
   <script>
   $(document).ready(function() {
    $('.accordion').hover(function(){
