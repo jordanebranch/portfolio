@@ -13,46 +13,16 @@
 	letter-spacing: 1px;
 	margin-bottom: 50px;
 	margin-top: 0px;
-	padding: 10px;
-	padding-left: 40px;
 	position: relative;
 	top: 100px;
+    left: 0px;
 	color: black;
 	cursor: pointer;
     background-color: lightgray;
 	border-radius: 10px;
     text-align:center;
-  }
-
-  .firsth1 {
-	background-color: #D8D8D8;
-	border-radius: 10px;
-	color: black;
-	text-align: center;
-	margin: 0;
-	margin-bottom: 50px;
-	padding: 0;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	cursor: auto;
-	font: small-caps 50px 'Lato', sans-serif;
-	letter-spacing: 3px;
-  }
-
-  .firsth1:hover{
-	background-color: #D8D8D8;
-	border-radius: 10px;
-	color: black;
-	text-align: center;
-	margin: 0;
-	margin-bottom: 50px;
-	padding: 0;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	cursor: auto;
-	font: small-caps 50px 'Lato', sans-serif;
-	letter-spacing: 3px;
-	border: none;
+    padding-top: 10px;
+    padding-bottom:10px;
   }
 
 .row {
@@ -63,7 +33,6 @@
 body {
   margin: 0 auto;
   padding: 0;
-  width: 100%;
  }
 
 .thumbnail {
@@ -399,7 +368,6 @@ button:hover{
  }
 
 .resumeheader{
-	width: 100%;
 	margin: 0 auto;
 	margin-bottom: 0px;
 	color: lightgray;
@@ -664,14 +632,16 @@ button:hover{
 	letter-spacing: 1px;
 	margin-bottom: 50px;
 	margin-top: 0px;
-	padding: 10px;
-	padding-left: 40px;
 	position: relative;
 	top: 100px;
+    left: 0px;
 	color: #393939;
 	cursor: pointer;
 	border: 1px solid lightgray;
 	border-radius: 10px;
+    width: auto;
+    padding-top: 10px;
+    padding-bottom:10px;
   }
 
   .unpublishedh1:hover, .publishedh1:hover{
