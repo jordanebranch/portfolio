@@ -61,9 +61,9 @@
 }
 
 body {
-  margin: 0px;
-  padding: 0px;
-  font: 100% 'Lato', sans-serif;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
  }
 
 .thumbnail {
@@ -250,7 +250,7 @@ h1 {
   position: relative;
   top: -230px;
   left: -30px;
-  width: 100%
+  width: 100%;
 }
 
 #circle {
@@ -399,7 +399,7 @@ button:hover{
  }
 
 .resumeheader{
-	width: 97.7%;
+	width: 100%;
 	margin: 0 auto;
 	margin-bottom: 0px;
 	color: lightgray;
@@ -425,6 +425,7 @@ button:hover{
   background-color: lightgray;
   padding: 10px;
   letter-spacing: 1px;
+  font: 30px 'Lato', sans-serif;
  }
 
  h4 {
@@ -435,12 +436,13 @@ button:hover{
   border-width: 0px 0px 1px 0px;
   padding-bottom: 8px;
   width: 30%;
+  font: 20px 'Lato', sans-serif;
  }
 
  .bullets li{
   list-style-type: none;
   line-height: 22px;
-  font-size: 18px;
+  font: 18px 'Lato', sans-serif;
  }
 
  .border{
