@@ -778,11 +778,19 @@ button{
 
 .name li a{
   float: left;
-  text-align: left;
+  text-align: center;
   color: #383839;
-  width: 50%;
+  width: 150px;
 }
 
+.nameHomepage li{
+  float: left;
+  text-align: center;
+  color: #383839;
+  width: 180px;
+}
+  }
+  
 @media(max-width: 950px) {
   .skillName{
   width: 96%;
