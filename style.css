@@ -573,12 +573,12 @@ button:hover{
 /*Portfolio landing page*/
 
 #circle2 {
-  width: 30vw;
-  height: 30vw;
+  width: 39vw;
+  height: 39vw;
   background: url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/new_year_background.png");
-  -moz-border-radius: 17.5vw;
-  -webkit-border-radius: 17.5vw;
-  border-radius: 17.5vw;
+  -moz-border-radius: 17vw;
+  -webkit-border-radius: 17vw;
+  border-radius: 20vw;
   position: relative;
   top: 80px;
   box-shadow: 0px 0px 5px 0px #393939;
@@ -597,14 +597,14 @@ button:hover{
 .shortText {
   position: relative;
   font: small-caps 5vw 'Lato', sans-serif;
-  top: 11vw;
+  top: 14vw;
   text-align: center;
 }
 
 .longText {
   position: relative;
   font: small-caps 5vw 'Lato', sans-serif;
-  top: 8vw;
+  top: 11vw;
   text-align: center;
 }
 
@@ -616,10 +616,9 @@ button:hover{
   display: flex;
   text-wrap: none;
   padding: 0;
-  margin-bottom: 50px;
-  margin-left: 3px;
+  margin: 0 auto;
   float: left;
-  width: 33%;
+  width: 50%;
   -moz-transition: all .5s linear;
   -ms-transition: all .5s linear;
   -o-transition: all .5s linear;
