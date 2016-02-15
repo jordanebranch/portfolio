@@ -1,0 +1,424 @@
+<html>
+<head>
+		<link rel="stylesheet" href="2.css"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+</head>
+<style>
+    html,
+body {
+  margin: 0;
+  height: 100%;
+  background: #666;
+  text-align: center;
+}
+
+.container {
+  width: 600px;
+  height: 350px;
+  margin: 250px auto 0;
+  position: relative;
+  background: pink;
+}
+
+.letter {
+  position: relative;
+  width: 580px;
+  min-height: 300px;
+  height: auto;
+  background: #fff;
+  margin: 0 auto;
+  top: 10px;
+  transition: 2s ease-in-out;
+  transition-delay: 2s;
+  z-index: 300;
+}
+
+.left,
+.right,
+.top {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  z-index: 310;
+}
+
+.left {
+  border-left: 300px solid lightgray;
+  border-top: 160px solid transparent;
+  border-bottom: 160px solid transparent;
+}
+
+.right {
+  border-right: 300px solid lightgray;
+  border-top: 160px solid transparent;
+  border-bottom: 160px solid transparent;
+  left: 300px;
+}
+
+.top {
+  border-right: 300px solid transparent;
+  border-top: 200px solid pink;
+  border-left: 300px solid transparent;
+  transition: transform 1s, border 1s, ease-in-out;
+  transform-origin: top;
+  transform: rotateX(0deg);
+  z-index: 500;
+}
+
+.bottom {
+  width: 600px;
+  height: 190px;
+  position: absolute;
+  background: lightgray;
+  top: 160px;
+  z-index: 300;
+}
+
+.open {
+  transform-origin: top;
+  transform: rotateX(180deg);
+  transition: transform .7s, border .7s, .7s ease-in-out;
+  border-top: 200px solid pink;
+  z-index: 200;
+}
+
+.pull {
+  -webkit-animation: letter_animation 2s 1 ease-in-out;
+  animation: letter_animation 2s 1 ease-in-out;
+  -webkit-animation-delay: .9s;
+  animation-delay: .45s;
+  transition: 1.5s;
+  transition-delay: 1s;
+  z-index: 350;
+}
+
+#messarea {
+  height: 117px;
+  width: 560px;
+  padding: 10px;
+}
+
+.typewriter {
+  position: relative;
+  top: 0px;
+  visibility: hidden;
+  font: 60px 'Pacifico', cursive;
+  color: #666;
+}
+
+.star {
+  width: 10px;
+  height: 10px;
+  position: relative;
+  left: 250px;
+  top: 100px;
+  background-color: none;
+  -webkit-animation-name: twinkle;
+  -webkit-animation-duration: 2s;
+  animation-name: twinkle;
+  animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  z-index: 300;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.star2 {
+  width: 10px;
+  height: 10px;
+  position: relative;
+  left: 120px;
+  top: 60px;
+  background-color: none;
+  -webkit-animation-name: twinkle;
+  -webkit-animation-duration: 3s;
+  animation-name: twinkle;
+  animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+  z-index: 300;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-animation-delay: 10s; /* Chrome, Safari, Opera */
+    animation-delay: 8s;
+}
+
+.star3 {
+  width: 10px;
+  height: 10px;
+  position: relative;
+  left: 300px;
+  background-color: none;
+  -webkit-animation-name: twinkle;
+  -webkit-animation-duration: 3s;
+  animation-name: twinkle;
+  animation-duration: 3s;
+  -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+  -webkit-animation-iteration-count: infinite;
+  z-index: 300;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.star4 {
+  width: 10px;
+  height: 10px;
+  position: relative;
+  left: 80px;
+  top: -10px;
+  background-color: none;
+  -webkit-animation-name: twinkle;
+  -webkit-animation-duration: 3s;
+  animation-name: twinkle;
+  animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+   -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+  z-index: 300;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.star5 {
+  width: 10px;
+  height: 10px;
+  position: relative;
+  left: 500px;
+  background-color: none;
+  -webkit-animation-name: twinkle;
+  -webkit-animation-duration: 3s;
+  animation-name: twinkle;
+  animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+  z-index: 300;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-animation-delay: 7s;
+    animation-delay: 7s;
+}
+
+.star6 {
+  width: 10px;
+  height: 10px;
+  position: relative;
+  left: 450px;
+  top: 40px;
+  background-color: none;
+  -webkit-animation-name: twinkle;
+  -webkit-animation-duration: 3s;
+  animation-name: twinkle;
+  animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-delay: 10s;
+    animation-delay: 10s;
+  z-index: 300;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-animation-delay: 5s;
+    animation-delay: 5s;
+}
+
+.star7 {
+  width: 10px;
+  height: 10px;
+  position: relative;
+  left: 100px;
+  top: -20px;
+  background-color: none;
+  -webkit-animation-name: twinkle;
+  -webkit-animation-duration: 3s;
+  animation-name: twinkle;
+  animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-delay: 7s;
+    animation-delay: 7s;
+  z-index: 300;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.star8 {
+  width: 10px;
+  height: 10px;
+  position: relative;
+  left: 20px;
+  -background-color: none;
+  -webkit-animation-name: twinkle;
+  -webkit-animation-duration: 2s;
+  animation-name: twinkle;
+  animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-delay: 4s;
+    animation-delay: 4s;
+  z-index: 300;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  
+}
+
+.star9 {
+  width: 10px;
+  height: 10px;
+  position: relative;
+  left: 500px;
+  top: -60px;
+  background-color: none;
+  -webkit-animation-name: twinkle;
+  -webkit-animation-duration: 2s;
+  animation-name: twinkle;
+  animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  z-index: 300;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.star10 {
+  width: 10px;
+  height: 10px;
+  position: relative;
+  left: 300px;
+  top: -40px;
+  background-color: none;
+  -webkit-animation-name: twinkle;
+  -webkit-animation-duration: 2s;
+  animation-name: twinkle;
+  animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  z-index: 300;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+@-webkit-keyframes letter_animation {
+  0% {
+    transform: translatey(0px);
+    z-index: 300;
+    transition: .9s ease-in-out;
+  }
+  50% {
+    transform: translatey(-340px);
+    z-index: 300;
+    transition: .9s ease-in-out;
+  }
+  51% {
+    transform: translatey(-340px);
+    z-index: 350;
+    transition: .9s ease-in-out;
+  }
+  100% {
+    transform: translatey(0px);
+    z-index: 350;
+    transition: .9s ease-in-out;
+  }
+}
+
+@keyframes letter_animation {
+  0% {
+    transform: translatey(0px);
+    z-index: 300;
+    transition: .9s ease-in-out;
+  }
+  50% {
+    transform: translatey(-340px);
+    z-index: 300;
+    transition: .9s ease-in-out;
+  }
+  51% {
+    transform: translatey(-340px);
+    z-index: 350;
+    transition: .9s ease-in-out;
+  }
+  100% {
+    transform: translatey(0px);
+    z-index: 350;
+    transition: .9s ease-in-out;
+  }
+}
+
+@-webkit-keyframes twinkle {
+  from {
+    background-color: red;
+    transition: .9s ease-out;
+  }
+  to {
+    background-color: yellow;
+    transition: .9s ease-out;
+  }
+}
+
+@keyframes twinkle {
+  from {
+    background-color: none;
+  }
+  to {
+    background-color: pink;
+  }
+}
+    </style>
+	<body>
+		<div class = "container">
+			<div class = "letter">
+        <div class="star"></div>
+        <div class="star2"></div>
+        <div class="star3"></div>
+        <div class="star4"></div>
+        <div class="star5"></div>
+        <div class="star6"></div>
+        <p class="typewriter">Happy Birthday!</p>
+        <div class="star7"></div>
+        <div class="star8"></div>
+        <div class="star9"></div>
+        <div class="star10"></div>
+			</div>
+			<div class = "bottom"></div>			
+			<div class = "left"></div>
+			<div class = "right"></div>
+			<div class = "top"></div>
+		</div>
+        <script>
+        $(document).ready(function() {
+  $('.container').click(function() {
+    $('.top').addClass('open');
+    $('.letter').addClass('pull');
+
+    var text = $('.typewriter').text();
+
+    var length = text.length;
+    var timeOut;
+    var character = 0;
+    var myVar = setInterval(myTimer, 2100);
+
+    function myTimer() {
+      (function typeWriter() {
+        timeOut = setTimeout(function() {
+          $('.typewriter').css('visibility', 'visible');
+          character++;
+          var type = text.substring(0, character);
+          $('.typewriter').text(type);
+          typeWriter();
+
+          if (character == length) {
+            clearTimeout(timeOut);
+          }
+
+        }, 100);
+      }());
+    }
+  })
+});
+    </script>
+	</body>
+</html>
