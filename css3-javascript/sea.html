@@ -1,0 +1,846 @@
+<!doctype html>
+<html>
+<head>
+<title>Sea</title>
+</head>
+<style>
+body {
+  margin: 0;
+  width: 100%;
+}
+
+.sky {
+  width: 100%;
+  height: 380px;
+  background: blue;
+  background: -webkit-linear-gradient(to bottom right, #70609B, #B1D8D7, #FFEC72, yellow);
+  background: -o-linear-gradient(to bottom right, #70609B, #B1D8D7, #FFEC72, yellow);
+  background: -moz-linear-gradient(to bottom right, #70609B, #B1D8D7, #FFEC72, yellow);
+  background: linear-gradient(to bottom right, #70609B, #B1D8D7, #FFEC72, yellow);
+  z-index: -3;
+  margin: 0;
+}
+
+.ocean {
+  width: 100%;
+  height: 600px;
+  background-color: #546491;
+  opacity: .4;
+  z-index: 3;
+  animation: waves 3s infinite;
+}
+
+.sand {
+  width: 100%;
+  height: 150px;
+  background-color: tan;
+}
+
+
+/*whale*/
+
+.whale {
+  width: 480px;
+  height: 300px;
+  background-color: #33353F;
+  margin: 0 auto;
+  position: relative;
+  top: 140px;
+  border-bottom-left-radius: 350px 250px;
+  border-top-left-radius: 300px 400px;
+  border-bottom-right-radius: 600px 300px;
+  border-top-right-radius: 700px 500px;
+  animation: swim 6s infinite;
+}
+
+.whale:hover{
+  animation: roll 3s infinite;
+}
+.fin1 {
+  width: 200px;
+  height: 120px;
+  background-color: #33353F;
+  position: relative;
+  top: 210px;
+  left: 400px;
+  border-bottom-left-radius: 650px 650px;
+  border-top-left-radius: 0px 600px;
+  border-bottom-right-radius: 200px 300px;
+  border-top-right-radius: 700px 500px;
+  -ms-transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+
+.fin2 {
+  width: 200px;
+  height: 120px;
+  background-color: #33353F;
+  position: relative;
+  top: 0px;
+  left: 420px;
+  border-bottom-left-radius: 100px 100px;
+  border-top-left-radius: 300px 500px;
+  border-bottom-right-radius: 850px 900px;
+  border-top-right-radius: 600px 200px;
+  -ms-transform: rotate(-30deg);
+  -webkit-transform: rotate(-30deg);
+  transform: rotate(-30deg);
+}
+
+.eye {
+  width: 40px;
+  height: 40px;
+  background: white;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  position: relative;
+  left: 50px;
+  top: -60px;
+}
+
+.eyeball {
+  width: 20px;
+  height: 20px;
+  background: black;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  position: relative;
+  left: 5px;
+  top: 20px;
+}
+
+
+/*starfish*/
+
+.starfish {
+  margin: 0;
+  position: relative;
+  top: -122px;
+  display: block;
+  width: 0px;
+  height: 0px;
+  border-right: 100px solid transparent;
+  border-bottom: 70px solid pink;
+  border-left: 100px solid transparent;
+  border-radius: 30px;
+  -moz-transform: rotate(35deg);
+  -webkit-transform: rotate(35deg);
+  -ms-transform: rotate(35deg);
+  -o-transform: rotate(35deg);
+  z-index: -1;
+  animation: roll 5s infinite;
+}
+
+.starfish:before {
+  border-bottom: 80px solid pink;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -45px;
+  left: -65px;
+  display: block;
+  content: '';
+  -webkit-transform: rotate(-35deg);
+  -moz-transform: rotate(-35deg);
+  -ms-transform: rotate(-35deg);
+  -o-transform: rotate(-35deg);
+}
+
+.starfish:after {
+  position: absolute;
+  display: block;
+  top: 3px;
+  left: -105px;
+  width: 0px;
+  height: 0px;
+  border-right: 100px solid transparent;
+  border-bottom: 70px solid pink;
+  border-left: 100px solid transparent;
+  border-radius: 30px;
+  -webkit-transform: rotate(-70deg);
+  -moz-transform: rotate(-70deg);
+  -ms-transform: rotate(-70deg);
+  -o-transform: rotate(-70deg);
+  content: '';
+}
+
+.stareyeleft {
+  width: 20px;
+  height: 20px;
+  background: white;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  position: relative;
+  left: -35px;
+  top: 30px;
+  z-index: 1;
+}
+
+.stareyeleft1 {
+  width: 10px;
+  height: 10px;
+  background: black;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  position: relative;
+  left: 5px;
+  top: 10px;
+  z-index: 1;
+}
+
+.stareyeright {
+  width: 20px;
+  height: 20px;
+  background: white;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  position: relative;
+  left: -10px;
+  top: -8px;
+  z-index: 1;
+}
+
+.stareyeright1 {
+  width: 10px;
+  height: 10px;
+  background: black;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  position: relative;
+  left: 5px;
+  top: 10px;
+  z-index: 1;
+}
+
+
+/*Purple Fish*/
+
+.fish {
+  width: 120px;
+  height: 100px;
+  background-color: #70609B;
+  position: relative;
+  top: -380px;
+  left: 450px;
+  -moz-border-radius: 100px / 50px;
+  -webkit-border-radius: 100px / 50px;
+  border-radius: 80px / 60px;
+  z-index: -1;
+  animation: swim 2s infinite;
+}
+
+.fish .fin1 {
+  width: 50px;
+  height: 80px;
+  background-color: #70609B;
+  position: relative;
+  top: -10px;
+  left: 110px;
+  border-bottom-left-radius: 650px 650px;
+  border-top-left-radius: 0px 600px;
+  border-bottom-right-radius: 200px 300px;
+  border-top-right-radius: 700px 500px;
+  -ms-transform: rotate(50deg);
+  -webkit-transform: rotate(50deg);
+  transform: rotate(50deg);
+}
+
+.fish .fin2 {
+  width: 50px;
+  height: 80px;
+  background-color: #70609B;
+  position: relative;
+  top: -30px;
+  left: 110px;
+  border-bottom-left-radius: 200px 300px;
+  border-top-left-radius: 500px 600px;
+  border-bottom-right-radius: 450px 800px;
+  border-top-right-radius: 00px 600px;
+  -ms-transform: rotate(120deg);
+  -webkit-transform: rotate(120deg);
+  transform: rotate(120deg);
+}
+
+.fish .fin3 {
+  width: 50px;
+  height: 30px;
+  background-color: #B1D8D7;
+  position: relative;
+  top: -10px;
+  left: 30px;
+  border-bottom-left-radius: 650px 650px;
+  border-top-left-radius: 0px 600px;
+  border-bottom-right-radius: 200px 300px;
+  border-top-right-radius: 700px 500px;
+  -ms-transform: rotate(160deg);
+  -webkit-transform: rotate(160deg);
+  transform: rotate(160deg);
+  animation: fin 2s infinite ease-out;
+}
+
+.fish .stareyeleft {
+  width: 20px;
+  height: 20px;
+  background: white;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  position: relative;
+  left: 25px;
+  top: -120px;
+  z-index: 1;
+}
+
+.fish .stareyeleft1 {
+  width: 10px;
+  height: 10px;
+  background: black;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  position: relative;
+  left: 5px;
+  top: 10px;
+  z-index: 1;
+}
+
+.lipstop {
+  width: 20px;
+  height: 20px;
+  background-color: pink;
+  position: relative;
+  top: -26px;
+  left: -40px;
+  border-bottom-left-radius: 650px 650px;
+  border-top-left-radius: 0px 600px;
+  border-bottom-right-radius: 200px 300px;
+  border-top-right-radius: 700px 500px;
+  -ms-transform: rotate(150deg);
+  -webkit-transform: rotate(150deg);
+  transform: rotate(150deg);
+}
+
+.lipsbottom {
+  width: 25px;
+  height: 20px;
+  background-color: pink;
+  position: relative;
+  top: -35px;
+  left: -40px;
+  border-bottom-left-radius: 650px 650px;
+  border-top-left-radius: 0px 600px;
+  border-bottom-right-radius: 200px 300px;
+  border-top-right-radius: 700px 500px;
+  -ms-transform: rotate(130deg);
+  -webkit-transform: rotate(130deg);
+  transform: rotate(130deg);
+}
+
+.bubble1{
+  width: 36px;
+	height: 36px;
+	border: 1px solid blue;
+	-moz-border-radius: 18px;
+	-webkit-border-radius: 18px;
+	border-radius: 18px;
+  position: relative;
+  top: -250px;
+  left: -50px;
+}
+
+.bubble2{
+  width: 5px;
+	height: 5px;
+	border: 1px solid blue;
+	-moz-border-radius: 2.5px;
+	-webkit-border-radius: 2.5px;
+	border-radius: 2.5px;
+  position: relative;
+  top: -200px;
+  left: -50px;
+}
+
+.bubble3{
+  width: 20px;
+	height: 20px;
+	border: 1px solid blue;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+  position: relative;
+  top: -240px;
+  left: -20px;
+}
+
+.bubble4{
+  width: 10px;
+	height: 10px;
+	border: 1px solid blue;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+  position: relative;
+  top: -200px;
+  left: -30px;
+}
+
+/*Yellow Fish*/
+
+.fish2 {
+  width: 120px;
+  height: 100px;
+  background-color: #FFD149;
+  position: relative;
+  top: -700px;
+  left: 45px;
+  -moz-border-radius: 100px / 50px;
+  -webkit-border-radius: 100px / 50px;
+  border-radius: 80px / 60px;
+  z-index: -1;
+  animation: swim 3s infinite;
+  animation-delay: 2s;
+}
+
+.fish2 .fin1 {
+  width: 50px;
+  height: 80px;
+  background-color: #FFD149;
+  position: relative;
+  top: -10px;
+  left: 110px;
+  border-bottom-left-radius: 650px 650px;
+  border-top-left-radius: 0px 600px;
+  border-bottom-right-radius: 200px 300px;
+  border-top-right-radius: 700px 500px;
+  -ms-transform: rotate(50deg);
+  -webkit-transform: rotate(50deg);
+  transform: rotate(50deg);
+}
+
+.fish2 .fin2 {
+  width: 50px;
+  height: 80px;
+  background-color: #FFD149;
+  position: relative;
+  top: -30px;
+  left: 110px;
+  border-bottom-left-radius: 200px 300px;
+  border-top-left-radius: 500px 600px;
+  border-bottom-right-radius: 450px 800px;
+  border-top-right-radius: 00px 600px;
+  -ms-transform: rotate(120deg);
+  -webkit-transform: rotate(120deg);
+  transform: rotate(120deg);
+}
+
+.fish2 .fin3 {
+  width: 50px;
+  height: 30px;
+  background-color: #8AD8D2;
+  position: relative;
+  top: -10px;
+  left: 30px;
+  border-bottom-left-radius: 650px 650px;
+  border-top-left-radius: 0px 600px;
+  border-bottom-right-radius: 200px 300px;
+  border-top-right-radius: 700px 500px;
+  -ms-transform: rotate(160deg);
+  -webkit-transform: rotate(160deg);
+  transform: rotate(160deg);
+  animation: fin 2s infinite ease-out;
+}
+
+.fish2 .stareyeleft {
+  width: 20px;
+  height: 20px;
+  background: white;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  position: relative;
+  left: 25px;
+  top: -120px;
+  z-index: 1;
+}
+
+.fish2 .stareyeleft1 {
+  width: 10px;
+  height: 10px;
+  background: black;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  position: relative;
+  left: 5px;
+  top: 10px;
+  z-index: 1;
+}
+
+.fish2 .lipstop {
+  width: 20px;
+  height: 20px;
+  background-color: pink;
+  position: relative;
+  top: 0px;
+  left: -35px;
+  border-bottom-left-radius: 650px 650px;
+  border-top-left-radius: 0px 600px;
+  border-bottom-right-radius: 200px 300px;
+  border-top-right-radius: 700px 500px;
+  -ms-transform: rotate(160deg);
+  -webkit-transform: rotate(160deg);
+  transform: rotate(170deg);
+}
+
+.fish2 .lipsbottom {
+  width: 25px;
+  height: 20px;
+  background-color: pink;
+  position: relative;
+  top: -5px;
+  left: -35px;
+  border-bottom-left-radius: 650px 650px;
+  border-top-left-radius: 0px 600px;
+  border-bottom-right-radius: 200px 300px;
+  border-top-right-radius: 700px 500px;
+  -ms-transform: rotate(160deg);
+  -webkit-transform: rotate(160deg);
+  transform: rotate(130deg);
+}
+
+
+/*Red Fish*/
+
+.fish3 {
+  width: 120px;
+  height: 100px;
+  background-color: #AD3030;
+  position: relative;
+  top: -700px;
+  left: 650px;
+  -moz-border-radius: 100px / 50px;
+  -webkit-border-radius: 100px / 50px;
+  border-radius: 80px / 60px;
+  z-index: -1;
+  animation: swim 3s infinite;
+  animation-delay: 2s;
+}
+
+.fish3 .fin1 {
+  width: 50px;
+  height: 80px;
+  background-color: #AD3030;
+  position: relative;
+  top: -10px;
+  left: 110px;
+  border-bottom-left-radius: 650px 650px;
+  border-top-left-radius: 0px 600px;
+  border-bottom-right-radius: 200px 300px;
+  border-top-right-radius: 700px 500px;
+  -ms-transform: rotate(50deg);
+  -webkit-transform: rotate(50deg);
+  transform: rotate(50deg);
+}
+
+.fish3 .fin2 {
+  width: 50px;
+  height: 80px;
+  background-color: #AD3030;
+  position: relative;
+  top: -30px;
+  left: 110px;
+  border-bottom-left-radius: 200px 300px;
+  border-top-left-radius: 500px 600px;
+  border-bottom-right-radius: 450px 800px;
+  border-top-right-radius: 00px 600px;
+  -ms-transform: rotate(120deg);
+  -webkit-transform: rotate(120deg);
+  transform: rotate(120deg);
+}
+
+.fish3 .fin3 {
+  width: 50px;
+  height: 30px;
+  background-color: pink;
+  position: relative;
+  top: -10px;
+  left: 30px;
+  border-bottom-left-radius: 650px 650px;
+  border-top-left-radius: 0px 600px;
+  border-bottom-right-radius: 200px 300px;
+  border-top-right-radius: 700px 500px;
+  -ms-transform: rotate(160deg);
+  -webkit-transform: rotate(160deg);
+  transform: rotate(160deg);
+  animation: fin 2s infinite ease-out;
+}
+
+.fish3 .stareyeleft {
+  width: 20px;
+  height: 20px;
+  background: white;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  position: relative;
+  left: 25px;
+  top: -120px;
+  z-index: 1;
+}
+
+.fish3 .stareyeleft1 {
+  width: 10px;
+  height: 10px;
+  background: black;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  position: relative;
+  left: 5px;
+  top: 10px;
+  z-index: 1;
+}
+
+.fish3 .lipstop {
+  width: 20px;
+  height: 20px;
+  background-color: pink;
+  position: relative;
+  top: 0px;
+  left: -35px;
+  border-bottom-left-radius: 650px 650px;
+  border-top-left-radius: 0px 600px;
+  border-bottom-right-radius: 200px 300px;
+  border-top-right-radius: 700px 500px;
+  -ms-transform: rotate(170deg);
+  -webkit-transform: rotate(170deg);
+  transform: rotate(170deg);
+}
+
+.fish3 .lipsbottom {
+  width: 20px;
+  height: 20px;
+  background-color: pink;
+  position: relative;
+  top: -8px;
+  left: -35px;
+  border-bottom-left-radius: 650px 650px;
+  border-top-left-radius: 0px 600px;
+  border-bottom-right-radius: 200px 300px;
+  border-top-right-radius: 700px 500px;
+  -ms-transform: rotate(130deg);
+  -webkit-transform: rotate(130deg);
+  transform: rotate(130deg);
+}
+
+.bubble1{
+  width: 30px;
+	height: 30px;
+  background: lightblue;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+  position: relative;
+  top: -200px;
+  left: -50px;
+  animation: bubbles-rise 3s infinite;
+  animation-delay: 2s;
+}
+
+.bubble2{
+  width: 5px;
+	height: 5px;
+	background: lightblue;
+	-moz-border-radius: 2.5px;
+	-webkit-border-radius: 2.5px;
+	border-radius: 2.5px;
+  position: relative;
+  top: -200px;
+  left: -40px;
+  animation: bubbles-rise 3s infinite;
+}
+
+.bubble3{
+  width: 20px;
+	height: 20px;
+	background: lightblue;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+  position: relative;
+  top: -240px;
+  left: -20px;
+  animation: bubbles-rise 3s infinite;
+}
+
+.bubble4{
+  width: 10px;
+	height: 10px;
+	background: lightblue;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+  position: relative;
+  top: -200px;
+  left: -30px;
+  animation: bubbles-rise 4s infinite;
+  animation-delay: 1s;
+}
+
+@media (max-width: 835px) {
+  body{
+    width: 835px;
+  }
+}
+
+@-webkit-keyframes bubbles-rise {
+    100% {
+        transform: translateY(-200px) scale(.3);
+        opacity: 0;
+        animation-timing-function: ease-in-out;
+    }
+}
+
+@keyframes bubbles-rise {
+    100% {
+        transform: translateY(-200px) scale(.3);
+        opacity: 0;
+        animation-timing-function: ease-in-out;
+    }
+}
+
+@-webkit-keyframes swim {
+  0%  { transform: translate(0, 0); }
+  60%  { transform: translate(10px, 20px); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes swim {
+  0%  { transform: translate(0, 0); }
+  60%  { transform: translate(10px, 20px); }
+  100% { transform: translate(0, 0); }
+}
+
+@-webkit-keyframes swim {
+  0%  { transform: translate(0, 0); }
+  60%  { transform: translate(10px, 20px); }
+  100% { transform: translate(0, 0); }
+}
+
+@-webkit-keyframes roll {
+  100%  { -ms-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg); }
+}
+
+@keyframes roll {
+  0%  { -webkit-transform: rotate(-360deg); 
+    -moz-transform: rotate(-360deg); 
+    -o-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg); 
+    transform: translate()}
+}
+
+@-webkit-keyframes fin {
+  from {
+    top: -10px;
+  }
+  to {
+    top: -15px;
+    left: 35px;
+  }
+}
+
+@keyframes fin {
+  from {
+    top: -10px;
+  }
+  to {
+    top: -15px;
+    left: 35px;
+  }
+}
+
+</style>
+<body>
+<div class="sky">
+    <div class="whale">
+      <div class="fin1"></div>
+      <div class="fin2"></div>
+      <div class="sidefin"></div>
+      <div class="backsidefin"></div>
+      <div class="eye">
+        <div class="eyeball">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ocean">
+  </div>
+  <div class="sand">
+    <div class="starfish">
+      <div class="stareyeleft">
+        <div class="stareyeleft1">
+        </div>
+      </div>
+      <div class="stareyeright">
+        <div class="stareyeright1">
+        </div>
+      </div>
+    </div>
+    <div class="fish">
+      <div class="fin1"></div>
+      <div class="fin2"></div>
+      <div class="stareyeleft">
+        <div class="stareyeleft1">
+          <div class="fin3"></div>
+          <div class="lipstop"></div>
+          <div class="lipsbottom"></div>
+        </div>
+      </div>
+      <div class="bubble1"></div>
+      <div class="bubble2"></div>
+      <div class="bubble3"></div>
+      <div class="bubble4"></div>
+    </div>
+    <div class="fish2">
+      <div class="fin1"></div>
+      <div class="fin2"></div>
+      <div class="stareyeleft">
+        <div class="stareyeleft1">
+          <div class="fin3"></div>
+        </div>
+        <div class="lipstop"></div>
+        <div class="lipsbottom"></div>
+      </div>
+      <div class="bubble2"></div>
+      <div class="bubble3"></div>
+      <div class="bubble4"></div>
+    </div>
+    <div class="fish3">
+      <div class="fin1"></div>
+      <div class="fin2"></div>
+      <div class="stareyeleft">
+        <div class="stareyeleft1">
+          <div class="fin3"></div>
+        </div>
+        <div class="lipstop"></div>
+        <div class="lipsbottom"></div>
+      </div>
+      <div class="bubble1"></div>
+      <div class="bubble2"></div>
+      <div class="bubble3"></div>
+      <div class="bubble4"></div>
+    </div>
+  </div>
+</body>
+</html>
