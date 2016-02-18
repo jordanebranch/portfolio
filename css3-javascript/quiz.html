@@ -1,0 +1,351 @@
+<html>
+
+<head>
+  <title>Which Merrill College Professor Are You?</title>
+  <link href='https://fonts.googleapis.com/css?family=Carter One' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+</head>
+<style>
+.button{
+  color: teal;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid teal;
+  font-family: 'Lato', serif;
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.button:hover{
+  color: white;
+  background-color: teal;
+  -webkit-transition: background 1s ease;
+    -moz-transition: background 1s ease;
+    -o-transition: background 1s ease;
+    -ms-transition: background 1s ease;
+    transition: background 1s ease;
+  border: none;
+}
+
+.button:focus {outline:0;}
+
+#container {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+#descrip {
+  font-family: 'Lato', serif;
+  font-size: 18px;
+  padding-top:2%;
+  padding-bottom:2%;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Carter One', serif;
+  text-align: center;
+  padding: 2%;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: 'Carter One', serif;
+}
+
+#image{
+    text-align: center;
+}
+
+img {
+    width: 75%;
+}
+
+p {
+  font-family: 'Lato', serif;
+  color: #555555;
+  font-size: 18px;
+  text-align: center;
+}
+
+#professor {
+  font-family: 'Carter One', serif;
+  font-size: 36px;
+  text-align: center;
+}
+
+.radio-toolbar input[type="radio"] {
+    display:none; 
+}
+
+.radio-toolbar label {
+    display:inline-block;
+    width: 95%;
+    background-color: teal;
+    padding:8px 11px;
+    font-size:17px;
+    font-family: 'Lato', serif;
+    margin-bottom: 6px;
+    color: white;
+    letter-spacing: .9px;
+}
+
+.radio-toolbar label:hover {
+    background-color: white;
+  -webkit-transition: background .5s ease;
+    -moz-transition: background .5s ease;
+    -o-transition: background .5s ease;
+    -ms-transition: background .5s ease;
+    transition: background .5s ease;
+    color: teal;
+    border: 1px teal solid;
+}
+
+.radio-toolbar input[type="radio"]:checked + label { 
+    background-color: white;
+    color: teal;
+    border: 3px teal solid;
+}
+
+#results {
+  border: 5px solid;
+  border-color: teal;
+  padding: 2%;
+  background-color: white;
+  display:none;
+  
+}
+
+/*This CSS was written for mobile, so just delete the media queries if you want to embed this template into the body of an article*/
+
+@media screen and (min-width: 1024px) {
+  #container {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  #container {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  img {
+    width: 325px;
+    height: 325px;
+  }
+}
+</style>
+
+<body>
+  <div id="container">
+    <h1>Which Merrill College Professor Are You?</h1>
+    <form METHOD=POST>
+      <div class="radio-toolbar">
+      <h3>What's your dream job?</h3>
+      <input id="radio1" TYPE="radio" NAME="a" VALUE="1"><label for="radio1">Designer</label><br>
+      <input id="radio2" TYPE="radio" NAME="a" VALUE="3"><label for="radio2">Investigative journalist</label><br>
+      <input id="radio3" TYPE="radio" NAME="a" VALUE="2"><label for="radio3">Sports reporter</label><br>
+      <input id="radio4" TYPE="radio" NAME="a" VALUE="4"><label for="radio4">Anchor</label><br><br>
+      </div>
+
+      <h3>What’s your favorite class?</h3>
+      <div class="radio-toolbar">
+      <input id="radio5" TYPE="radio" NAME="b" VALUE="2"><label for="radio5">JOUR200</label><br>
+        <input id="radio6" TYPE="radio" NAME="b" VALUE="3"><label for="radio6">JOUR201</label><br>
+        <input id="radio7" TYPE="radio" NAME="b" VALUE="4"><label for="radio7">JOUR203</label><br>
+        <input id="radio8" TYPE="radio" NAME="b" VALUE="1"><label for="radio8">JOUR352</label><br><br>
+      </div>
+      <h3>What do you like to do on the weekends?</h3>
+      <div class="radio-toolbar">
+      <input id="radio9" TYPE="radio" NAME="c" VALUE="1"><label for="radio9">Go to a concert</label><br>
+      <input id="radio10" TYPE="radio" NAME="c" VALUE="3"><label for="radio10">Journalism</label><br>
+      <input id="radio11" TYPE="radio" NAME="c" VALUE="4"><label for="radio11">Spend time with family</label><br>
+      <input id="radio12" TYPE="radio" NAME="c" VALUE="2"><label for="radio12">Go to a sports game</label><br><br>
+      </div>
+      <h3>How would your friends describe you?</h3>
+      <div class="radio-toolbar">
+      <input id="radio13" TYPE="radio" NAME="d" VALUE="1"><label for="radio13">Chill</label><br>
+      <input id="radio14" TYPE="radio" NAME="d" VALUE="4"><label for="radio14">Type A</label><br>
+      <input id="radio15" TYPE="radio" NAME="d" VALUE="2"><label for="radio15">Always there for good advice</label><br>
+      <input id="radio16" TYPE="radio" NAME="d" VALUE="3"><label for="radio16">Intuitive</label><br><br>  
+      </div>
+      <h3>How would you describe what you wear to work?</h3>
+      <div class="radio-toolbar">
+      <input id="radio17" TYPE="radio" NAME="e" VALUE="4"><label for="radio17">Professional</label><br>
+      <input id="radio18" TYPE="radio" NAME="e" VALUE="3"><label for="radio18">Hippie</label><br>
+      <input id="radio19" TYPE="radio" NAME="e" VALUE="2"><label for="radio19">Trendy</label><br>
+      <input id="radio20" TYPE="radio" NAME="e" VALUE="1"><label for="radio20">Office streetwear</label><br><br>
+      </div>
+      <h3>What do you like to talk about?</h3>
+      <div class="radio-toolbar">
+      <input id="radio21" TYPE="radio" NAME="f" VALUE="4"><label for="radio21">Children</label><br>
+      <input id="radio22" TYPE="radio" NAME="f" VALUE="3"><label for="radio22">Glory days</label><br>
+      <input id="radio23" TYPE="radio" NAME="f" VALUE="2"><label for="radio23">Race, society and ethics</label><br>
+      <input id="radio24" TYPE="radio" NAME="f" VALUE="1"><label for="radio24">Memes</label><br><br>
+      </div>
+      <h3>What's your favorite color?</h3>
+      <div class="radio-toolbar">
+      <input id="radio25" TYPE="radio" NAME="g" VALUE="1"><label for="radio25">Blue</label><br>
+      <input id="radio26" TYPE="radio" NAME="g" VALUE="4"><label for="radio26">Pink</label><br>
+      <input id="radio27" TYPE="radio" NAME="g" VALUE="3"><label for="radio27">Green</label><br>
+      <input id="radio28" TYPE="radio" NAME="g" VALUE="2"><label for="radio28">Yellow</label><br><br>
+      </div>
+      <h3>What's your favorite beverage?</h3>
+      <div class="radio-toolbar">
+      <input id="radio29" TYPE="radio" NAME="h" VALUE="2"><label for="radio29">Coffee</label><br>
+      <input id="radio30" TYPE="radio" NAME="h" VALUE="4"><label for="radio30">Water</label><br>
+      <input id="radio31" TYPE="radio" NAME="h" VALUE="3"><label for="radio31">Wine</label><br>
+      <input id="radio32" TYPE="radio" NAME="h" VALUE="1"><label for="radio32">Flavored beverage</label><br><br>
+      </div>
+
+      <h3>Where are you from?</h3>
+      <div class="radio-toolbar">
+      <input id="radio33" TYPE="radio" NAME="i" VALUE="1"><label for="radio33">Baltimore metro area</label><br>
+      <input id="radio34" TYPE="radio" NAME="i" VALUE="2"><label for="radio34">D.C. metro area</label><br>
+      <input id="radio35" TYPE="radio" NAME="i" VALUE="4"><label for="radio35">Northeast</label><br>
+      <input id="radio36" TYPE="radio" NAME="i" VALUE="3"><label for="radio36">Elsewhere</label><br><br>
+      </div>
+      <h3>What do you call exercise?</h3>
+      <div class="radio-toolbar">
+      <input id="radio37" TYPE="radio" NAME="j" VALUE="1"><label for="radio37">Rock climbing</label><br>
+      <input id="radio38" TYPE="radio" NAME="j" VALUE="3"><label for="radio38">Turning the pages of a book</label><br>
+      <input id="radio39" TYPE="radio" NAME="j" VALUE="2"><label for="radio39">Hitting the gym</label><br>
+      <input id="radio40" TYPE="radio" NAME="j" VALUE="4"><label for="radio40">Nothing</label><br><br>
+      </div>
+      <h3>Which Hogwarts house would you belong to?</h3>
+      <div class="radio-toolbar">
+      <input id="radio41" TYPE="radio" NAME="k" VALUE="1"><label for="radio41">Gryffindor</label><br>
+      <input id="radio42" TYPE="radio" NAME="k" VALUE="4"><label for="radio42">Slytherin</label><br>
+      <input id="radio43" TYPE="radio" NAME="k" VALUE="3"><label for="radio43">Ravenclaw</label><br>
+      <input id="radio44" TYPE="radio" NAME="k" VALUE="2"><label for="radio44">Hufflepuff</label><br><br>
+      </div>
+     
+      <input class="button" TYPE="button" VALUE="Show me who I am!" onClick="computeForm(this.form); getElementById('results').style.display = 'block'"><br><br>
+        
+    </form>
+
+    <div id="results">
+      <p>Which Merrill College Professor Are You?</p>
+      <div id="professor"></div>
+      <div id="descrip"></div>
+      <div id="image"></div>
+    </div>
+<input class="button" type="button" value="Try Again!" onClick="window.location.href=window.location.href">
+  </div>
+  <script>
+    
+    function test_it(entry) {
+    if (entry.value!=null && entry.value.length!=0) {
+    entry.value=""+ eval(entry.value);
+    }
+    computeForm(entry.form);
+    }
+    function computeForm(form) {
+    var total=0
+    
+    for (var count=0; count<4; count++)
+    {
+    if (form.a[count].checked){
+    var total=total+parseInt(form.a[count].value);
+    }
+    }
+    
+    for (var count=0; count<4; count++)
+    {
+    if (form.b[count].checked){
+    var total=total+parseInt(form.b[count].value);
+    }
+    }
+    for (var count=0; count<4; count++)
+    {
+    if (form.c[count].checked){
+    var total=total+parseInt(form.c[count].value);
+    }
+    }                           
+    for (var count=0; count<4; count++)
+    {
+    if (form.d[count].checked){
+    var total=total+parseInt(form.d[count].value);
+    }
+    }
+    for (var count=0; count<4; count++)
+    {
+    if (form.e[count].checked){
+    var total=total+parseInt(form.e[count].value);
+    }}
+                               
+    for (var count=0; count<4; count++)
+    {
+    if (form.f[count].checked){
+    var total=total+parseInt(form.f[count].value);
+    }}
+    
+    for (var count=0; count<4; count++)
+    {
+    if (form.g[count].checked){
+    var total=total+parseInt(form.g[count].value);
+    }
+      }                         
+    for (var count=0; count<4; count++)
+    {
+    if (form.h[count].checked){
+    var total=total+parseInt(form.h[count].value);
+    }
+    }
+    for (var count=0; count<4; count++)
+    {
+    if (form.i[count].checked){
+    var total=total+parseInt(form.i[count].value);
+    }
+          }                     
+    for (var count=0; count<4; count++)
+    {
+    if (form.j[count].checked){
+    var total=total+parseInt(form.j[count].value);
+    }
+    }
+    for (var count=0; count<4; count++)
+    {
+    if (form.k[count].checked){
+    var total=total+parseInt(form.k[count].value);
+    }
+    
+    }
+    var professor = "You're SEAN MUSSENDEN!";
+    var professor1 = "You're KEVIN BLACKISTONE!";
+    var professor2 = "You're DEB NELSON!";
+    var professor3 = "You're BETHANY SWAIN!";
+    var oops = "Please fill in all answers for a more accurate score!";
+    var sean_description = "Everyone who knows you says you’re the chillest person alive. You’ve got great taste in music, and you’re always ahead of the curve on trends. Sometimes you can be goofy, but you’re 100 percent down to earth. It’s time to go make a laptop sticker of your face. Just because.";
+    var kevin_description = "You’re fun, sporty and a devastatingly cool person. People respect your opinions because you’re knowledgeable about so much. Everybody wants to know you and be friend. It’s your world, and everyone else is just living in it.";
+    var deb_description = "You’re smart, intuitive and have a true nose for news. Most people would describe you as sweet and unassuming, but they're still intimidated by your success. If people take the time, they soon learn that your tough, resilient interior is just a part of the job.";
+    var bethany_description = "You're kind and self-assured. Everyone who knows you admires you for being resourceful and creative. In your free time, you cheer on your friends. Once people are your friends, you’re behind them forever.";                           
+    var sean = new Image();
+ sean.src="http://i0.wp.com/merrill.umd.edu/wp-content/uploads/2015/05/Sean-Mussenden-250.png";
+    var kevin = new Image();
+ kevin.src="http://i0.wp.com/merrill.umd.edu/wp-content/uploads/2015/05/Kevin_500px-e1439229034148.jpg";
+    var deb = new Image();
+ deb.src="http://i0.wp.com/merrill.umd.edu/wp-content/uploads/2015/05/DeborahNelson-e1439232618339.jpg";
+    var bethany = new Image();
+ bethany.src="http://i1.wp.com/merrill.umd.edu/wp-content/uploads/2015/05/bethany-swain-e1439233735552.jpg";
+    if (total<10){ document.getElementById('professor').innerHTML=oops;
+          }
+    else if (total>=10 && total<=18){ document.getElementById('professor').innerHTML=professor; 
+ document.getElementById('descrip').innerHTML=sean_description;  document.getElementById('image').appendChild(sean);                                }
+    else if (total>=19 && total<=25){ document.getElementById('professor').innerHTML=professor1; 
+    document.getElementById('descrip').innerHTML=kevin_description;                                  
+ document.getElementById('image').appendChild(kevin);
+                                    }
+    else if (total>=26 && total<=33){ document.getElementById('professor').innerHTML=professor2; 
+        document.getElementById('descrip').innerHTML=deb_description; 
+ document.getElementById('image').appendChild(deb);                                  }
+    else { document.getElementById('professor').innerHTML=professor3;  
+  document.getElementById('descrip').innerHTML=bethany_description;  document.getElementById('image').appendChild(bethany);                                   }
+    }                          
+  </script>
+</body>
+
+</html>
