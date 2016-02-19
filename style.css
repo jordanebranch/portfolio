@@ -37,12 +37,10 @@ body {
 
 .thumbnail {
   display: flex;
-  width: 30%;
+  width: 33%;
   float: left;
   flex-wrap: wrap;
   margin-top: 50px;
-  margin-right: 3px;
-  margin-left: 20px;
   margin-bottom: 0px;
 }
 
@@ -97,7 +95,6 @@ a .img-responsive:hover {
 .container{
 	margin: 0 auto;
 	width: 1000px;
-	position: absolute;
 }
 
 /*navigation*/
@@ -216,9 +213,6 @@ a:selected{
 h1 {
   font: small-caps 44px 'Lato', sans-serif;
   letter-spacing: 3px;
-  position: relative;
-  top: -230px;
-  left: -30px;
   width: 100%;
 }
 
@@ -229,25 +223,24 @@ h1 {
   -moz-border-radius: 150px;
   -webkit-border-radius: 150px;
   border-radius: 150px;
-  position: relative;
-  top: 110px;
-  left: 50px;
   border: 5px solid lightgray;
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 80px;
 }
 
 .about {
-  float: right;
   width: 50%;
   margin: 0 auto;
+  display: inline-block;
+  float: right;
+  margin: 60px;
 }
 
 .about p{
   font: 20px 'Lato', sans-serif;
   line-height: 40px;
   margin-left: 10px;
-  position: relative;
-  top: -230px;
-  left: -30px;
   width: 100%
 }
 
@@ -657,33 +650,34 @@ button:hover{
   
   @media(max-width: 1000px){
 
+  body{
+    margin: 0 auto;
+  }
+  
 .container{
 	width: 100%;
 	margin: 0 auto;
+    text-align: center;
 }
 
 h1 {
   font: small-caps 33px 'Lato', sans-serif;
   text-align: center;
   line-height: 50px;
-  position: relative;
-  top: 110px;
-  left: 0px;
 }
 
 .about {
   width: 100%;
+  margin: 0 auto;
+  display: inline-block;
 }
 
 .about p{
   font: 20px 'Lato', sans-serif;
   line-height: 28px;
-  margin-left: 10px;
-  position: relative;
-  top: 110px;
-  left: -10px;
   width: 100%;
   text-align: center;
+  margin: 0;
 }
 
 button{
@@ -696,25 +690,24 @@ button{
 }
 
 #contact-bar{
-  position: relative;
-  top: 650px;
-  bottom: -140px;
   background-color: lightgray;
   height: 60px;
   width: 100%;
+  position: absolute;
+  bottom: -200px;
 }
 
 #circle {
-  width: 260px;
-  height: 260px;
-  margin: auto;
-  background: linear-gradient(#383839, transparent 20%), linear-gradient(0deg, #383839, transparent 20%), url("http://i666.photobucket.com/albums/vv28/jordanebranch/Jordan%20Branch_zps5xgim5ku.jpg");
-  -moz-border-radius: 130px;
-  -webkit-border-radius: 130px;
-  border-radius: 130px;
-  position: relative;
-  top: 130px;
-  left: 0px;
+    width: 300px;
+  height: 300px;
+  background: linear-gradient(#383839, transparent 20%), linear-gradient(0deg, #383839, transparent 20%), url(	    "http://i666.photobucket.com/albums/vv28/jordanebranch/Jordan%20Branch_zps5xgim5ku.jpg");
+  -moz-border-radius: 150px;
+  -webkit-border-radius: 150px;
+  border-radius: 150px;
+  border: 5px solid lightgray;
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 80px;
 }
 
 .contactEmoji{
@@ -723,7 +716,6 @@ button{
 }
 
 #contact-bar li ul{
-  position: relative;
   display: inline-block;
   float: right;
   width: 40px;
@@ -732,7 +724,6 @@ button{
 }
 
 #contact-bar .pdfFloat{
-  position: relative;
   display: inline-block;
   float: left;
   width: 40px;
@@ -866,7 +857,6 @@ button{
     margin: 0 auto;
   }
   #circle2 {
-    position: relative;
     width: 200px;
     height: 200px;
     background: url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/new_year_background.png");
