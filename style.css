@@ -15,7 +15,6 @@
 	margin-top: 0px;
 	position: relative;
 	top: 100px;
-    left: 0px;
 	color: black;
 	cursor: pointer;
     background-color: lightgray;
@@ -24,11 +23,6 @@
     padding-top: 10px;
     padding-bottom:10px;
   }
-
-.row {
-  margin-top: 80px;
-  margin-bottom: 0;
-}
 
 body {
   margin: 0 auto;
@@ -40,7 +34,7 @@ body {
   width: 33%;
   float: left;
   flex-wrap: wrap;
-  margin-top: 50px;
+  margin-top: 90px;
   margin-bottom: 0px;
 }
 
@@ -256,12 +250,12 @@ section{
 /*Home Page Contact Bar*/
 
 #contact-bar{
-  position: absolute;
   bottom: 0px;
   background-color: lightgray;
   height: 60px;
   width: 100%;
   padding-top: 15px;
+  margin-top: 55px;
 }
 
 #contact-bar li ul{
@@ -566,15 +560,15 @@ button:hover{
 /*Portfolio landing page*/
 
 #circle2 {
-  width: 39vw;
-  height: 39vw;
+  width: 36vw;
+  height: 36vw;
   background: url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/new_year_background.png");
-  -moz-border-radius: 17vw;
-  -webkit-border-radius: 17vw;
-  border-radius: 20vw;
-  position: relative;
-  top: 80px;
+  -moz-border-radius: 18vw;
+  -webkit-border-radius: 18vw;
+  border-radius: 18vw;
+  display: inline-block;
   box-shadow: 0px 0px 5px 0px #393939;
+  margin-top: 90px;
 }
 
 #circle2:hover {
@@ -590,14 +584,14 @@ button:hover{
 .shortText {
   position: relative;
   font: small-caps 5vw 'Lato', sans-serif;
-  top: 14vw;
+  top: 10vw;
   text-align: center;
 }
 
 .longText {
   position: relative;
   font: small-caps 5vw 'Lato', sans-serif;
-  top: 11vw;
+  top: 6vw;
   text-align: center;
 }
 
@@ -606,7 +600,7 @@ button:hover{
 }
 
 .flex {
-  display: flex;
+  display: inline-block;
   text-wrap: none;
   padding: 0;
   margin: 0 auto;
@@ -693,8 +687,7 @@ button{
   background-color: lightgray;
   height: 60px;
   width: 100%;
-  position: absolute;
-  bottom: -200px;
+  margin-top: 300px;
 }
 
 #circle {
