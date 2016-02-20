@@ -255,6 +255,8 @@ section{
   width: 100%;
   padding-top: 15px;
   margin-top: 75px;
+  position: fixed;
+  bottom: 0px;
 }
 
 #contact-bar li ul{
