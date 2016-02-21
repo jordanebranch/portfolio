@@ -20,8 +20,8 @@
   background-color: lightgray;
   border-radius: 10px;
   text-align:center;
-  padding-top: 10px;
-  padding-bottom:10px;
+  padding-top: 15px;
+  padding-bottom:15px;
 }
 
 body {
@@ -623,20 +623,21 @@ h4 {
   left: 0px;
   color: #393939;
   cursor: pointer;
-  border: 1px solid lightgray;
   border-radius: 10px;
   padding-top: 10px;
   padding-bottom:10px;
+  text-align: left;
 }
 
 .unpublishedh1:hover, .publishedh1:hover{
-  color: #393939; 
+  color: black;
+  background-color: lightgray;
   -moz-transition: all .1s linear;
   -ms-transition: all .1s linear;
   -o-transition: all .1s linear;
   -webkit-transition: all .1s linear;
   transition: all .1s linear;
-  border: solid lightgray;
+  border: none;
 }
   
   /*Media Queries*/
