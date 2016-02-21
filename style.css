@@ -626,7 +626,6 @@ button:hover{
 	cursor: pointer;
 	border: 1px solid lightgray;
 	border-radius: 10px;
-    width: auto;
     padding-top: 10px;
     padding-bottom:10px;
   }
@@ -893,4 +892,10 @@ button{
   #resume{
     display:none;
   }
+   .border{
+  border: solid;
+  border-width: 0px 0px 1px 0px;
+  padding-bottom: 5px;
+  width: 250px;
+ }
 }
