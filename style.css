@@ -852,6 +852,7 @@ h4 {
       -webkit-border-radius: 100px;
       border-radius: 100px;
       margin: 0 auto;
+	  margin-top: 60px;
     }
     
     .shortText {
