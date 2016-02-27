@@ -627,9 +627,19 @@ h4 {
   padding-top: 10px;
   padding-bottom:10px;
   text-align: left;
+  -webkit-box-shadow:inset 0px 0px 0px 2px lightgray;
+  -moz-box-shadow:inset 0px 0px 0px 2px lightgray;
+  box-shadow:inset 0px 0px 0px 2px lightgray;
+}
+
+.fa{
+  padding:10px;
 }
 
 .unpublishedh1:hover, .publishedh1:hover{
+  -webkit-box-shadow:inset 0px 0px 0px 5px lightgray;
+  -moz-box-shadow:inset 0px 0px 0px 5px lightgray;
+  box-shadow:inset 0px 0px 0px 5px lightgray;
 }
   
   /*Media Queries*/
@@ -704,7 +714,7 @@ h4 {
     #contact-bar li ul{
       display: inline-block;
       float: right;
-      width: 40px;
+      width: 50px;
       margin: 0px;
       padding: 0px;
     }
@@ -864,6 +874,10 @@ h4 {
       position: relative;
       font: small-caps 29px 'Lato', sans-serif;
     }
+	
+	.unpublishedh1, .publishedh1 {
+	  text-align: center;
+	}
   }
 
   @media(max-width: 910px) {
