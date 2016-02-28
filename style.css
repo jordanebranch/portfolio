@@ -560,12 +560,11 @@ h4 {
 /*Portfolio landing page*/
 
 #circle2 {
-  width: 36vw;
-  height: 36vw;
+  width: 400px;
+  height: 400px;
   background: url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/new_year_background.png");
-  -moz-border-radius: 18vw;
-  -webkit-border-radius: 18vw;
-  border-radius: 18vw;
+  -webkit-border-radius: 200px;
+  border-radius: 200px;
   display: inline-block;
   box-shadow: 0px 0px 5px 0px #393939;
   margin-top: 90px;
@@ -583,15 +582,15 @@ h4 {
 
 .shortText {
   position: relative;
-  font: small-caps 5vw 'Lato', sans-serif;
-  top: 10vw;
+  font: small-caps 60px 'Lato', sans-serif;
+  top: 100px;
   text-align: center;
 }
 
 .longText {
   position: relative;
-  font: small-caps 5vw 'Lato', sans-serif;
-  top: 6vw;
+  font: small-caps 60px'Lato', sans-serif;
+  top: 40px;
   text-align: center;
 }
 
@@ -846,7 +845,7 @@ h4 {
     }
  }
 
-  @media(max-width: 496px) {
+  @media(max-width: 800px) {
     .flex {
       display: flex;
       flex-wrap: wrap;
@@ -855,24 +854,23 @@ h4 {
     }
     
     #circle2 {
-      width: 200px;
-      height: 200px;
+      width: 300px;
+      height: 300px;
       background: url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/new_year_background.png");
-      -moz-border-radius: 100px;
-      -webkit-border-radius: 100px;
-      border-radius: 100px;
+      -webkit-border-radius: 150px;
+      border-radius: 150px;
       margin: 0 auto;
 	  margin-top: 60px;
     }
     
     .shortText {
       position: relative;
-      font: small-caps 29px 'Lato', sans-serif;
+      font: small-caps 40px 'Lato', sans-serif;
     }
     
     .longText {
       position: relative;
-      font: small-caps 29px 'Lato', sans-serif;
+      font: small-caps 40px 'Lato', sans-serif;
     }
 	
 	.unpublishedh1, .publishedh1 {
