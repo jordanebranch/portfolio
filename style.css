@@ -183,7 +183,7 @@ a{
 
 .fa.fa-chevron-down{
   position: absolute;
-  top:75%;
+  top:77%;
   left: 50%;
   font-size: 40px;
   color: white;
@@ -191,7 +191,7 @@ a{
 
 .fa.fa-chevron-down:hover{
   position: absolute;
-  top: 75%;
+  top: 77%;
   left: 50%;
   font-size: 40px;
   color: red;
@@ -359,13 +359,13 @@ img:hover {
 /*contact section*/
 
 #contact {
-  background-color: white;
   width: 100%;
   height: 250px;
 }
 
-#contact-data{
-  padding-top: 80px;
+.contact-data{
+  margin-top: 80px;
+  background-color: lightgray;
 }
 
 #arrow a {
@@ -509,9 +509,18 @@ a .img-responsive:hover {
   transform: rotate(90deg);
 }
 
+.fa.fa-cog{
+  color: red;
+}
 .container{
 	margin: 0 auto;
 	width: 900px;
+    padding-bottom: 80px;
+}
+
+.container p{
+  font: small-caps 90px 'Lato', sans-serif;
+  text-align: center;
 }
 
 .unpublishedh1, .publishedh1 {
