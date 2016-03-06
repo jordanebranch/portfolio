@@ -29,6 +29,10 @@ a{
 .dropdownBox .ui-state-focus {
   outline: none;
 }
+.banner-text-wrap{
+  max-width: 900px;
+  max-height: 500px;
+}
 /*nav*/
 nav {
   position: fixed;
@@ -566,6 +570,89 @@ a .img-responsive:hover {
     font-weight: 700;
 	top: 15%;
   }
+}
+
+@media(min-height: 550px){
+  .banner h1 {
+    font: 90px 'Lato', sans-serif;
+    font-weight: 700;
+	top: 10%;
+  }
+  .fa.fa-chevron-down{
+  position: absolute;
+  top:55%;
+  left: 50%;
+  font-size: 40px;
+  color: white;
+}
+
+.fa.fa-chevron-down:hover{
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  font-size: 40px;
+  color: red;
+  z-index: 100;
+}
+}
+
+@media(min-height: 750px){
+  .banner h1 {
+    font: 90px 'Lato', sans-serif;
+    font-weight: 700;
+	top: 10%;
+  }
+  .fa.fa-chevron-down{
+  position: absolute;
+  top:45%;
+  left: 50%;
+  font-size: 40px;
+  color: white;
+}
+
+.fa.fa-chevron-down:hover{
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  font-size: 40px;
+  color: red;
+  z-index: 100;
+}
+}
+
+@media(min-height: 920px){
+  .banner h1 {
+    font: 90px 'Lato', sans-serif;
+    font-weight: 700;
+	top: 10%;
+  }
+  .fa.fa-chevron-down{
+  position: absolute;
+  top:35%;
+  left: 50%;
+  font-size: 40px;
+  color: white;
+}
+
+.fa.fa-chevron-down:hover{
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  font-size: 40px;
+  color: red;
+  z-index: 100;
+}
+}
+
+@media(min-height: 1070px){
+  .banner h1 {
+    font: 90px 'Lato', sans-serif;
+    font-weight: 700;
+	top: 20%;
+  }
+  .fa.fa-chevron-down{
+  display: none;
+}
 }
 
 /*nav change*/
