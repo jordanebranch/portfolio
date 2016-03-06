@@ -360,12 +360,14 @@ img:hover {
 
 #contact {
   width: 100%;
-  height: 250px;
+  padding-bottom: 20px;
 }
 
 .contact-data{
   margin-top: 80px;
   background-color: lightgray;
+  height: auto;
+  overflow: auto;
 }
 
 #arrow a {
@@ -414,6 +416,7 @@ li {
 
 #contact li {
   font: 15px 'Lato', sans-serif;
+  margin: 0 auto;
 }
 
 .contact-text-wrap {
@@ -548,208 +551,6 @@ a .img-responsive:hover {
   box-shadow:inset 0px 0px 0px 2px red;
 }
 
-/*resume page*/
-.transitionBanner {
-  width: 100%;
-  height: 350px;
-  margin-top: 50px;
-  background: linear-gradient(#383839, transparent 20%), linear-gradient(0deg, #383839, transparent 20%), url("http://i666.photobucket.com/albums/vv28/jordanebranch/eaf9d586-6ad1-41e2-a565-918d341e738e_zpshjjmesce.jpg");
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-}
-
-.transitionBanner2 {
-  width: 100%;
-  height: 350px;
-  margin-top: 50px;
-  background: linear-gradient(#383839, transparent 20%), linear-gradient(0deg, #383839, transparent 20%), url("http://i666.photobucket.com/albums/vv28/jordanebranch/coding_zpscqflavxj.jpg");
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-}
-
-.transitionBanner3 {
-  width: 100%;
-  height: 350px;
-  margin-top: 50px;
-  background: linear-gradient(#383839, transparent 30%), linear-gradient(0deg, #383839, transparent 30%), url("http://i666.photobucket.com/albums/vv28/jordanebranch/New%20York_zpsdzw2ug7e.jpg");
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-}
-
-.resumeheader{
-  margin: 0 auto;
-  margin-bottom: 0px;
-  color: lightgray;
-  background-color: #393939;
-  padding-top: 80px;
-  padding-bottom: 30px;
-  text-align: center;
-  font: small-caps 100px 'Lato', sans-serif;
-}
-
-h2 {
-  padding: 15px;
-  padding-top: 30px;
-  margin: 0;
-  font-size: 50px;
-  font: small-caps 55px 'Lato', sans-serif;
-}
-
-h3 {
-  margin-left: 0px;
-  margin-top: 10px;
-  font-size: 20px;
-  background-color: lightgray;
-  padding: 10px;
-  letter-spacing: 1px;
-  font: 30px 'Lato', sans-serif;
-}
-
-.date h4 {
-  margin-top: 30px;
-  margin-bottom: 0px;
-  font-size: 20px;
-  border: solid;
-  border-width: 0px 0px 1px 0px;
-  padding-bottom: 8px;
-  width: 30%;
-  font: 20px 'Lato', sans-serif;
-}
-
-.bullets li{
-  list-style-type: none;
-  line-height: 22px;
-  font: 18px 'Lato', sans-serif;
-}
-
-.border{
-  border: solid;
-  border-width: 0px 0px 1px 0px;
-  padding-bottom: 5px;
-  width: 400px;
-}
-
-.paddingDate {
-  line-height: 30px;
-  font-size: 15px;
-  font-style: italic;
-}
-
-.skillheader{
-  text-align: center;
-  margin: 0;
-  margin-bottom: 5px;
-  font: small-caps 30px 'Lato', sans-serif;
-  background-color: white;
-  color: black;
-  padding: 0;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.skillName p{
-  text-align: right;
-  font: small-caps 18px 'Lato', sans-serif;
-}
-
-.skillName{
-  width: 31%;
-  display: inline-block;
-  border: solid #666;
-  border-width: 1px 1px 0px 0px;
-  margin: 10px;
-}
-
-.html{
-  height: 30px;
-  width: 25vw;
-  background-color: lightgray;
-  border: 1px solid #666;
-  margin-bottom: 5px;
-  padding-bottom: 10px;
-  padding-right: 5px;
-}
-
-.css{
-  height: 30px;
-  width: 25vw;
-  background-color: lightgray;
-  border: 1px solid #666;
-  margin-bottom: 5px;
-  padding-bottom: 10px;
-  padding-right: 5px;
-}
-
-.javascript{
-  height: 30px;
-  width: 18vw;
-  background-color: lightgray;
-  border: 1px solid #666;
-  padding-bottom: 10px;
-  padding-right: 5px;
-}
-
-.illustrator{
-  height: 30px;
-  width: 25vw;
-  background-color: lightgray;
-  border: 1px solid #666;
-  margin-bottom: 5px;
-  padding-bottom: 10px;
-  padding-right: 5px;
-}
-
-.indesign{
-  height: 30px;
-  width: 23vw;
-  background-color: lightgray;
-  border: 1px solid #666;
-  margin-bottom: 5px;
-  padding-bottom: 10px;
-  padding-right: 5px;
-}
-
-.photoshop{
-  height: 30px;
-  width: 14vw;
-  background-color: lightgray;
-  border: 1px solid #666;
-  padding-bottom: 10px;
-  padding-right: 5px;
-}
-
-.tableau{
-  height: 30px;
-  width: 25vw;
-  background-color: lightgray;
-  border: 1px solid #666;
-  margin-bottom: 5px;
-  padding-bottom: 10px;
-  padding-right: 5px;
-}
-
-.excel{
-  height: 30px;
-  width: 10vw;
-  background-color: lightgray;
-  border: 1px solid #666;
-  margin-bottom: 5px;
-  padding-bottom: 10px;
-  padding-right: 5px;
-}
-
-.d3{
-  height: 30px;
-  width: 6vw;
-  background-color: lightgray;
-  border: 1px solid #666;
-  padding-bottom: 10px;
-  padding-right: 5px;
-}
-
 /*header adjustment*/
 @media(max-width: 641px) {
   .banner h1 {
@@ -801,7 +602,7 @@ h3 {
     padding-bottom: 50px;
   }
   #work {
-    height: 1000px;
+    height: 900px;
   }
   .project-a img {
     margin: 0 auto;
@@ -877,104 +678,6 @@ h3 {
     padding-top: 40px;
   }
 }
-
-/*responsive resume*/
-@media(max-width: 950px) {
-    .skillName{
-      width: 96%;
-      display: inline-block;
-      border: solid #666;
-      border-width: 1px 1px 0px 0px;
-      margin: 10px;
-    }
-    
-    .html{
-      height: 30px;
-      width: 89vw;
-      background-color: lightgray;
-      border: 1px solid #666;
-      margin-bottom: 5px;
-      padding-bottom: 10px;
-      padding-right: 5px;
-    }
-
-    .css{
-      height: 30px;
-      width: 89vw;
-      background-color: lightgray;
-      border: 1px solid #666;
-      margin-bottom: 5px;
-      padding-bottom: 10px;
-      padding-right: 5px;
-    }
-
-    .javascript{
-      height: 30px;
-      width: 60vw;
-      background-color: lightgray;
-      border: 1px solid #666;
-      padding-bottom: 10px;
-      padding-right: 5px;
-    }
-    
-    .illustrator{
-      height: 30px;
-      width: 89vw;
-      background-color: lightgray;
-      border: 1px solid #666;
-      margin-bottom: 5px;
-      padding-bottom: 10px;
-      padding-right: 5px;
-    }
-    
-    .indesign{
-      height: 30px;
-      width: 83vw;
-      background-color: lightgray;
-      border: 1px solid #666;
-      margin-bottom: 5px;
-      padding-bottom: 10px;
-      padding-right: 5px;
-    }
-    
-    .photoshop{
-      height: 30px;
-      width: 35vw;
-      background-color: lightgray;
-      border: 1px solid #666;
-      padding-bottom: 10px;
-      padding-right: 5px;
-    }
-    
-    .tableau{
-      height: 30px;
-      width: 89vw;
-      background-color: lightgray;
-      border: 1px solid #666;
-      margin-bottom: 5px;
-      padding-bottom: 10px;
-      padding-right: 5px;
-    }
-    
-    .excel{
-      height: 30px;
-      width: 35vw;
-      background-color: lightgray;
-      border: 1px solid #666;
-      margin-bottom: 5px;
-      padding-bottom: 10px;
-      padding-right: 5px;
-    }
-    
-    .d3{
-      height: 30px;
-      width: 15vw;
-      background-color: lightgray;
-      border: 1px solid #666;
-      padding-bottom: 10px;
-      padding-right: 5px;
-    }
- }
  
  @media(max-width: 910px) {
     .thumbnail {
@@ -995,10 +698,6 @@ h3 {
       flex-wrap: wrap;
       margin-top: 90px;
       margin-bottom: 0px;
-    }
-  
-    #resume{
-      display:none;
     }
   
    .border{
