@@ -183,7 +183,7 @@ a{
 
 .fa.fa-chevron-down{
   position: absolute;
-  top: 90%;
+  top:75%;
   left: 50%;
   font-size: 40px;
   color: white;
@@ -191,10 +191,11 @@ a{
 
 .fa.fa-chevron-down:hover{
   position: absolute;
-  top: 90%;
+  top: 75%;
   left: 50%;
   font-size: 40px;
   color: red;
+  z-index: 100;
 }
 
 /*Content starts*/
@@ -741,19 +742,12 @@ h3 {
 }
 
 /*header adjustment*/
-@media(max-width: 541px) {
+@media(max-width: 641px) {
   .banner h1 {
-    font: 73px 'Lato', sans-serif;
+    font: 75px 'Lato', sans-serif;
     font-weight: 700;
-	top: 10%;
+	top: 20%;
   }
-  .fa.fa-chevron-down{
-  position: absolute;
-  top: 90%;
-  left: 50%;
-  font-size: 40px;
-  color: white;
-}
 }
 
 /*nav change*/
