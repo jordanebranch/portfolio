@@ -3,51 +3,61 @@
   <title>Data Visualization</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet' type='text/css' />
-  <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="../style.css">
   <link rel="shortcut icon" type="image/png" href="../favicon.png">
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 </head>
 <body>
+  <div id="top"></div>
+  <div id="accordion">
+    <h4 class="accordion-toggle"><i class="fa fa-bars"></i>
+      jordan branch</h4>
+    <div class="accordion-content">
+      <ul>
+		<a href="../index.html">
+          <li>home</li>
+        </a>
+		<a href="../css3-javascript/index.html">
+          <li>css + js</li>
+        </a>
+        <a href="#">
+          <li>pages</li>
+        </a>
+        <a href="../data-visualization/index.html"><li>data vis</li></a>
+        <a href="#contact"><li>contact</li></a>
+      </ul>
+    </div>
+  </div>
   <nav>
-    <ul class="menu">
-      <li class="link">
-        <a href="../resume.html" class="linkName" id="resume">
-         Resume
-      </a>
-      </li>
-      <ul class="accordion">
-        <li class="link">
-          <a href="../portfolio-home.html" class="linkName" id="dropdown-menu">
-        Portfolio
-      </a>
-          <ul class="submenu">
-          <a href="index.html">
-            <li class="sublink">
-              Data Visualization
-            </li>
-            </a>
-            <a href="../css3-javascript/index.html">
-            <li class="sublink">
-              CSS3 + JS
-            </li>
-            </a>
-      </ul>
-      </ul>
-      <div class="name">
-      <li class="link">
-      <a href="../index.html" class="linkName">
-         Jordan Branch
-      </a>
-    </li>
-      </div>
-      
-      </li>
-    </ul>
+	<ul class="menu">
+	  <a href="#contact" class="contact"><li>contact
+	  </li></a>
+    <li><a class="dropdown-toggle">
+      work</a>
+      <div class="dropdown-content">
+		<ul>
+        <a href="../css3-javascript/index.html">
+          <li class="sublink">css + js</li>
+        </a>
+        <a href="#work"><li class="sublink">pages</li></a>
+        <a href="../data-visualization/index.html"><li class="sublink">data vis</li></a>
+	  </div>
+	  </li>
+  </div>
+		<div class="nameHomepage">
+		  <a href="../index.html"><li>
+			jordan branch
+		  </li></a>
+		</div>
+	</ul>
   </nav>
+  <div id="arrow">
+      <a id="top" href="#top"><i class="fa fa-arrow-circle-up"></i></a>
+    </div>
   <div class="container">
-	<h1 class="portfoliopage">Data Visualization Tools + Skills</h1>
+	<h1 class="portfoliopage">data visualization</h1>
   <div class="dropdownBox">
     <h1 class="publishedh1"><i class="fa fa-cog rotate2"></i>Published Work</h1>
 
@@ -106,7 +116,7 @@
       </div>
     </div>
   </div>
-  <div id="container">
+  <div id="unpublished-box">
     <h1 class="unpublishedh1"><i class="fa fa-cog rotate1"></i>Unpublished Work</h1>
 
     <!-- Page Content -->
@@ -138,9 +148,29 @@
 
   </div>
     </div>
+  <div id="contact-data">
+	<div id="contact">
+    <div class="contact-text-wrap">
+      <p>follow me</p>
+      <ul>
+
+        <li><a href="https://twitter.com/Jordan_EBranch" target="_blank"><i class="fa fa-twitter-square"></i>Twitter</li></a>
+
+        <li><a href="https://www.linkedin.com/in/jordanebranch" target="_blank"><i class="fa fa-linkedin-square"></i>LinkedIn</li></a>
+			  
+		<li><a href="https://github.com/jordanebranch" target="_blank"><i class="fa fa-github-square"></i>Github</li></a>
+
+      </ul>
+      <p>contact me</p>
+      <ul>
+        <li>Location: Washington Metro Area</li>
+        <li>Cell: (407) 227-0951</li>
+        <li>Email: <a href="mailto:jordane.branch@gmail.com">jordane.branch@gmail.com</a></li>
+    </div>
+  </div>
   <script>
     $(document).ready(function() {
-  $("#container").accordion({
+  $("#unpublished-box").accordion({
     collapsible: true,
     active: false
   });
@@ -156,18 +186,40 @@
   });
   $(".publishedh1").click(function() {    $(".publishedh1").toggleClass("down");
   });
-  $('.accordion').hover(function(){
-        $(this).find('ul').slideDown()
-    }, function(){
-        $(this).find('ul').slideUp()
-    }).find('ul').hide();
-  $(".sublink").on("mouseover", function() {
-  $("#dropdown-menu").addClass('permahover');
-});
-  $(".sublink").on("mouseleave", function() {
-  $("#dropdown-menu").removeClass('permahover');
-});
-});
+	});
+  
+  $(function() {
+    $('a[href*="#"]:not([href="#"])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        }
+      }
+    });
+  });
+
+$(document).ready(function($) {
+	$('.accordion-content').hide();
+    $('#accordion').find('.accordion-toggle').click(function(){
+      //Expand or collapse this panel
+      $(this).next().slideToggle('fast');
+
+    });
+  });
+
+$(document).ready(function($) {
+	$('.dropdown-content').hide();
+    $('.dropdown-toggle').click(function(){
+      //Expand or collapse this panel
+      $(this).next().slideToggle('fast');
+
+    });
+  });
   </script>
 </body>
 

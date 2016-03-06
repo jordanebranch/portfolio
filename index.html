@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--Fonts-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
   <!--Stylesheet-->
   <link rel="stylesheet" type="text/css" href="style.css">
   <!--jQuery-->
@@ -14,70 +14,143 @@
   <link rel="shortcut icon" type="image/png" href="favicon.png">
 </head>
 <body>
+  <div id="top"></div>
+  <div id="accordion">
+    <h4 class="accordion-toggle"><a href="index.html"></a><i class="fa fa-bars"></i>
+      jordan branch</h4>
+    <div class="accordion-content">
+      <ul>
+		<a href="index.html">
+          <li>home</li>
+        </a>
+		<a href="css3-javascript/index.html">
+          <li>css + js</li>
+        </a>
+        <a href="#">
+          <li>pages</li>
+        </a>
+        <a href="data-visualization/index.html"><li>data vis</li></a>
+        <a href="#contact"><li>contact</li></a>
+      </ul>
+    </div>
+  </div>
   <nav>
 	<ul class="menu">
-	  <li class="link">
-		<a href="resume.html" class="linkName" id="resume">Resume</a>
+	  <a href="#contact" class="contact"><li>contact
+	  </li></a>
+    <li><a class="dropdown-toggle">
+      work</a>
+      <div class="dropdown-content">
+		<ul>
+        <a href="css3-javascript/index.html">
+          <li class="sublink">css + js</li>
+        </a>
+        <a href="#work"><li class="sublink">pages</li></a>
+        <a href="data-visualization/index.html"><li class="sublink">data vis</li></a>
+	  </div>
 	  </li>
-    <ul class="accordion">
-	  <li class="link">
-		<a href="portfolio-home.html" class="linkName" id="dropdown-menu">Portfolio</a>
-		<ul class="submenu">
-		  <a href="data-visualization/index.html">
-			<li class="sublink">Data Visualization</li>
-		  </a> 
-		  <a href="css3-javascript/index.html">
-            <li class="sublink">CSS3 + JS</li>
-		  </a>
-       </ul>
-    </ul>
+  </div>
 		<div class="nameHomepage">
-		  <li class="link">
-			<a href="#" class="linkName">Jordan Branch</a>
-		  </li>
+		  <a href="#"><li>
+			jordan branch
+		  </li></a>
 		</div>
-	  </li>
 	</ul>
   </nav>
-  <div class="container">
-    <div id="circle"></div>
-    <div class="about">
-      <h1>Front-End Developer</h1>
-      <p>I am a student at the University of Maryland with a passion for front-end development and digital strategy. With a desire to learn about emerging technologies, I stay on top of the digital age. I'm currently learning PHP and SASS.	</p>
-	</div>
+    <div class="banner">
+    <h1>not your average user</h1>
+    <div id="arrow">
+      <a id="top" href="#top"><i class="fa fa-arrow-circle-up"></i></a>
+    </div>
+	<a href="#about"><i class="fa fa-chevron-down"></i></a>
   </div>
-      <div id="contact-bar">
-        <li>
-          <a href="https://twitter.com/Jordan_EBranch">
-            <ul class="contactEmoji"><i class="fa fa-twitter-square"></i></ul>
-          </a>
-          <a href="https://www.linkedin.com/in/jordanebranch">
-            <ul class="contactEmoji"><i class="fa fa-linkedin-square"></i></ul>
-          </a>
-          <a href="mailto:jordane.branch@gmail.com">
-            <ul class="contactEmoji"><i class="fa fa-envelope-square"></i></ul>
-          </a>
-          <a href="https://github.com/jordanebranch">
-            <ul class="contactEmoji"><i class="fa fa-github-square"></i></ul></a>
-            <div class="pdfFloat">
-			  <ul class="contactEmoji"><a href="https://drive.google.com/file/d/0B4DCAte3cN2qbk0xMVpET3pDazQ/view?usp=sharing"><button>Resume PDF</button></a></ul>
-		  </div>
-        </li>
+  <div id="about">
+    <h1>what i'm about<span>:</span></h1>
+    <p>I am an <span>Interactive Front-End Designer</span> and a student at the University of Maryland with a passion for the digital space and design trends. I use HTML5, CSS3 and JavaScript to optimize the user experience. With a desire to learn about emerging technologies, I am constantly pushing to learn more and keep up to speed on the latest digital trends.</p>
+    <a href="https://drive.google.com/file/d/0B4DCAte3cN2qbk0xMVpET3pDazQ/view?usp=sharing" target="_blank"><div class="button">learn more</div></a>
+  </div>
+  <div id="work">
+    <div class="work-text-wrap">
+      <h1>featured work<span>:</span></h1>
+      <div class="project-a">
+        <div class="image-wrapa">
+          <a href="css3-javascript/sea.html"><img src="http://i666.photobucket.com/albums/vv28/jordanebranch/Screenshot%202016-02-17%2020.47.41_zpsv4t0j9hl.png" /></a>
+        </div>
       </div>
+      <div class="project-b">
+        <div class="image-wrapb">
+          <a href="css3-javascript/letter.html"><img src="http://i666.photobucket.com/albums/vv28/jordanebranch/c161d46d-6978-4b19-90ce-ff22bce2a802_zpsdmacpetr.png" /></a>
+        </div>
+      </div>
+      <div class="project-c">
+        <div class="image-wrapc">
+          <a href="css3-javascript/css3-rabbit.html"><img src="http://i666.photobucket.com/albums/vv28/jordanebranch/roger-rabbit_zpsjhx5wxhw.png" /></a>
+        </div>
+      </div>
+    </div>
+    <div class="caption-wrap">
+      <div class="caption">
+        <a href="#"><p>roger rabbit</p></a>
+        <a href="#"><p class="no-margin">birthday card</p></a>
+        <a href="#"><p class="no-margin">moby dick + friends</p></a>
+      </div>
+    </div>
+  </div>
+  <div id="contact-data">
+  <div id="contact">
+    <div class="contact-text-wrap">
+      <p>follow me</p>
+      <ul>
+
+        <li><a href="https://twitter.com/Jordan_EBranch" target="_blank"><i class="fa fa-twitter-square"></i>Twitter</li></a>
+
+        <li><a href="https://www.linkedin.com/in/jordanebranch" target="_blank"><i class="fa fa-linkedin-square"></i>LinkedIn</li></a>
+			  
+		<li><a href="https://github.com/jordanebranch" target="_blank"><i class="fa fa-github-square"></i>Github</li></a>
+
+      </ul>
+      <p>contact me</p>
+      <ul>
+        <li>Location: Washington Metro Area</li>
+        <li>Cell: (407) 227-0951</li>
+        <li>Email: <a href="mailto:jordane.branch@gmail.com">jordane.branch@gmail.com</a></li>
+    </div>
+  </div>
+  </div>
 </body>
 <script>
-	$(document).ready(function() {
-	  $('.accordion').hover(function(){
-        $(this).find('ul').slideDown()
-	  }, function(){
-        $(this).find('ul').slideUp()
-	  }).find('ul').hide();
-	  $(".sublink").on("mouseover", function() {
-		$("#dropdown-menu").addClass('permahover');
-	  });
-	  $(".sublink").on("mouseleave", function() {
-		$("#dropdown-menu").removeClass('permahover');
-	  });
-   });
+	
+	$(function() {
+    $('a[href*="#"]:not([href="#"])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        }
+      }
+    });
+  });
+
+$(document).ready(function($) {
+	$('.accordion-content').hide();
+    $('#accordion').find('.accordion-toggle').click(function(){
+      //Expand or collapse this panel
+      $(this).next().slideToggle('fast');
+
+    });
+  });
+
+$(document).ready(function($) {
+	$('.dropdown-content').hide();
+    $('.dropdown-toggle').click(function(){
+      //Expand or collapse this panel
+      $(this).next().slideToggle('fast');
+
+    });
+  });
 </script>
 </html>
