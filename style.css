@@ -233,7 +233,7 @@ a{
   letter-spacing: 3px;
   -webkit-text-fill-color: red;
   -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: rgba(0,0,0,.6);
+  -webkit-text-stroke-color: rgba(0, 0, 0, .9);
 }
 
 /*about section*/
