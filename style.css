@@ -563,17 +563,16 @@ a .img-responsive:hover {
   box-shadow:inset 0px 0px 0px 2px red;
 }
 /*header adjustment*/
-
-
-@media(min-height: 350px){
-   .banner h1 {
-    font: 95px 'Lato', sans-serif;
+@media(min-height: 550px){
+  .banner h1 {
+    font: 81px 'Lato', sans-serif;
     font-weight: 700;
-	top: 10%;
+	top: 5%;
+    line-height: 90px;
   }
   .fa.fa-chevron-down{
   position: absolute;
-  top:75%;
+  top:80%;
   left: 50%;
   font-size: 40px;
   color: white;
@@ -581,7 +580,7 @@ a .img-responsive:hover {
 
 .fa.fa-chevron-down:hover{
   position: absolute;
-  top: 75%;
+  top: 80%;
   left: 50%;
   font-size: 40px;
   color: red;
@@ -589,16 +588,16 @@ a .img-responsive:hover {
 }
 }
 
-@media(min-height: 550px){
+@media(min-height: 620px){
   .banner h1 {
-    font: 95px 'Lato', sans-serif;
+    font: 90px 'Lato', sans-serif;
     font-weight: 700;
-	top: 12%;
+	top: 6%;
     line-height: 90px;
   }
   .fa.fa-chevron-down{
   position: absolute;
-  top:65%;
+  top:70%;
   left: 50%;
   font-size: 40px;
   color: white;
@@ -606,7 +605,7 @@ a .img-responsive:hover {
 
 .fa.fa-chevron-down:hover{
   position: absolute;
-  top: 65%;
+  top: 70%;
   left: 50%;
   font-size: 40px;
   color: red;
@@ -646,7 +645,7 @@ a .img-responsive:hover {
   }
   .fa.fa-chevron-down{
   position: absolute;
-  top:35%;
+  top:45%;
   left: 50%;
   font-size: 40px;
   color: white;
@@ -654,7 +653,7 @@ a .img-responsive:hover {
 
 .fa.fa-chevron-down:hover{
   position: absolute;
-  top: 35%;
+  top: 45%;
   left: 50%;
   font-size: 40px;
   color: red;
