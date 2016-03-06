@@ -229,7 +229,7 @@ a{
   letter-spacing: 3px;
   -webkit-text-fill-color: red;
   -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #666;
+  -webkit-text-stroke-color: rgba(0,0,0,.6);
 }
 
 /*about section*/
@@ -465,7 +465,7 @@ li {
   border-radius: 10px;
   text-align:center;
   padding-top: 15px;
-  padding-bottom:25px;
+  padding-bottom:55px;
 }
 .thumbnail {
   display: flex;
@@ -540,7 +540,7 @@ a .img-responsive:hover {
   margin-bottom: 50px;
   margin-top: 0px;
   position: relative;
-  top: 100px;
+  top: 50px;
   left: 0px;
   color: #393939;
   cursor: pointer;
