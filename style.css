@@ -564,6 +564,7 @@ a .img-responsive:hover {
 }
 /*header adjustment*/
 
+
 @media(min-height: 350px){
    .banner h1 {
     font: 95px 'Lato', sans-serif;
@@ -590,9 +591,10 @@ a .img-responsive:hover {
 
 @media(min-height: 550px){
   .banner h1 {
-    font: 90px 'Lato', sans-serif;
+    font: 95px 'Lato', sans-serif;
     font-weight: 700;
-	top: 10%;
+	top: 12%;
+    line-height: 90px;
   }
   .fa.fa-chevron-down{
   position: absolute;
