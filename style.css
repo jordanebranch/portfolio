@@ -191,7 +191,7 @@ a{
 
 .fa.fa-chevron-down{
   position: absolute;
-  top:77%;
+  top:75%;
   left: 50%;
   font-size: 40px;
   color: white;
@@ -199,7 +199,7 @@ a{
 
 .fa.fa-chevron-down:hover{
   position: absolute;
-  top: 77%;
+  top: 75%;
   left: 50%;
   font-size: 40px;
   color: red;
@@ -560,11 +560,11 @@ a .img-responsive:hover {
 }
 
 /*header adjustment*/
-@media(max-width: 641px) {
+@media(max-width: 899px) {
   .banner h1 {
-    font: 75px 'Lato', sans-serif;
+    font: 80px 'Lato', sans-serif;
     font-weight: 700;
-	top: 20%;
+	top: 15%;
   }
 }
 
