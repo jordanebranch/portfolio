@@ -572,6 +572,30 @@ a .img-responsive:hover {
   }
 }
 
+@media(min-height: 250px){
+   .banner h1 {
+    font: 90px 'Lato', sans-serif;
+    font-weight: 700;
+	top: 10%;
+  }
+  .fa.fa-chevron-down{
+  position: absolute;
+  top:75%;
+  left: 50%;
+  font-size: 40px;
+  color: white;
+}
+
+.fa.fa-chevron-down:hover{
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  font-size: 40px;
+  color: red;
+  z-index: 100;
+}
+}
+}
 @media(min-height: 550px){
   .banner h1 {
     font: 90px 'Lato', sans-serif;
