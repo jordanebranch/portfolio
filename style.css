@@ -250,6 +250,7 @@ a{
   width: 900px;
   margin: 0 auto;
   padding-bottom: 50px;
+  line-height: 29px !important;
 }
 
 .button {
@@ -341,38 +342,26 @@ img:hover {
   transition: all 0.3s ease 0s;
 }
 
-.caption-wrap {
-  margin: 0 auto;
-  width: 900px;
+.contain{
+    overflow: hidden;
 }
 
-.caption p {
-  margin-top: 0;
-  width: 297px;
-  margin-right: 1px;
-  display: inline-block;
+.caption{
   color: white;
-  padding-top: 5px;
-  padding-left: 2px;
-  padding-bottom: 5px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
   font: 20px 'Lato', sans-serif;
   text-align: center;
   letter-spacing: 1px;
 }
-
-.caption .no-margin {
-  margin-right: 0;
-}
-
 
 /*contact section*/
 
 #contact {
   width: 100%;
   padding-bottom: 20px;
+}
+
+.contact-text-wrap ul li a{
+  font-size: 18px;
 }
 
 .contact-data{
@@ -427,7 +416,7 @@ li {
 }
 
 #contact li {
-  font: 15px 'Lato', sans-serif;
+  font: 18px 'Lato', sans-serif;
   margin: 0 auto;
 }
 
@@ -717,7 +706,7 @@ a .img-responsive:hover {
     padding-bottom: 50px;
   }
   #work {
-    height: 900px;
+    height: 1100px;
   }
   .project-a img {
     margin: 0 auto;
@@ -774,9 +763,7 @@ a .img-responsive:hover {
   #arrow a {
     display: none;
   }
-  .caption {
-    display: none;
-  }
+
   .image-wrapa,
   .image-wrapb,
   .image-wrapc {
@@ -785,6 +772,7 @@ a .img-responsive:hover {
     overflow: hidden;
     margin-bottom: 10px;
   }
+  overflow: hidden;
   #contact ul {
     list-style-type: none;
     width: 205px;
