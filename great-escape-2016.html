@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--fonts-->
+  <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <!--Font Awesome Stylesheet-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<style>
+/*global*/
+* {
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -ms-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none !important;
+}
+
+h1 {
+  padding-bottom: 30px;
+}
+
+h2 {
+  padding-bottom: 20px;
+  font-size: 23px !important;
+}
+
+h3 {
+  border-bottom: solid lightgray;
+  border-width: 1px;
+  width: 250px;
+  padding: 10px;
+}
+
+h4 {
+  border-bottom: solid lightgray;
+  border-width: 1px;
+  width: 250px;
+  padding-bottom: 10px;
+}
+
+p {
+  font-size: 17px;
+}
+
+img {
+  width: 100%;
+  height: 310px;
+  margin: 0 auto;
+}
+
+.trump{
+  height: 50px;
+  width: 40px;
+}
+
+.bernie{
+  height: 50px;
+  width: 55px;
+}
+
+.rubio{
+  height: 50px;
+  width: 70px;
+}
+
+.cruz{
+  height: 80px;
+  width: 70px;
+}
+
+.kasich{
+  height: 50px;
+  width: 50px;
+}
+
+.hillary{
+  height: 50px;
+  width: 50px;
+}
+
+
+/*Defining container sizes*/
+.container-fluid {
+  background-color: #EFF3FF;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.container {
+  padding-top: 60px;
+}
+
+.container-fluid .container {
+  padding-top: 60px;
+  padding-bottom: 10px;
+}
+
+/*hero image*/
+.hero-unit {
+  background-image: url('http://i666.photobucket.com/albums/vv28/jordanebranch/american-flag-1149151_1920_zpsst7vjibs.jpg');
+  background-size: cover;
+  background-color: #EEEEEE;
+  height: 500px;
+}
+
+.hero-unit h1 {
+  color: black;
+  font-size: 120px;
+  letter-spacing: -1px;
+  line-height: 1;
+  margin-bottom: 0;
+  padding-top: 70px;
+  font-family: 'Amatic SC', cursive;
+  text-align: center;
+  background-color: rgba(255, 255, 255, .2);
+  height: 100%;
+}
+
+/*nav*/
+nav {
+  position: relative;
+}
+
+.navbar.navbar-default.navbar-fixed-top {
+  background-color: black;
+}
+
+.navbar-default .navbar-text {
+  float: none;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  padding-top: 15px;
+  color: white !important;
+}
+
+.navbar-default .navbar-text:hover {
+  color: lightgray !important;
+}
+
+.navbar-default {
+  border: none !important;
+}
+
+.navbar-text {
+  text-align: center;
+}
+
+.pointer {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid black;
+  position: absolute;
+  left: 50%;
+  top: 48px;
+}
+
+/*sections*/
+
+.row.destination {
+  margin-bottom: 50px;
+}
+
+.row.summary {
+  margin-bottom: 40px;
+}
+
+.figure-caption {
+  padding-top: 5px;
+  font-size: 15px;
+}
+
+
+/*Social Sharing Buttons*/
+
+.ssb {
+  z-index: 100;
+  position: fixed;
+  bottom: 0;
+}
+
+.btn-twitter {
+  background: #00acee;
+  border-radius: 0;
+  color: #fff;
+  width: 65px;
+}
+
+.btn-twitter:active,
+.btn-twitter:hover {
+  width: 75px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.btn-twitter:hover .fa.fa-twitter {
+  color: white;
+}
+
+.fa.fa-twitter {
+  font-size: 25px;
+  padding: 2px;
+}
+
+.fa.fa-twitter:hover {
+  color: white;
+  padding: 2px;
+}
+
+.btn-facebook {
+  background: #3b5998;
+  border-radius: 0;
+  color: #fff;
+  width: 65px;
+}
+
+.btn-facebook:active,
+.btn-facebook:hover {
+  width: 75px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.btn-facebook:hover .fa.fa-facebook {
+  color: white;
+}
+
+.fa.fa-facebook {
+  font-size: 25px;
+  padding: 2px;
+}
+
+.btn-googleplus {
+  background: #e93f2e;
+  border-radius: 0;
+  color: #fff;
+  width: 65px;
+}
+
+.btn-googleplus:hover .fa.fa-google-plus {
+  color: white;
+}
+
+.btn-googleplus:active,
+.btn-googleplus:hover {
+  width: 75px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.fa.fa-google-plus {
+  font-size: 25px;
+  padding: 2px;
+}
+
+.btn-linkedin {
+  background: #0e76a8;
+  border-radius: 0;
+  color: #fff;
+  width: 65px;
+}
+
+.btn-linkedin:active,
+.btn-linkedin:hover {
+  width: 75px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.btn-linkedin:hover .fa.fa-linkedin {
+  color: white;
+}
+
+.fa.fa-linkedin {
+  font-size: 25px;
+  padding: 2px;
+}
+
+/*comments*/
+.container-fuid .comment:focus {
+  outline: none !important;
+}
+
+.comment {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.commenter.row {
+  margin-top: 30px;
+}
+
+.commenter.row img {
+  width: 140px;
+  height: 90px;
+  border-radius: 5px;
+}
+
+iframe {
+  height: 150px;
+}
+
+.row .button {
+  margin-bottom: 50px;
+  width: 60px;
+  padding: 5px;
+  text-align: center;
+  border: 1px solid;
+  border-color: darkgray;
+  border-radius: 5px;
+}
+
+.row .button:hover {
+  background-color: #EAF0FF;
+  cursor: pointer;
+}
+
+/*media queries*/
+@media(max-width: 990px) {
+  img {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+}
+</style>
+<body>
+  <!--navbar-->
+  <div class="container-fluid">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <a href="#comments">
+        <p class="navbar-text">What's your escape plan?</p>
+      </a>
+      <div class="pointer"></div>
+    </nav>
+    <!--social share buttons start-->
+    <div class="ssb">
+      <div class="row">
+        <!-- Twitter -->
+        <a href="https://twitter.com/intent/tweet?text=Will+this+election+season+turn+into+your&url=jordanebranch.github.io/portfolio/great-escape-2016.html&hashtags=GreatEscape2016?" title="Share on Twitter" target="_blank" class="btn btn-twitter"><i class="fa fa-twitter"></i></a>
+      </div>
+      <div class="row">
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/sharer/sharer.php?u=jordanebranch.github.io/portfolio/great-escape-2016.html" title="Share on Facebook" target="_blank" class="btn btn-facebook"><i class="fa fa-facebook"></i></a>
+      </div>
+      <div class="row">
+        <!-- Google+ -->
+        <a href="https://plus.google.com/share?url=jordanebranch.github.io/portfolio/great-escape-2016.html" title="Share on Google+" target="_blank" class="btn btn-googleplus"><i class="fa fa-google-plus"></i></a>
+      </div>
+      <div class="row">
+        <!-- LinkedIn -->
+        <a href="http://www.linkedin.com/shareArticle?mini=true&url=&title=&summary=jordanebranch.github.io/portfolio/great-escape-2016.html" title="Share on LinkedIn" target="_blank" class="btn btn-linkedin"><i class="fa fa-linkedin"></i></a>
+      </div>
+    </div>
+  </div>
+  <!--hero image-->
+  <div class="hero-unit">
+    <h1>Where would you go?</h1>
+  </div>
+  <!--summary starts-->
+  <div class="container">
+    <div class="row summary">
+      <div class="col-md-10 col-md-offset-1">
+        <h1>Citizens Across The U.S. Are Planning Their Great Escape This Election Season</h1>
+
+        <p>As the battle for the White House rages on, candidates are dropping like flies, kind of. (Looking at you, Ben Carson.) Chances are, your pick might not be left in the race, and even if they are, might not make it to the Oval Office.</p>
+
+        <p>Not to fear, though. If you don’t like something, there’s no reason you should have to put up with it. So don’t. Actualize everyone else's threats and just move away.</p>
+
+        <p>We’ve taken the liberty of putting together some destinations. Comment your own escape plan below.</p>
+      </div>
+    </div>
+  </div>
+  <!--Canada section starts-->
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row destination">
+        <div class="col-md-5 col-md-offset-1">
+          <h4>The Obvious Choice: Canada</h4>
+          <p>Canada has seen a surge in Americans seeking to cross the border in the past month. Follow the crowd and get yourself a nice place in Saskatchewan.</p>
+          <p>Pros: socialized health care (if you’re into that sort of thing), great waterfall, everyone is super polite</p>
+          <p>Cons: Tim Horton’s, very cold</p>
+          <p><a href="http://www.cic.gc.ca/english/immigrate/">Immigration website</p></a>
+        </div>
+        <div class="col-md-6">
+          <figure class="figure">
+            <img src="http://luxesoul.com/wp-content/uploads/2015/05/London-clock-landscape-nature-canada-corner.jpg" class="figure-img img-fluid img-rounded">
+            <figcaption class="figure-caption text-xs-right">Enjoy these pristine outdoor views with your government-supplied allergy medication.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Russia section starts-->
+  <div class="container">
+    <div class="row destination">
+      <div class="col-md-5 col-md-push-5 col-md-offset-1">
+        <h4>The Tight Regime: Russia</h4>
+        <p>If the presidency doesn’t have enough power for you, go somewhere there’s more. Find someone Donald Trump might find extreme — Vladimir Putin. He won’t let his citizens get into shenanigans, and besides, they’re still riding the high of the Olympics.</p>
+        <p>Pros: Lots of vodka, very nice architecture</p>
+        <p>Cons: Less free speech, very cold</p>
+        <p><a href="http://www.fms.gov.ru/">Immigration website</p></a>
+      </div>
+      <div class="col-md-6 col-md-pull-6">
+        <figure class="figure">
+          <img src="http://greenapplevisacentre.com/wp-content/uploads/2015/06/Moscow-Russia.jpg" class="figure-img img-fluid img-rounded">
+          <figcaption class="figure-caption text-xs-right">Stone cold walls, stone cold government.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <!--Barbados section starts-->
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row destination">
+        <div class="col-md-5 col-md-offset-1">
+          <h4>The Luxurious Getaway: Barbados</h4>
+          <p>Located in the Caribbean, Barbados is surrounded by beautiful blue waters. It’s got a representative democracy and is a popular destination for cruise ships.</p>
+          <p>Pros: Rihanna is from here, very warm</p>
+          <p>Cons: Widespread poverty, heavy reliance on tourism industry</p>
+          <p><a href="http://www.immigration.gov.bb/">Immigration website</p></a> </div>
+        <div class="col-md-6">
+          <figure class="figure">
+            <img src="http://images.huffingtonpost.com/2014-03-20-MT_Beach1.jpg" class="figure-img img-fluid img-rounded">
+            <figcaption class="figure-caption text-xs-right"> Imagine playing with monkeys every day on this beach. You couldn't do that in America.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Western Sahara section starts-->
+  <div class="container">
+    <div class="row destination">
+      <div class="col-md-5 col-md-push-5 col-md-offset-1">
+        <h4>The Wild Ride: Western Sahara</h4>
+        <p>This country is just south of Morocco and is mostly populated by tribes that live by herding camels. It doesn’t have a central government, so if you’ve just completely given up on politics, here’s the place.</p>
+        <p>Pros: Do whatever you want, lots of camels</p>
+        <p>Cons: It’s a desert, has Moroccan landmines everywhere, very hot</p>
+        <p>Immigration website: you can probably just show up</p>
+        </a>
+      </div>
+      <div class="col-md-6 col-md-pull-6">
+        <figure class="figure">
+          <img src="http://travelhdwallpapers.com/wp-content/uploads/2014/03/Sahara-Desert-11.jpg" class="figure-img img-fluid img-rounded">
+          <figcaption class="figure-caption text-xs-right">No need to worry about politicians, it'll just be you and this little guy.</figcaption>
+        </figure>
+      </div>
+    </div>
+    <!--Comments section starts-->
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <h3 id="comments">Comments</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <h2>If your least favorite candidate wins, where would you hope to move?</h2>
+      </div>
+</div>
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <textarea name='comment' class='comment'></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2 col-md-offset-10">
+        <div class="button">Post</div>
+      </div>
+</div>
+    <div class="commenter row">
+      <div class="col-md-2 col-md-offset-1">
+        <img src="http://i666.photobucket.com/albums/vv28/jordanebranch/twilight-1177504_1280_zpsyoocpg2u.jpg">
+      </div>
+      <div class="col-md-8">
+        <h4><b>blueblood99:</b></h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-3">
+        <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/250186260&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+      </div>
+    </div>
+    <div class="commenter row">
+      <div class="col-md-2 col-md-offset-1">
+        <img src="http://i666.photobucket.com/albums/vv28/jordanebranch/twilight-1177504_1280_zpsyoocpg2u.jpg">
+      </div>
+      <div class="col-md-8">
+        <h4><b>blueblood99:</b></h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-3">
+        <p>Well I mean the closest option would be Canada. But I’ve always wanted to take a road trip through South America, and the Olympics are this summer, so why not? Honestly, if Trump wins the Republican nomination I might just leave then, get a head
+          start.
+        </p>
+      </div>
+    </div>
+    <div class="commenter row">
+      <div class="col-md-2 col-md-offset-1">
+        <img src="http://i666.photobucket.com/albums/vv28/jordanebranch/twilight-1177504_1280_zpsyoocpg2u.jpg">
+      </div>
+      <div class="col-md-8">
+        <h4><b>blueblood99:</b></h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-3">
+        <p>Well I mean the closest option would be Canada. But I’ve always wanted to take a road trip through South America, and the Olympics are this summer, so why not? Honestly, if Trump wins the Republican nomination I might just leave then, get a head
+          start.
+        </p>
+      </div>
+    </div>
+    <div class="commenter row">
+      <div class="col-md-2 col-md-offset-1">
+        <img src="http://i666.photobucket.com/albums/vv28/jordanebranch/twilight-1177504_1280_zpsyoocpg2u.jpg">
+      </div>
+      <div class="col-md-8">
+        <h4><b>blueblood99:</b></h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-3">
+        <p>Well I mean the closest option would be Canada. But I’ve always wanted to take a road trip through South America, and the Olympics are this summer, so why not? Honestly, if Trump wins the Republican nomination I might just leave then, get a head
+          start.
+        </p>
+      </div>
+    </div>
+    <div class="commenter row">
+      <div class="col-md-2 col-md-offset-1">
+        <img src="http://i666.photobucket.com/albums/vv28/jordanebranch/twilight-1177504_1280_zpsyoocpg2u.jpg">
+      </div>
+      <div class="col-md-8">
+        <h4><b>blueblood99:</b></h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-3">
+        <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/250194255&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+      </div>
+    </div>
+    <div class="commenter row">
+      <div class="col-md-2 col-md-offset-1">
+        <img src="http://i666.photobucket.com/albums/vv28/jordanebranch/twilight-1177504_1280_zpsyoocpg2u.jpg">
+      </div>
+      <div class="col-md-8">
+        <h4><b>blueblood99:</b></h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-3">
+        <p><b>VIDEO HERE</b></p>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script>
+  $(function() {
+    $('a[href*="#"]:not([href="#"])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        }
+      }
+    });
+  });
+  </script>
+</body>
+</html>
