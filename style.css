@@ -5,6 +5,7 @@ body {
 
 span {
   color: red;
+  font-family: 'Allerta Stencil', sans-serif;
 }
 
 a{
@@ -29,23 +30,22 @@ a{
 .dropdownBox .ui-state-focus {
   outline: none;
 }
-.banner-text-wrap{
-  max-width: 900px;
-  max-height: 500px;
-}
+
+
 /*nav*/
 nav {
   position: fixed;
   width: 100%;
   margin: 0 auto;
   text-align: center;
-  background-color: rgba(0, 0, 0, .6);
+  background-color: rgba(0, 0, 0, .7);
   z-index: 150;
 }
 
 .menu {
   width: 900px;
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 nav ul a li {
@@ -53,7 +53,7 @@ nav ul a li {
   text-decoration: none;
   color: #E8E8E8;
   margin: 0px 0px;
-  font: 25px 'Lato', sans-serif;
+  font: 20px 'Roboto', sans-serif;
   letter-spacing: 1px;
   padding-top: 15px;
   position: relative;
@@ -75,7 +75,6 @@ nav ul li {
   text-decoration: none;
   color: #E8E8E8;
   margin: 0px 0px;
-  font: 25px 'Lato', sans-serif;
   letter-spacing: 1px;
   padding-top: 10px;
   position: relative;
@@ -100,7 +99,7 @@ a{
   display: block;
   text-decoration: none;
   color: #E8E8E8;
-  font: 25px 'Lato', sans-serif;
+  font: 20px 'Roboto', sans-serif;
   letter-spacing: 1px;
   position: relative;
   display: inline-block;
@@ -120,15 +119,14 @@ a{
 
 .dropdown-content{
     position: absolute;
-	top: 65px;
-	background-color: rgba(0, 0, 0, .6);
+	top: 59px;
+	background-color: rgba(0, 0, 0, .7);
 	width: 150px;
     padding-bottom: 10px;
 }
 
 .sublink{
   text-align: center;
-  padding: 10px;
 }
 
 .sublink:hover{
@@ -147,7 +145,7 @@ a{
 }
 
 .accordion-toggle {
-  font: 25px 'Lato', sans-serif;
+  font: 25px 'Roboto', sans-serif;
   padding: 20px;
   margin: 0;
   color: white;
@@ -163,7 +161,7 @@ a{
 }
 
 #accordion li {
-  font: 25px 'Lato', sans-serif;
+  font: 25px 'Roboto', sans-serif;
   padding: 5px;
   margin: 0;
   color: white;
@@ -195,7 +193,7 @@ a{
 
 .fa.fa-chevron-down{
   position: absolute;
-  top:75%;
+  top:90%;
   left: 50%;
   font-size: 40px;
   color: white;
@@ -203,7 +201,7 @@ a{
 
 .fa.fa-chevron-down:hover{
   position: absolute;
-  top: 75%;
+  top: 90%;
   left: 50%;
   font-size: 40px;
   color: red;
@@ -220,31 +218,35 @@ a{
   background: url("http://i666.photobucket.com/albums/vv28/jordanebranch/bridge_zps14koymf3.jpeg");
   background-size: cover;
   background-position: center;
+  overflow:hidden;
+  position:relative;
 }
 
 .banner h1 {
-  z-index: 99;
-  position: absolute;
-  top: 30%;
-  width: 100%;
+  color: rgba(225,225,225,.9);
+  font-size: 120px;
+  letter-spacing: -1px;
+  line-height: 1;
+  margin-bottom: 0;
+  padding-top: 150px;
   text-align: center;
-  font: 90px 'Lato', sans-serif;
-  font-weight: 700;
-  letter-spacing: 3px;
-  -webkit-text-fill-color: red;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: rgba(0, 0, 0, .9);
+  background-color: rgba(0, 0, 0, .5);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: -90px;
+  font-family: 'Allerta Stencil', sans-serif;
 }
 
 /*about section*/
 #about h1 {
-  font: 50px 'Lato', sans-serif;
+  font: 50px 'Allerta Stencil', sans-serif;
   text-align: center;
   padding-top: 80px;
 }
 
 #about p {
-  font: 20px 'Lato', sans-serif;
+  font: 20px 'Roboto', sans-serif;
   text-align: center;
   padding: 10px;
   width: 900px;
@@ -257,9 +259,10 @@ a{
   margin: 0 auto;
   text-align: center;
   margin-bottom: 30px;
-  font: 30px 'Lato', sans-serif;
+  font: 30px 'Roboto', sans-serif;
+  letter-spacing: 1px;
   color: black;
-  max-width: 210px;
+  max-width: 230px;
   padding: 8px;
   margin-bottom: 80px;
   border: solid red;
@@ -279,13 +282,14 @@ a{
 #work {
   background-color: #666;
   width: 100%;
-  height: 500px;
+  height: 550px;
 }
 
 #work h1 {
-  font: 50px 'Lato', sans-serif;
+  font: 50px 'Allerta Stencil', sans-serif;
   text-align: center;
   padding-top: 80px;
+  padding-bottom: 30px;
   color: white;
 }
 
@@ -295,7 +299,7 @@ a{
 }
 
 h2 {
-  font: 20px 'Lato', sans-serif;
+  font: 20px 'Roboto', sans-serif;
 }
 
 .project-a img {
@@ -348,7 +352,7 @@ img:hover {
 
 .caption{
   color: white;
-  font: 20px 'Lato', sans-serif;
+  font: 20px 'Roboto', sans-serif;
   text-align: center;
   letter-spacing: 1px;
 }
@@ -401,10 +405,12 @@ img:hover {
 
 li {
   padding: 5px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 #contact p {
-  font: 30px 'Lato', sans-serif;
+  font: 30px 'Roboto', sans-serif;
   text-align: center;
   width: 205px;
   display: inline-block;
@@ -416,7 +422,7 @@ li {
 }
 
 #contact li {
-  font: 18px 'Lato', sans-serif;
+  font: 18px 'Roboto', sans-serif;
   margin: 0 auto;
 }
 
@@ -446,7 +452,7 @@ li {
 /*data visualization page*/
 
 .portfoliopage {
-  font: 70px 'Lato', sans-serif;
+  font: 70px 'Allerta Stencil', sans-serif;
   letter-spacing: 1px;
   margin-bottom: 50px;
   margin-top: 0px;
@@ -523,12 +529,12 @@ a .img-responsive:hover {
 }
 
 .container p{
-  font: small-caps 90px 'Lato', sans-serif;
+  font: small-caps 90px 'Roboto', sans-serif;
   text-align: center;
 }
 
 .unpublishedh1, .publishedh1 {
-  font: small-caps 55px 'Lato', sans-serif;
+  font: small-caps 55px 'Roboto', sans-serif;
   letter-spacing: 1px;
   margin-bottom: 50px;
   margin-top: 0px;
@@ -551,119 +557,6 @@ a .img-responsive:hover {
   -moz-box-shadow:inset 0px 0px 0px 2px red;
   box-shadow:inset 0px 0px 0px 2px red;
 }
-/*header adjustment*/
-@media(min-height: 550px){
-  .banner h1 {
-    font: 81px 'Lato', sans-serif;
-    font-weight: 700;
-	top: 5%;
-    line-height: 90px;
-  }
-  .fa.fa-chevron-down{
-  position: absolute;
-  top:80%;
-  left: 50%;
-  font-size: 40px;
-  color: white;
-}
-
-.fa.fa-chevron-down:hover{
-  position: absolute;
-  top: 80%;
-  left: 50%;
-  font-size: 40px;
-  color: red;
-  z-index: 100;
-}
-}
-
-@media(min-height: 620px){
-  .banner h1 {
-    font: 90px 'Lato', sans-serif;
-    font-weight: 700;
-	top: 6%;
-    line-height: 90px;
-  }
-  .fa.fa-chevron-down{
-  position: absolute;
-  top:70%;
-  left: 50%;
-  font-size: 40px;
-  color: white;
-}
-
-.fa.fa-chevron-down:hover{
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  font-size: 40px;
-  color: red;
-  z-index: 100;
-}
-}
-
-@media(min-height: 750px){
-  .banner h1 {
-    font: 90px 'Lato', sans-serif;
-    font-weight: 700;
-	top: 10%;
-  }
-  .fa.fa-chevron-down{
-  position: absolute;
-  top:45%;
-  left: 50%;
-  font-size: 40px;
-  color: white;
-}
-
-.fa.fa-chevron-down:hover{
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  font-size: 40px;
-  color: red;
-  z-index: 100;
-}
-}
-
-@media(min-height: 920px){
-  .banner h1 {
-    font: 90px 'Lato', sans-serif;
-    font-weight: 700;
-	top: 10%;
-  }
-  .fa.fa-chevron-down{
-  position: absolute;
-  top:45%;
-  left: 50%;
-  font-size: 40px;
-  color: white;
-}
-
-.fa.fa-chevron-down:hover{
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  font-size: 40px;
-  color: red;
-  z-index: 100;
-}
-}
-
-@media(min-height: 1070px){
-  .banner h1 {
-    font: 90px 'Lato', sans-serif;
-    font-weight: 700;
-	top: 10%;
-  }
-  .fa.fa-chevron-down{
-  display: none;
-}
-#arrow{
-  display: none;
-}
-}
-
 /*nav change*/
 @media(min-width: 682px) {
   #accordion {
@@ -681,7 +574,10 @@ a .img-responsive:hover {
 }
 
 /*responsive breakpoint*/
-@media(max-width: 930px) {
+@media(max-width: 916px) {
+  .banner h1{
+    font-size:90px;
+  }
   .unpublishedh1, .publishedh1 {
 	  text-align: center;
 	}
@@ -698,7 +594,7 @@ a .img-responsive:hover {
     margin: 0 auto;
   }
   #about p {
-    font: 20px 'Lato', sans-serif;
+    font: 20px 'Roboto', sans-serif;
     text-align: center;
     padding: 10px;
     width: 90%;
@@ -706,7 +602,7 @@ a .img-responsive:hover {
     padding-bottom: 50px;
   }
   #work {
-    height: 1100px;
+    height: 1150px;
   }
   .project-a img {
     margin: 0 auto;
@@ -772,7 +668,6 @@ a .img-responsive:hover {
     overflow: hidden;
     margin-bottom: 10px;
   }
-  overflow: hidden;
   #contact ul {
     list-style-type: none;
     width: 205px;
@@ -780,10 +675,7 @@ a .img-responsive:hover {
     float: left;
     padding-top: 40px;
   }
-}
- 
- @media(max-width: 910px) {
-    .thumbnail {
+  .thumbnail {
       display: flex;
       width: 45%;
       float: left;
@@ -791,7 +683,13 @@ a .img-responsive:hover {
       margin-top: 90px;
       margin-bottom: 0px;
     }
+}
+
+@media(max-width:465px){
+  .banner h1{
+    font-size: 68px;
   }
+}
 
   @media(max-width: 610px) {
     .thumbnail {
