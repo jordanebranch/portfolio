@@ -5,7 +5,7 @@ body {
 
 span {
   color: red;
-  font-family: 'Allerta Stencil', sans-serif;
+  font-family: small-caps 'Allerta Stencil', sans-serif;
 }
 
 a{
@@ -53,8 +53,8 @@ nav ul a li {
   text-decoration: none;
   color: #E8E8E8;
   margin: 0px 0px;
-  font: 20px 'Roboto', sans-serif;
-  letter-spacing: 1px;
+  font: small-caps 25px 'Roboto', sans-serif;
+  letter-spacing: 3px;
   padding-top: 15px;
   position: relative;
   display: inline-block;
@@ -99,14 +99,15 @@ a{
   display: block;
   text-decoration: none;
   color: #E8E8E8;
-  font: 20px 'Roboto', sans-serif;
-  letter-spacing: 1px;
+  font: small-caps 25px 'Roboto', sans-serif;
+  letter-spacing: 3px;
   position: relative;
   display: inline-block;
   float: right;
   width: 150px;
   padding-bottom: 15px;
   padding-top: 5px;
+  z-index: 150;
 }
 
 .dropdown-toggle:hover{
@@ -127,6 +128,9 @@ a{
 
 .sublink{
   text-align: center;
+  padding-left: 7px;
+  padding-top: 10px;
+  padding-bottom: 5px;
 }
 
 .sublink:hover{
@@ -145,7 +149,8 @@ a{
 }
 
 .accordion-toggle {
-  font: 25px 'Roboto', sans-serif;
+  font: small-caps 25px 'Roboto', sans-serif;
+  letter-spacing: 3px;
   padding: 20px;
   margin: 0;
   color: white;
@@ -161,7 +166,8 @@ a{
 }
 
 #accordion li {
-  font: 25px 'Roboto', sans-serif;
+  font: small-caps 25px 'Roboto', sans-serif;
+  letter-spacing: 3px;
   padding: 5px;
   margin: 0;
   color: white;
@@ -240,7 +246,9 @@ a{
 
 /*about section*/
 #about h1 {
-  font: 50px 'Allerta Stencil', sans-serif;
+  font: small-caps 60px 'Allerta Stencil', sans-serif;
+  line-height: 60px;
+  letter-spacing: 2px;
   text-align: center;
   padding-top: 80px;
 }
@@ -259,8 +267,8 @@ a{
   margin: 0 auto;
   text-align: center;
   margin-bottom: 30px;
-  font: 30px 'Roboto', sans-serif;
-  letter-spacing: 1px;
+  font: small-caps 30px 'Roboto', sans-serif;
+  letter-spacing: 3px;
   color: black;
   max-width: 230px;
   padding: 8px;
@@ -286,7 +294,9 @@ a{
 }
 
 #work h1 {
-  font: 50px 'Allerta Stencil', sans-serif;
+  font: small-caps 60px 'Allerta Stencil', sans-serif;
+  line-height: 60px;
+  letter-spacing: 2px;
   text-align: center;
   padding-top: 80px;
   padding-bottom: 30px;
@@ -352,7 +362,7 @@ img:hover {
 
 .caption{
   color: white;
-  font: 20px 'Roboto', sans-serif;
+  font: small-caps 25px 'Roboto', sans-serif;
   text-align: center;
   letter-spacing: 1px;
 }
@@ -404,13 +414,13 @@ img:hover {
 }
 
 li {
-  padding: 5px;
   padding-left: 0;
   padding-right: 0;
 }
 
 #contact p {
-  font: 30px 'Roboto', sans-serif;
+  font: small-caps 25px 'Roboto', sans-serif;
+  letter-spacing: 3px;
   text-align: center;
   width: 205px;
   display: inline-block;
@@ -422,8 +432,15 @@ li {
 }
 
 #contact li {
-  font: 18px 'Roboto', sans-serif;
+  font: 16px 'Roboto', sans-serif;
+  letter-spacing: 1px;
   margin: 0 auto;
+}
+
+#contact li a {
+  font: 16px 'Roboto', sans-serif;
+  margin: 0 auto;
+  letter-spacing: 0px;
 }
 
 .contact-text-wrap {
