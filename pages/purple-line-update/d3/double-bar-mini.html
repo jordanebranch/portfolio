@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+  <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+</head>
+<style>
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: .8rem;
+}
+
+h1 {
+  margin: 0;
+  padding: 0.1rem 0.4rem;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: .5px;
+  font-size: 18px;
+}
+
+h2{
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  width: 290px;
+  font-family: "Montserrat", sans-serif;
+}
+
+p{
+  text-align: center;
+  font-size: 16px;
+  width: 290px;
+}
+
+.bar {
+  fill: purple;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #444;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.x-label, .y-label {
+  font-size: .8rem;
+}
+
+.number{
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+  
+</style>
+<body>
+
+<h1>Partial Acquisitions Made Up the Bulk of Residential Properties Affected by the Purple Line</h1>
+<h2>By Jordan Branch</h2>
+  <p>The Purple Line's construction required 155 residential acquisitions -- 127 of which were partial acquisitions. Full acquisitions -- 28, including apartment buildings -- resulted in 53 residential displacements. Displacements required residents to move.</p>
+  <div id="chart"></div>
+        <script>
+            $(document).ready(function(){
+            var margin = {top: 40, right: 0, bottom: 60, left: 60},
+                width = 290 - margin.left - margin.right,
+                height = 350 - margin.top - margin.bottom;
+            var x = d3.scale.ordinal()
+              .rangeRoundBands([0, width], .1);
+            var y = d3.scale.linear()
+              .range([height, 0]);
+            var xAxis = d3.svg.axis()
+                .scale(x)
+                .orient("bottom");
+            var yAxis = d3.svg.axis()
+                .scale(y)
+                .orient("left")
+            var svg = d3.select("#chart").append("svg")
+                .attr("width", width + margin.left + margin.right)
+                .attr("height", height + margin.top + margin.bottom)
+              .append("g")
+                .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+            var data = [
+              {type: "Partial Acquisitions", number: 127},
+              {type: "Full Acquisitions", number: 28}
+              ];
+            x.domain(data.map(function(d) { return d.type; }));
+            y.domain([0, d3.max(data, function(d) { return d.number; })]);
+            svg.append("g")
+                .attr("class", "x axis")
+                .attr("transform", "translate(0," + height + ")")
+                .call(xAxis)
+              .append("text")
+                .attr("class", "x-label")
+                .attr("y", 43)
+                .attr("dx", "-1em")
+                .style("text-anchor", "center")
+                .text("Source: Maryland Transit Administration");
+            svg.append("g")
+                .attr("class", "y axis")
+                .call(yAxis)
+              .append("text")
+                .attr("class", "y-label")
+                .attr("transform", "rotate(-90)")
+                .attr("y", -40)
+                .attr("dx", "-4em")
+                .style("text-anchor", "end")
+                .text("Number of Acquisitions");
+            svg.selectAll(".bar")
+                .data(data)
+              .enter().append("rect")
+                .attr("class", "bar")
+                .attr("x", function(d) { return x(d.type); })
+                .attr("width", x.rangeBand())
+                .attr("y", function(d) { return y(d.number); })
+                .attr("height", function(d) { return height - y(d.number); })
+              svg.selectAll(".number")
+                .data(data)
+                .enter()
+                .append("text")
+                .text(function(d){return d.number})
+                .classed("number", true)
+                .attr("r", 4);
+              svg.selectAll(".number")
+                .attr("dx", function(d){
+                  var date = d.type;
+                    return x(d.type) + 38;
+                })
+                .attr("dy", function(d){
+                  return y(d.number) - 10;
+                })
+          });
+        </script>
+  
+    </body>
+</html>
