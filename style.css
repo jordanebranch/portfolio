@@ -1,4 +1,6 @@
-body {
+
+
+/*body {
   margin: 0 auto;
   padding: 0;
 }
@@ -42,13 +44,16 @@ li {
   margin-bottom: 0;
   text-align: center;
 }
-/*nav*/
+
 nav {
   position: fixed;
   width: 100%;
   margin: 0 auto;
   text-align: center;
+<<<<<<< Updated upstream
   background-color: rgba(0, 0, 0, .7);
+=======
+>>>>>>> Stashed changes
   z-index: 150;
 }
 
@@ -99,7 +104,7 @@ nav ul li {
   width: 190px;
 }
 
-/*desktop nav dropdown*/
+
 
 .dropdown-toggle{
   display: block;
@@ -148,7 +153,7 @@ nav ul li {
   box-shadow: none;
   }
   
-/*mobile nav*/
+
 #accordion {
   margin: 0 auto;
   margin-top: 0;
@@ -224,7 +229,6 @@ nav ul li {
   z-index: 100;
 }
 
-/*Content starts*/
 .banner {
   height: 500px;
   -webkit-background-size: cover;
@@ -254,7 +258,7 @@ nav ul li {
   font-family: 'Allerta Stencil', sans-serif;
 }
 
-/*about section*/
+
 #about h1 {
   font: small-caps 70px 'Allerta Stencil', sans-serif;
   line-height: 60px;
@@ -296,7 +300,6 @@ nav ul li {
   color: white;
 }
 
-/*work section*/
 #work {
   width: 100%;
   height: auto !important;
@@ -371,7 +374,7 @@ h2 {
   letter-spacing: 1px;
 }
 
-/*contact section*/
+
 
 #contact {
   width: 100%;
@@ -465,7 +468,7 @@ h2 {
   color: red;
 }
 
-/*data visualization page*/
+
 
 .portfoliopage {
   font: 70px 'Allerta Stencil', sans-serif;
@@ -571,7 +574,7 @@ h2 {
   margin: 0 auto;
 }
 
-/*nav change*/
+
 @media(min-width: 682px) {
   #accordion {
     display: none;
@@ -587,7 +590,7 @@ h2 {
   }
 }
 
-/*responsive breakpoint*/
+
 @media(max-width: 916px) {
   .banner h1{
     font-size:90px;
@@ -683,3 +686,4 @@ h2 {
     font-size: 68px;
   }
 }
+*/
