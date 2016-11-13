@@ -1,3 +1,6 @@
+html {
+    position: relative;
+}
 h1 {
     color: #656;
     font-family: 'Lato', Helvetica;
@@ -23,9 +26,18 @@ span {
 }
 .intro {
     border: 1px solid #ccc;
+    box-shadow: 2px 4px 20px #888888;
     margin: 3rem auto;
     padding: 2rem;
     width: 300px;
+}
+footer {
+    background-color: #f1f1f1;
+    bottom: 0;
+    height: 100px;
+    left: 0;
+    position: absolute;
+    width: 100%;
 }
 /*body {
   margin: 0 auto;
