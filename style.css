@@ -50,11 +50,8 @@ nav {
   width: 100%;
   margin: 0 auto;
   text-align: center;
-<<<<<<< Updated upstream
-  background-color: rgba(0, 0, 0, .7);
-=======
->>>>>>> Stashed changes
   z-index: 150;
+  border-bottom: 1px solid #ccc;
 }
 
 .menu {
@@ -66,9 +63,9 @@ nav {
 nav ul a li {
   display: block;
   text-decoration: none;
-  color: #E8E8E8;
+  color: #666;
   margin: 0px 0px;
-  font: small-caps 25px 'Roboto', sans-serif;
+  font: small-caps 20px 'Roboto', sans-serif;
   letter-spacing: 3px;
   padding-top: 15px;
   position: relative;
