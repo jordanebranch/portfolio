@@ -1,4 +1,9 @@
-
+h1 {
+    color: #656;
+    font-family: 'Lato', Helvetica;
+    font-weight: bolder;
+    letter-spacing: 3px;
+}
 
 /*body {
   margin: 0 auto;
