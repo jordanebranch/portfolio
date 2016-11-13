@@ -3,7 +3,7 @@ h1 {
     font-family: 'Lato script=all', Helvetica;
     font-size: 2.5rem;
     font-weight: bolder;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     margin-bottom: 0.25rem;
 }
 p {
@@ -12,13 +12,14 @@ p {
 }
 span {
     color: #666;
-    font-family: 'Roboto script=all';
+    font-family: 'Roboto';
     font-style: italic;
     font-weight: lighter;
     letter-spacing: 0.5px;
 }
 .intro {
-  width: 300;
+  margin: 0 auto;
+  width: 300px;
 }
 /*body {
   margin: 0 auto;
