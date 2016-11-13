@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+ <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<style>
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: .8rem;
+}
+
+h1 {
+  margin: 0;
+  padding: 0.1rem 0.4rem;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: .5px;
+  font-size: 20px;
+}
+
+h2{
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+}
+
+p{
+  text-align: center;
+  font-size: 15px;
+}
+
+.axis path {
+   fill: none;
+   stroke: #777;
+   shape-rendering: crispEdges;
+}
+
+.cost{
+   font-family: "Montserrat", sans-serif;
+   font-size: 12px;
+}
+
+
+    </style>
+</head>
+<h1>Cost of Purple Line Construction Rose Over 15-Year Stretch</h1>
+<h2>By Jordan Branch</h2>
+  <p>The cost of Purple Line construction has risen more than $1 billion dollars since the project was first proposed. The current contstruction cost of the Purple Line's construction is estimated at $2.65 billion. When 30 years of operations and maintenance costs are added, the number jumps to $5.6 billion.</p>
+<!--Built form @jay3dec tutorial http://code.tutsplus.com/tutorials/building-a-multi-line-chart-using-d3js--cms-22935-->
+  <div class="container">
+
+        <div class="jumbotron">
+
+            <svg id="visualisation" width="280" height="400"></svg>
+            <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+            <script>
+                function InitChart() {
+                    var data = [{
+                        "cost": "1.2",
+                        "year": "2001"
+                    }, {
+                        "cost": "1.4",
+                        "year": "2002"
+                    }, {
+                        "cost": "1.52",
+                        "year": "2007"
+                    }, {
+                        "cost": "1.68",
+                        "year": "2009"
+                    }, {
+                        "cost": "1.9",
+                        "year": "2011"
+                    }, {
+                        "cost": "2.15",
+                        "year": "2012"
+                    }, {
+                        "cost": "2.37",
+                        "year": "2014"
+                    },{
+                        "cost": "2.65",
+                        "year": "2016"
+                    }];
+                    var x = d3.time.scale().range([0, WIDTH]);
+                    var y = d3.scale.linear().range([HEIGHT, 0]);
+                    var vis = d3.select("#visualisation"),
+                        WIDTH = 290,
+                        HEIGHT = 350,
+                        MARGINS = {
+                            top: 20,
+                            right: 30,
+                            bottom: 40,
+                            left: 70
+                        },
+                        xScale = d3.scale.linear().range([MARGINS.left, WIDTH - MARGINS.right]).domain([2000, 2016]),
+                        yScale = d3.scale.linear().range([HEIGHT - MARGINS.top, MARGINS.bottom]).domain([0, 2.7]),
+                        xAxis = d3.svg.axis()
+                        .scale(xScale)
+                        .tickFormat(d3.format("d"));
+                        yAxis = d3.svg.axis()
+                        .scale(yScale)
+                        .orient("left")
+                    vis.append("svg:g")
+                        .attr("class", "x axis")
+                        .attr("transform", "translate(0," + (HEIGHT - MARGINS.bottom) + ")")
+                        .call(xAxis)
+                        .selectAll("text")  
+                        .style("text-anchor", "end")
+                        .attr("dx", "-.8em")
+                        .attr("dy", ".15em")
+                        .attr("transform", "rotate(-65)" )
+                     vis.append("svg:g")    
+                        .append("text")
+                        .attr("class", "x-label")
+                        .attr("y", 380)
+                        .attr("dx", "2em")
+                        .style("text-anchor", "center")
+                        .text("Source: A Collection of News Articles");
+                    vis.append("svg:g")
+                        .attr("class", "y axis")
+                        .attr("transform", "translate(" + (MARGINS.left -6) + ",-20)")
+                        .call(yAxis)
+                        .append("text")
+                        .attr("transform", "rotate(-90)")
+                        .attr("y", -50)
+                        .attr("dx", "-4.5em")
+                        .style("text-anchor", "end")
+                        .text("Cost of Purple Line Construction (Billion Dollars)");
+                    var lineGen = d3.svg.line()                    
+                        .x(function(d) {
+                            return xScale(d.year);
+                        })
+                        .y(function(d) {
+                            return yScale(d.cost);
+                        })
+                    vis.selectAll(".cost")
+                       .data(data)
+                       .enter()
+                       .append("text")
+                       .text(function(d){return "$" + d.cost})
+                       .classed("cost", true)
+                       .attr("r", 4);
+                    vis.selectAll(".cost")
+                       .attr("dx", function(d){
+                         var date = d.year;
+                         return xScale(d.year) - 17;
+                       })
+                       .attr("dy", function(d){
+                         return yScale(d.cost) - 17;
+                       })
+                    vis.append('svg:path')
+                        .attr('d', lineGen(data))
+                        .attr('stroke', 'purple')
+                        .attr('stroke-width', 2)
+                        .attr('fill', 'none')
+                }
+                InitChart();
+            </script>
+        </div>
+
+    </div>
+<body>
+<script>
+
+
+
+</script>
+</body>
+</html>
